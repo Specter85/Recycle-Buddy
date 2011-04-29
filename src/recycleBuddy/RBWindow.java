@@ -55,14 +55,23 @@ public class RBWindow extends JFrame {
 		
 		// Add the home and back buttons.
 		back = new JButton("Back");
+		back.addActionListener(new BackListener(this));
 		pan.add(back);	
 		home = new JButton("Home");
+		home.addActionListener(new HomeListener(this));
 		pan.add(home);
 	}
 	
 	public void changeView(DisplayOption option, int buttonNum) {
-		for(int i = 0; i < options.length; i++) {
-			options[i].setText("test2");
+		if(option == DisplayOption.SHOW_CHILD) {
+			for(int i = 0; i < options.length; i++) {
+				options[i].setText("test2");
+			}
+		}
+		else {
+			for(int i = 0; i < options.length; i++) {
+				options[i].setText("test");
+			}
 		}
 	}
 	
