@@ -37,6 +37,7 @@ public class RBWindow extends JFrame {
 		options = new RBButton[NUM_OPTIONS];
 		for(int i = 0; i < options.length; i++) {
 			options[i] = new RBButton("test", "test.png");
+			options[i].addActionListener(new OptionListener(this, i));
 			bPan.add(options[i]);
 		}
 		
@@ -50,6 +51,12 @@ public class RBWindow extends JFrame {
 		pan.add(back);	
 		home = new JButton("Home");
 		pan.add(home);
+	}
+	
+	public void changeView() {
+		for(int i = 0; i < options.length; i++) {
+			options[i].setText("test2");
+		}
 	}
 	
 }
