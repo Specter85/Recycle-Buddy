@@ -18,6 +18,13 @@ public class RBWindow extends JFrame {
 	private RBButton[] options;
 	private JButton back;
 	private JButton home;
+	
+	// enum for different display options.
+	enum DisplayOption {
+		SHOW_ROOT,
+		SHOW_PARENT,
+		SHOW_CHILD
+	}
 
 	RBWindow() {
 		// Set the window's default size and behavior.
@@ -53,10 +60,14 @@ public class RBWindow extends JFrame {
 		pan.add(home);
 	}
 	
-	public void changeView() {
+	public void changeView(DisplayOption option, int buttonNum) {
 		for(int i = 0; i < options.length; i++) {
 			options[i].setText("test2");
 		}
+	}
+	
+	public void changeView(DisplayOption option) {
+		changeView(option, 0);
 	}
 	
 }

@@ -3,6 +3,8 @@ package recycleBuddy;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+import recycleBuddy.RBWindow.DisplayOption;
+
 public class OptionListener implements ActionListener {
 	
 	private RBWindow parent;
@@ -14,7 +16,7 @@ public class OptionListener implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		parent.changeView();
+		parent.changeView(DisplayOption.SHOW_CHILD, buttonNum);
 	}
 	
 }
