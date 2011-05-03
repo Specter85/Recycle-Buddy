@@ -5,16 +5,18 @@ import java.awt.event.ActionEvent;
 
 import recycleBuddy.RBWindow.ButtonTypes;
 
-public class BackListener implements ActionListener {
-
+public class SideOptionListener implements ActionListener {
+	
 	private RBWindow parent;
+	private int buttonNum;
 	
-	BackListener(RBWindow parent) {
+	SideOptionListener(RBWindow parent, int buttonNum) {
 		this.parent = parent;
+		this.buttonNum = buttonNum;
 	}
-	
+
 	public void actionPerformed(ActionEvent e) {
-		parent.changeView(ButtonTypes.BACK);
+		parent.changeView(ButtonTypes.SIDE_OPTION, buttonNum);
 	}
 	
 }

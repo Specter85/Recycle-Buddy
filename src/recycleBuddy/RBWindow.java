@@ -16,14 +16,16 @@ public class RBWindow extends JFrame {
 	
 	// References to the window's buttons.
 	private RBButton[] options;
+	private JButton[] sideOptions;
 	private JButton back;
 	private JButton home;
 	
-	// enum for different display options.
-	enum DisplayOption {
-		SHOW_ROOT,
-		SHOW_PARENT,
-		SHOW_CHILD
+	// enum for different button types options.
+	enum ButtonTypes {
+		HOME,
+		BACK,
+		OPTION,
+		SIDE_OPTION
 	}
 
 	RBWindow() {
@@ -34,6 +36,19 @@ public class RBWindow extends JFrame {
 		
 		// Set the layout for the window.
 		setLayout(new BorderLayout());
+		
+		// Create panel for the side pane buttons.
+		JPanel pPan = new JPanel();
+		pPan.setLayout(new GridLayout(6,1));
+		add(pPan, BorderLayout.WEST);
+		
+		// Add buttons to the side pane.
+		sideOptions = new JButton[NUM_OPTIONS];
+		for(int i = 0; i < sideOptions.length; i++) {
+			sideOptions[i] = new JButton("test");
+			sideOptions[i].addActionListener(new SideOptionListener(this, i));
+			pPan.add(sideOptions[i]);
+		}
 		
 		// Create panel for the option buttons.
 		JPanel bPan = new JPanel();
@@ -62,8 +77,8 @@ public class RBWindow extends JFrame {
 		pan.add(home);
 	}
 	
-	public void changeView(DisplayOption option, int buttonNum) {
-		if(option == DisplayOption.SHOW_CHILD) {
+	public void changeView(ButtonTypes option, int buttonNum) {
+		if(option == ButtonTypes.OPTION) {
 			for(int i = 0; i < options.length; i++) {
 				options[i].setText("test2");
 			}
@@ -75,8 +90,20 @@ public class RBWindow extends JFrame {
 		}
 	}
 	
-	public void changeView(DisplayOption option) {
+	public void changeView(ButtonTypes option) {
 		changeView(option, 0);
+	}
+	
+	public void refreshOption(int button, String text, String image, 
+			boolean active) {
+		options[button].setText(text);
+		options[button].setImage(image);
+		options[button].setEnabled(active);
+	}
+	
+	public void refreshSideOption(int button, String text, boolean active) {
+		sideOptions[button].setText(text);
+		sideOptions[button].setEnabled(active);
 	}
 	
 }

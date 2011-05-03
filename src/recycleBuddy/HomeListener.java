@@ -3,7 +3,7 @@ package recycleBuddy;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import recycleBuddy.RBWindow.DisplayOption;
+import recycleBuddy.RBWindow.ButtonTypes;
 
 public class HomeListener implements ActionListener {
 
@@ -14,7 +14,7 @@ public class HomeListener implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		parent.changeView(DisplayOption.SHOW_ROOT);
+		parent.changeView(ButtonTypes.HOME);
 	}
 	
 }
