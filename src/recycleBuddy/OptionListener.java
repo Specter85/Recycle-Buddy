@@ -3,20 +3,20 @@ package recycleBuddy;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import recycleBuddy.RBWindow.ButtonTypes;
+//import recycleBuddy.RBWindow.ButtonTypes;
 
 public class OptionListener implements ActionListener {
 	
-	private RBWindow parent;
+	private RBModel model;
 	private int buttonNum;
 	
-	OptionListener(RBWindow parent, int buttonNum) {
-		this.parent = parent;
+	OptionListener(RBModel model, int buttonNum) {
+		this.model = model;
 		this.buttonNum = buttonNum;
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		parent.changeView(ButtonTypes.OPTION, buttonNum);
+		model.click(buttonNum + 2);
 	}
 	
 }

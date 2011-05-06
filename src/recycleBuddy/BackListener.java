@@ -3,18 +3,18 @@ package recycleBuddy;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import recycleBuddy.RBWindow.ButtonTypes;
+//import recycleBuddy.RBWindow.ButtonTypes;
 
 public class BackListener implements ActionListener {
 
-	private RBWindow parent;
+	private RBModel model;
 	
-	BackListener(RBWindow parent) {
-		this.parent = parent;
+	BackListener(RBModel model) {
+		this.model = model;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		parent.changeView(ButtonTypes.BACK);
+		model.click(RBModel.BACK);
 	}
 	
 }

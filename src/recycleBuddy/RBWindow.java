@@ -20,6 +20,9 @@ public class RBWindow extends JFrame {
 	private JButton back;
 	private JButton home;
 	
+	// Reference to RecycleBuddy's model.
+	RBModel model;
+	
 	// enum for different button types options.
 	enum ButtonTypes {
 		HOME,
@@ -34,6 +37,9 @@ public class RBWindow extends JFrame {
 		setSize(WIDTH, HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		// Create RecycleBuddy's model.
+		model = new RBModel(NUM_OPTIONS);
+		
 		// Set the layout for the window.
 		setLayout(new BorderLayout());
 		
@@ -46,7 +52,7 @@ public class RBWindow extends JFrame {
 		sideOptions = new JButton[NUM_OPTIONS];
 		for(int i = 0; i < sideOptions.length; i++) {
 			sideOptions[i] = new JButton("test");
-			sideOptions[i].addActionListener(new SideOptionListener(this, i));
+			sideOptions[i].addActionListener(new SideOptionListener(model, i));
 			pPan.add(sideOptions[i]);
 		}
 		
@@ -59,7 +65,7 @@ public class RBWindow extends JFrame {
 		options = new RBButton[NUM_OPTIONS];
 		for(int i = 0; i < options.length; i++) {
 			options[i] = new RBButton("test", "test.png");
-			options[i].addActionListener(new OptionListener(this, i));
+			options[i].addActionListener(new OptionListener(model, i));
 			bPan.add(options[i]);
 		}
 		
@@ -70,10 +76,10 @@ public class RBWindow extends JFrame {
 		
 		// Add the home and back buttons.
 		back = new JButton("Back");
-		back.addActionListener(new BackListener(this));
+		back.addActionListener(new BackListener(model));
 		pan.add(back);	
 		home = new JButton("Home");
-		home.addActionListener(new HomeListener(this));
+		home.addActionListener(new HomeListener(model));
 		pan.add(home);
 	}
 	
