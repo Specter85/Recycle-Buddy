@@ -3,7 +3,7 @@ package recycleBuddy;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-//import recycleBuddy.RBWindow.ButtonTypes;
+import recycleBuddy.RBWindow.ButtonTypes;
 
 public class OptionListener implements ActionListener {
 	
@@ -16,7 +16,7 @@ public class OptionListener implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		model.click(buttonNum + 2);
+		model.click(ButtonTypes.OPTION, buttonNum);
 	}
 	
 }

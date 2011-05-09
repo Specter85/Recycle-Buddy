@@ -38,7 +38,7 @@ public class RBWindow extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Create RecycleBuddy's model.
-		model = new RBModel(NUM_OPTIONS);
+		model = new RBModel(NUM_OPTIONS, this);
 		
 		// Set the layout for the window.
 		setLayout(new BorderLayout());
