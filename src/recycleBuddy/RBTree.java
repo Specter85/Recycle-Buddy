@@ -12,12 +12,16 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @version 0.02
+ * @latest 5/8/11
+ * @version 0.0.03
+ * 5/3/11 0.0.01 - Created tree structure.
+ * 5/5/11 0.0.02 - added build(), full comments, and childNum
+ * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
  */
 
 package recycleBuddy;
 
-//import java.io.*; // streaming data
+import java.io.*; // streaming data
 
 
 public class RBTree {
@@ -49,23 +53,142 @@ public class RBTree {
 	* 
 	* @postcondition A full tree of recycling data is constructed.
 	*/
-	public void build(String dataPath) {
-		// open the initial file
+	public void build(String dataPath) throws FileNotFoundException {		
+		try {
+			// open the initial file
+			FileReader recycleFile = new FileReader(dataPath);
+			
+			// place in buffered reader for easier parsing
+			BufferedReader recycleData = new BufferedReader(recycleFile);
+			
+			String[] readData = new String[4];
+			
+			// close the initial file
+			
+			// for each file to be read
+			//   open the file
+			//   read the data to:
+			
+			//discard self-identification
+			for (int x = 0; x < 6; ++x) {
+				if (recycleData.ready()) {
+					recycleData.readLine();
+				}				
+			}
+			
+			
+			for (int i = 0; i < 4; ++i) {
+				if (recycleData.ready()) {
+					readData[i] = recycleData.readLine();
+				}
+			}
+			// fill this tree's node			
+			thisNode.setTitle(readData[0]);
+			thisNode.setText(readData[1]);
+			thisNode.setImagePath(readData[2]);
+			childNum = Integer.parseInt(readData[3]);
+				
+			// lengthwise or breadthwise recursion here?
+			
+			// create children trees
+			
+			// base case
+			if (0 == childNum) {
+				recycleData.readLine();
+				return;
+			}
+			else {
+				//children = new RBTree[childNum];
+				
+				for (int offspring = 0; offspring < childNum; ++offspring) {
+					children[offspring] = new RBTree(this, offspring);
+					children[offspring].build(recycleData);
+				}
+			}
+
+			
+			//     return to parent if there are no more children to create
+			//       and parent is not null
+			//     stop when there are no more children to create and parent is null
+			//   close the file
+			recycleData.close();
+			
+			// Is this command necessary?
+			recycleFile.close();
+		}
+		catch (Exception e) {
+			
+		}
 		
-		// read data
 		
-		// close the initial file
 		
-		// for each file to be read
-		//   open the file
-		//   read the data to:
-		//     fill this tree's node
-		//     create children trees
-		//     return to parent if there are no more children to create
-		//       and parent is not null
-		//     stop when there are no more children to create and parent is null
-		//   close the file
+
 	} // end build
+	
+	
+	
+	/**
+	* build (overloaded)
+	*
+	* Builds a full data tree based on external data.
+	* 
+	* @param path for file stream
+	* 
+	* @postcondition A full tree of recycling data is constructed.
+	*/
+	public void build(BufferedReader recycleData) throws FileNotFoundException {		
+		try {			
+			String[] readData = new String[4];
+			
+			// close the initial file
+			
+			// for each file to be read
+			//   open the file
+			//   read the data to:
+			
+			//discard self-identification
+			for (int x = 0; x < 6; ++x) {
+				if (recycleData.ready()) {
+					recycleData.readLine();
+				}				
+			}
+			
+			
+			for (int i = 0; i < 4; ++i) {
+				if (recycleData.ready()) {
+					readData[i] = recycleData.readLine();
+				}
+			}
+			// fill this tree's node			
+			thisNode.setTitle(readData[0]);
+			thisNode.setText(readData[1]);
+			thisNode.setImagePath(readData[2]);
+			childNum = Integer.parseInt(readData[3]);
+				
+			// lengthwise or breadthwise recursion here?
+			
+			// create children trees
+			
+			// base case
+			if (0 == childNum) {
+				recycleData.readLine();
+				return;
+			}
+			else {
+				//children = new RBTree[childNum];
+				
+				for (int offspring = 0; offspring < childNum; ++offspring) {
+					children[offspring] = new RBTree(this, offspring);
+					children[offspring].build(recycleData);
+				}
+			}
+		}
+		catch (Exception e) {
+			
+		}
+	} // end overloaded build
+	
+	
 	
 	// ACCESSORS
 	// Straightforward code; comment later.

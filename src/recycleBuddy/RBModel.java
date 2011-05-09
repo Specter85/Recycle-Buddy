@@ -11,18 +11,32 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @version 0.02
+ * @latest 5/8/11
+ * @version 0.0.04
+ * 5/3/11 0.0.01 - coded constructor and click()
+ * 5/5/11 0.0.02 - added childOffset support for more children than displays,
+ * 	added full commenting
+ * 5/7/11 0.0.03 - changed click() to select(), 
+ * 	added RBWindow.ButtonTypes enum to select() params
+ *  changed version numbering scheme
+ *  started version change log
+ * 5/8/11 0.0.04 - added RBWindow reference to constructor
+ *  select() now calls refreshOption() of RBWindow
+ *  select() can handle fewer children in the data tree than displays
+ *  set INITIALFILEPATH to StartZFR.txt
  */
 
 package recycleBuddy;
 
+// enum for select() function
+import recycleBuddy.RBWindow.ButtonTypes;
 //import java.io.*; // streaming data
 
 
 public class RBModel {
 	// CONSTANT DECLARATIONS
 	// Initial path to data. (TO BE DEFINED)
-	static String INITIALFILEPATH = "UNDEFINED";
+	static String INITIALFILEPATH = "StartZFR.txt";
 	// Note - find a better way to do this enumeration:
 	static int HOME = 0; // control requiring root display
 	static int BACK = 1; // control requiring parent display
@@ -41,7 +55,7 @@ public class RBModel {
 	* 
 	* @param The quantity of potential different control inputs.
 	*/
-	public RBModel(int howManyControls) {
+	public RBModel(int howManyControls, RBWindow refViews) {
 		try {
 			// Create a new Recycle Buddy data tree.
 			// As the root, its parent is null.
@@ -54,13 +68,19 @@ public class RBModel {
 			treeTraverser = rootTree;
 			
 			// Set the number of controls.
-			controlAmt = howManyControls;
+			//controlAmt = howManyControls;
 			
 			// Set the number of displays.
-			displayAmt = controlAmt - SPECIALCONTROLOFFSET;
+			//displayAmt = controlAmt - SPECIALCONTROLOFFSET;
+			
+			displayAmt = howManyControls;
+			
 			
 			// Initialize child offset.
 			childOffset = 0;
+			
+			// create reference to view
+			view = refViews;
 		}
 		catch (Exception e) {
 			// add exception handling
@@ -87,16 +107,16 @@ public class RBModel {
 	* 
 	* @postcondition Each display will be set to the correct information.
 	*/
-	public void click(int whichControl) {
+	public void click(ButtonTypes selectionType, int whichDisplay) {
 		try {
 			// VARIABLE DECLARATIONS
 			// which (if non-negative) viewer-controller pair sent input
-			int whichDisplay = whichControl - SPECIALCONTROLOFFSET;
+			//int whichDisplay = whichOption - SPECIALCONTROLOFFSET;
 			
 			// First, go to the correct portion of the tree.
 			
 			// We want to display the initial data
-			if (HOME == whichControl) {
+			if (ButtonTypes.HOME == selectionType) {
 				// Go back to the root.
 				treeTraverser = rootTree;
 				
@@ -105,7 +125,7 @@ public class RBModel {
 				
 			} // end if HOME
 			// We want to display the previous data
-			else if (BACK == whichControl) {
+			else if (ButtonTypes.BACK == selectionType) {
 				// DECLARE VARIABLES
 				// child order of this tree
 				int whichChild = treeTraverser.getChildNum();
@@ -119,12 +139,15 @@ public class RBModel {
 				// Go back to the parent tree.
 				treeTraverser = treeTraverser.getParent();							
 			} // end if BACK
+			/*
 			// We want to display more siblings
 			else if (SEEMORE == whichControl) {
 				// probable off-by-one error
 				childOffset += displayAmt;
 
 			} // end if SEEMORE
+			*/
+			
 			// We want to display the selected data.
 			else {
 				// Go to the selected child tree.
@@ -136,31 +159,47 @@ public class RBModel {
 			} // end else normal selection
 			
 			// Then, display the information for the number of displays.
-
-			// NOTE
-			// To properly implement the following section in MVC, there
-			// should be a clock function in RBModel 
-			// that forces a refresh of all the displays every few milliseconds
-			// if the tree traverser changed.
+			
+			// This is where logic to control the difference between
+			// the number of displays and number of children should lie.
+			
+			// Three cases:
+			
 			for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
-				// call each display in turn and pass it the contents of
-				// each RBTreeNode in each of the children of the tree traverser
+				// get this numbered child of the current node
+				RBTree treeDisplayInfo = treeTraverser.getChild(i);
 				
-				// This is where logic to control the difference between
-				// the number of displays and number of children should lie.
+				// get the node
 				
-				// Three cases:
-				// 1) There are fewer children than there are displays.
-				// Solution: disable extra displays.
-				
-				// 2) There are as many children as displays.
+				// 1) There are as many children as displays.
 				// Solution: perform normally.
-				
+				if (treeDisplayInfo != null) {
+					RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
+					
+					// unpack the node
+					String name, text, img;
+					
+					name = nodeDisplayInfo.getTitle();
+					text = nodeDisplayInfo.getText();
+					img = nodeDisplayInfo.getImagePath();
+					
+					// call each display in turn and pass it the contents of
+					// each RBTreeNode in each of the children of the tree traverser
+					view.refreshOption(i, text, img, true);
+				}
+				// 2) There are fewer children than there are displays.
+				// Solution: disable extra displays.
+				else // there aren't enough children to be displayed
+				{
+					// display a "disabled" button
+					view.refreshOption(i, "placeholder: no info", null, false);
+				}
+								
 				// 3) There are more children than there are displays.
 				// Solution: display "see more" information 
 				// as the first (last?) display call
 				
-				// Currently, this algorithm will probably produce
+				// Currently, this algorithm may produce
 				// results that are off by one.				
 			}			
 		}
@@ -177,4 +216,5 @@ public class RBModel {
 	private int childOffset; // offset for displaying siblings
 	private RBTree rootTree; // a tree containing recycling data
 	private RBTree treeTraverser; // pointer to various parts of the data tree
+	private RBWindow view;
 } // end class
