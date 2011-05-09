@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/8/11
- * @version 0.0.04
+ * @latest 5/9/11
+ * @version 0.0.05
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -24,6 +24,7 @@
  *  select() now calls refreshOption() of RBWindow
  *  select() can handle fewer children in the data tree than displays
  *  set INITIALFILEPATH to StartZFR.txt
+ * 5/9/11 0.0.05 - added "Side Option" selection to select() function
  */
 
 package recycleBuddy;
@@ -38,10 +39,12 @@ public class RBModel {
 	// Initial path to data. (TO BE DEFINED)
 	static String INITIALFILEPATH = "StartZFR.txt";
 	// Note - find a better way to do this enumeration:
+	/*
 	static int HOME = 0; // control requiring root display
 	static int BACK = 1; // control requiring parent display
 	static int SEEMORE = 2;
 	static int SPECIALCONTROLOFFSET = 3; // number of special controls
+	*/
 	
 	// DATA COMPONENT INTERACTIVE SECTION
 	// INCLUDES CONSTRUCTOR
@@ -148,15 +151,27 @@ public class RBModel {
 			} // end if SEEMORE
 			*/
 			
+			// the side bar displays the root's children
+			else if (ButtonTypes.SIDE_OPTION == selectionType){
+				// now we are strictly selecting children of the root
+				treeTraverser = rootTree.getChild(whichDisplay);
+				
+				// Reset child offset
+				childOffset = 0;
+				
+				
+				
+			} // end else if side option selection
+			
 			// We want to display the selected data.
-			else {
+			else if (ButtonTypes.OPTION == selectionType){
 				// Go to the selected child tree.
 				treeTraverser = 
 					treeTraverser.getChild(whichDisplay + childOffset);
 				
 				// Reset child offset
 				childOffset = 0;
-			} // end else normal selection
+			} // end else if normal selection
 			
 			// Then, display the information for the number of displays.
 			
