@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
-import java.awt.Image;
+import javax.swing.JTextArea;
 import java.awt.CardLayout;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -29,8 +29,8 @@ public class RBWindow extends JFrame {
 	private JPanel bPan;
 	private JPanel tPan;
 	
-	// Refrences to tPan's text and image.
-	private JLabel tPanText;
+	// References to tPan's text and image.
+	private JTextArea tPanText;
 	private JLabel tPanImage;
 	
 	// Strings for the panels.
@@ -99,12 +99,14 @@ public class RBWindow extends JFrame {
 		mainPan.add(tPan, TEXT_PANEL);
 		
 		// Add text to the text panel.
-		tPanText = new JLabel("This is a test.");
+		tPanText = new JTextArea("This is a test.");
+		tPanText.setEditable(false);
 		tPan.add(tPanText, BorderLayout.CENTER);
 		
 		// Add an image to the text panel.
 		tPanImage = new JLabel();
-		tPanImage.setIcon(new IconImage("test.png"));
+		tPanImage.setIcon(new ImageIcon("test.png"));
+		tPan.add(tPanImage, BorderLayout.NORTH);
 		
 		// Create panel for the home and back buttons.
 		JPanel pan = new JPanel();
@@ -113,15 +115,15 @@ public class RBWindow extends JFrame {
 		
 		// Add the home and back buttons.
 		back = new JButton("Back");
-		back.addActionListener(new BackListener(/*model*/this));
+		back.addActionListener(new BackListener(model));
 		pan.add(back);	
 		home = new JButton("Home");
-		home.addActionListener(new HomeListener(/*model*/this));
+		home.addActionListener(new HomeListener(model));
 		pan.add(home);
 	}
 	
 	public void changeView(ButtonTypes option, int buttonNum) {
-		 CardLayout cl = (CardLayout)(mainPan.getLayout());
+		CardLayout cl = (CardLayout)(mainPan.getLayout());
 		if(option == ButtonTypes.HOME) {
 			/*for(int i = 0; i < options.length; i++) {
 				options[i].setText("test2");
@@ -150,6 +152,21 @@ public class RBWindow extends JFrame {
 	public void refreshSideOption(int button, String text, boolean active) {
 		sideOptions[button].setText(text);
 		sideOptions[button].setEnabled(active);
+	}
+	
+	public void refreshTextPane(String text, String image) {
+		tPanText.setText(text);
+		tPanImage.setIcon(new ImageIcon(image));
+	}
+	
+	public void showButtonPane() {
+		CardLayout cl = (CardLayout)(mainPan.getLayout());
+		cl.show(mainPan, BUTTON_PANEL);
+	}
+	
+	public void showTextPane() {
+		CardLayout cl = (CardLayout)(mainPan.getLayout());
+		cl.show(mainPan, TEXT_PANEL);
 	}
 	
 }
