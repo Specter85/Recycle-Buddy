@@ -2,11 +2,12 @@ package recycleBuddy;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
 import java.awt.CardLayout;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 
 public class RBWindow extends JFrame {
 	
@@ -26,12 +27,16 @@ public class RBWindow extends JFrame {
 	private JPanel bPan;
 	private JPanel tPan;
 	
+	// Refrences to tPan's text and image.
+	private JLabel tPanText;
+	private JLabel tPanImage;
+	
 	// Strings for the panels.
-	static final String BUTTON_PANEL = "button panel";
-	static final String TEXT_PANEL = "text panel";
+	private static final String BUTTON_PANEL = "button panel";
+	private static final String TEXT_PANEL = "text panel";
 	
 	// Reference to RecycleBuddy's model.
-	RBModel model;
+	private RBModel model;
 	
 	// enum for different button types options.
 	enum ButtonTypes {
@@ -66,11 +71,12 @@ public class RBWindow extends JFrame {
 			pPan.add(sideOptions[i]);
 		}
 		
+		// Make the main panel and set it to CardLayout.
 		mainPan = new JPanel();
 		mainPan.setLayout(new CardLayout());
 		add(mainPan, BorderLayout.CENTER);
 		
-		// Create panel for the option buttons.
+		// Create panel for the option buttons and add it to the main panel.
 		bPan = new JPanel();
 		bPan.setLayout(new GridLayout(2, 3));
 		mainPan.add(bPan, BUTTON_PANEL);
@@ -83,8 +89,18 @@ public class RBWindow extends JFrame {
 			bPan.add(options[i]);
 		}
 		
+		// Create the text panel and add it to the main panel.
 		tPan = new JPanel();
+		tPan.setLayout(new BorderLayout());
 		mainPan.add(tPan, TEXT_PANEL);
+		
+		// Add text to the text panel.
+		tPanText = new JLabel("This is a test.");
+		tPan.add(tPanText, BorderLayout.CENTER);
+		
+		// Add an image to the text panel.
+		tPanImage = new JLabel();
+		tPanImage.setIcon(new IconImage("test.png"));
 		
 		// Create panel for the home and back buttons.
 		JPanel pan = new JPanel();
