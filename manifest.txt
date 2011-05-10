@@ -1,0 +1,2 @@
+Class-Path: bin\.
+Main-Class: recycleBuddy.Main
