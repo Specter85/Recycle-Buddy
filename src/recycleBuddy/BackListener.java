@@ -7,14 +7,16 @@ import recycleBuddy.RBWindow.ButtonTypes;
 
 public class BackListener implements ActionListener {
 
-	private RBModel model;
+	//private RBModel model;
+	private RBWindow model;
 	
-	BackListener(RBModel model) {
+	BackListener(/*RBModel model*/RBWindow model) {
 		this.model = model;
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		model.click(ButtonTypes.BACK, 0);
+		//model.click(ButtonTypes.HOME, 0);
+		model.changeView(ButtonTypes.BACK);
 	}
 	
 }

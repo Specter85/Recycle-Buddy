@@ -2,6 +2,7 @@ package recycleBuddy;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import java.awt.CardLayout;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -19,6 +20,15 @@ public class RBWindow extends JFrame {
 	private JButton[] sideOptions;
 	private JButton back;
 	private JButton home;
+	
+	// References to the window's main panels and their pane.
+	private JPanel mainPan;
+	private JPanel bPan;
+	private JPanel tPan;
+	
+	// Strings for the panels.
+	static final String BUTTON_PANEL = "button panel";
+	static final String TEXT_PANEL = "text panel";
 	
 	// Reference to RecycleBuddy's model.
 	RBModel model;
@@ -56,10 +66,14 @@ public class RBWindow extends JFrame {
 			pPan.add(sideOptions[i]);
 		}
 		
+		mainPan = new JPanel();
+		mainPan.setLayout(new CardLayout());
+		add(mainPan, BorderLayout.CENTER);
+		
 		// Create panel for the option buttons.
-		JPanel bPan = new JPanel();
+		bPan = new JPanel();
 		bPan.setLayout(new GridLayout(2, 3));
-		add(bPan, BorderLayout.CENTER);
+		mainPan.add(bPan, BUTTON_PANEL);
 		
 		// Add buttons to the options panel.
 		options = new RBButton[NUM_OPTIONS];
@@ -69,6 +83,9 @@ public class RBWindow extends JFrame {
 			bPan.add(options[i]);
 		}
 		
+		tPan = new JPanel();
+		mainPan.add(tPan, TEXT_PANEL);
+		
 		// Create panel for the home and back buttons.
 		JPanel pan = new JPanel();
 		pan.setLayout(new FlowLayout());
@@ -76,23 +93,26 @@ public class RBWindow extends JFrame {
 		
 		// Add the home and back buttons.
 		back = new JButton("Back");
-		back.addActionListener(new BackListener(model));
+		back.addActionListener(new BackListener(/*model*/this));
 		pan.add(back);	
 		home = new JButton("Home");
-		home.addActionListener(new HomeListener(model));
+		home.addActionListener(new HomeListener(/*model*/this));
 		pan.add(home);
 	}
 	
 	public void changeView(ButtonTypes option, int buttonNum) {
-		if(option == ButtonTypes.OPTION) {
-			for(int i = 0; i < options.length; i++) {
+		 CardLayout cl = (CardLayout)(mainPan.getLayout());
+		if(option == ButtonTypes.HOME) {
+			/*for(int i = 0; i < options.length; i++) {
 				options[i].setText("test2");
-			}
+			}*/
+			cl.show(mainPan, BUTTON_PANEL);
 		}
-		else {
-			for(int i = 0; i < options.length; i++) {
+		else if(option == ButtonTypes.BACK) {
+			/*for(int i = 0; i < options.length; i++) {
 				options[i].setText("test");
-			}
+			}*/
+			cl.show(mainPan, TEXT_PANEL);
 		}
 	}
 	
