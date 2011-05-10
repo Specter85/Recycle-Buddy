@@ -1,10 +1,13 @@
 package recycleBuddy;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
+
 import javax.swing.JPanel;
 
 public class RBWindow extends JFrame {
@@ -36,6 +39,8 @@ public class RBWindow extends JFrame {
 		super();
 		setSize(WIDTH, HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ImageIcon temp = new ImageIcon("RecycleBuddy.png");
+		this.setIconImage(temp.getImage());
 		
 		// Create RecycleBuddy's model.
 		model = new RBModel(NUM_OPTIONS, this);
