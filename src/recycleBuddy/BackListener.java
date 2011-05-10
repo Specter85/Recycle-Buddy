@@ -14,7 +14,7 @@ public class BackListener implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		model.click(ButtonTypes.BACK, 0);
+		model.click(ButtonTypes.HOME, 0);
 	}
 	
 }
