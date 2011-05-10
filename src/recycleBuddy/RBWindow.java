@@ -40,6 +40,7 @@ public class RBWindow extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ImageIcon temp = new ImageIcon("RecycleBuddy.png");
 		this.setIconImage(temp.getImage());
+		this.setTitle("Recycle Buddy");
 		
 		// Create RecycleBuddy's model.
 		model = new RBModel(NUM_OPTIONS, this);
