@@ -6,7 +6,6 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.Image;
 
 import javax.swing.JPanel;
 
@@ -24,7 +23,7 @@ public class RBWindow extends JFrame {
 	private JButton home;
 	
 	// Reference to RecycleBuddy's model.
-	RBModel model;
+	private RBModel model;
 	
 	// enum for different button types options.
 	enum ButtonTypes {
