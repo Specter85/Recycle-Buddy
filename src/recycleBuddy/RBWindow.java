@@ -121,6 +121,9 @@ public class RBWindow extends JFrame {
 		home = new JButton("Home");
 		home.addActionListener(new HomeListener(model));
 		pan.add(home);
+		
+		// Set the initial state of the window.
+		model.setInitialState();
 	}
 	
 	public void changeView(ButtonTypes option, int buttonNum) {
