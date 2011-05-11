@@ -25,6 +25,11 @@
  *  select() can handle fewer children in the data tree than displays
  *  set INITIALFILEPATH to StartZFR.txt
  * 5/9/11 0.0.05 - added "Side Option" selection to select() function
+ * 5/11/11 0.0.06 - added null handling for BACK selection of click()
+ *  added precondition 5 to click()
+ *  added primitive exception handling (needs to be improved) to class
+ *  added setInitialState()
+ *  added hard stop to BACK option in click()
  */
 
 package recycleBuddy;
@@ -86,12 +91,69 @@ public class RBModel {
 			view = refViews;
 		}
 		catch (Exception e) {
-			// add exception handling
+			// add better exception handling
 			// focus on io exceptions
+			
+			e.printStackTrace();
 		}
 	} // end RBModel
 	
 	// VIEWER-CONTROLLER (UI) COMPONENT INTERACTIVE SECTION	
+	/**
+	 * setInitialState
+	 * 
+	 * Sends the first display information to be shown.
+	 * 
+	 * @preconditions 1) Number of display areas is known
+	 *   2) Correct command to call displays in Viewer module is known.
+	 *   3) Data tree is built.
+	 *   
+	 * @postcondition Each display of the Viewer module will be set to its
+	 *   correct, initialized position.
+	 */
+	public void setInitialState() {
+		// for each display area
+		for (int i = 0; i < displayAmt; ++i) {
+			// display on the main button and display on a side button
+			
+			// get this numbered child of the current node
+			RBTree treeDisplayInfo = treeTraverser.getChild(i);
+			
+			// get the node
+			
+			// Three cases:
+			// 1) There are as many children as displays.
+			// Solution: perform normally.
+			if (treeDisplayInfo != null) {
+				RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
+				
+				// unpack the node
+				String name, text, img;
+				
+				name = nodeDisplayInfo.getTitle();
+				text = nodeDisplayInfo.getText();
+				img = nodeDisplayInfo.getImagePath();
+				
+				// call each display in turn and pass it the contents of
+				// each RBTreeNode in each of the children of the tree traverser
+				view.refreshOption(i, text, img, true);
+				
+				// ..and set the sidebar displays
+				view.refreshSideOption(i, text, true);
+			}
+			// 2) There are fewer children than there are displays.
+			// Solution: disable extra displays.
+			else // there aren't enough children to be displayed
+			{
+				// display a "disabled" button
+				view.refreshOption(i, "placeholder: no info", null, false);
+				
+				// ...and set the sidebar displays
+				view.refreshSideOption(i, "placeholder: no info", false);
+			}
+		}
+	}
+	
 	/**
 	* click
 	*
@@ -105,6 +167,7 @@ public class RBModel {
 	*     3c) Controls 2+ correspond to category selections.
 	*   4) Number of displays is equal to number of controls - number
 	*     of special controls (aka SPECIALCONTROLOFFSET)
+	*   5) Data tree is built
 	* 
 	* @param whichControl called the display
 	* 
@@ -139,8 +202,11 @@ public class RBModel {
 					childOffset += displayAmt;
 				}
 									
-				// Go back to the parent tree.
-				treeTraverser = treeTraverser.getParent();							
+				// Go back to the parent tree, if it exists
+				if (null != treeTraverser.getParent()) {
+					treeTraverser = treeTraverser.getParent();
+				}
+											
 			} // end if BACK
 			/*
 			// We want to display more siblings
@@ -173,19 +239,18 @@ public class RBModel {
 				childOffset = 0;
 			} // end else if normal selection
 			
+			
 			// Then, display the information for the number of displays.
 			
 			// This is where logic to control the difference between
-			// the number of displays and number of children should lie.
-			
-			// Three cases:
-			
+			// the number of displays and number of children should lie.									
 			for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
 				// get this numbered child of the current node
 				RBTree treeDisplayInfo = treeTraverser.getChild(i);
 				
 				// get the node
 				
+				// Three cases:
 				// 1) There are as many children as displays.
 				// Solution: perform normally.
 				if (treeDisplayInfo != null) {
@@ -216,12 +281,13 @@ public class RBModel {
 				
 				// Currently, this algorithm may produce
 				// results that are off by one.				
-			}			
+			} // next display		
 		}
 		catch (Exception e) {
-			// add exception handling
+			// add better exception handling
 			// focus on out of range exceptions
 			// ...and null exceptions
+			e.printStackTrace();
 		}
 	} // end click
 	
