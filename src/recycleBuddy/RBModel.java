@@ -12,7 +12,7 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 5/11/11
- * @version 0.0.07
+ * @version 0.1.00
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -30,7 +30,8 @@
  *  added primitive exception handling (needs to be improved) to class
  *  added setInitialState()
  *  added hard stop to BACK option in click()
- * 5/11/09 0.0.07 - remove all null passing
+ * 5/11/11 0.0.07 - remove all null passing
+ * 5/11/11 0.1.00 - ZFR candidate passes data to UI
  */
 
 package recycleBuddy;
@@ -73,8 +74,9 @@ public class RBModel {
 			// Build the tree with the file path to the data.
 			rootTree.build(INITIALFILEPATH);
 			
+		
 			// Point the tree traverser to the root.
-			treeTraverser = rootTree;
+			treeTraverser = rootTree;			
 			
 			// Set the number of controls.
 			//controlAmt = howManyControls;
@@ -115,17 +117,9 @@ public class RBModel {
 	public void setInitialState() {
 		// for each display area
 		for (int i = 0; i < displayAmt; ++i) {
-			// display on the main button and display on a side button
-			
-			// get this numbered child of the current node
-			RBTree treeDisplayInfo = treeTraverser.getChild(i);
-			
-			// get the node
-			
-			// Three cases:
-			// 1) There are as many children as displays.
-			// Solution: perform normally.
-			if (treeDisplayInfo != null) {
+			// display on the main button and display on a side button			
+			if (i < treeTraverser.getChildNum()) {
+				RBTree treeDisplayInfo = treeTraverser.getChild(i);
 				RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
 				
 				// unpack the node
@@ -142,12 +136,9 @@ public class RBModel {
 				// ..and set the sidebar displays
 				view.refreshSideOption(i, text, true);
 			}
-			// 2) There are fewer children than there are displays.
-			// Solution: disable extra displays.
-			else // there aren't enough children to be displayed
-			{
+			else {
 				// display a "disabled" button
-				view.refreshOption(i, "placeholder: no info", "plasticBin.jpg", false);
+				view.refreshOption(i, "placeholder: no info", "test.png", false);
 				
 				// ...and set the sidebar displays
 				view.refreshSideOption(i, "placeholder: no info", false);
@@ -193,21 +184,21 @@ public class RBModel {
 			} // end if HOME
 			// We want to display the previous data
 			else if (ButtonTypes.BACK == selectionType) {
-				// DECLARE VARIABLES
-				// child order of this tree
-				int whichChild = treeTraverser.getChildNum();
-				
+				// DECLARE VARIABLES												
+				// child order of this tree (not available)				
+				//int whichChild = treeTraverser.getChildNum();
+												
 				// probable off-by-one error
 				// recalculate offset
+				/*
 				while ((whichChild - childOffset) > displayAmt) {
 					childOffset += displayAmt;
-				}
+				}*/
 									
 				// Go back to the parent tree, if it exists
 				if (null != treeTraverser.getParent()) {
 					treeTraverser = treeTraverser.getParent();
-				}
-											
+				}																							
 			} // end if BACK
 			/*
 			// We want to display more siblings
@@ -221,16 +212,12 @@ public class RBModel {
 			// the side bar displays the root's children
 			else if (ButtonTypes.SIDE_OPTION == selectionType){
 				// now we are strictly selecting children of the root
-				if (treeTraverser.getChildNum() != 0) {
-					treeTraverser = rootTree.getChild(whichDisplay);
-					childOffset = 0;
-				}
 				
-				// Reset child offset
+				treeTraverser = rootTree.getChild(whichDisplay);
+				childOffset = 0;
 				
 				
-				
-				
+				// Reset child offset																
 			} // end else if side option selection
 			
 			// We want to display the selected data.
@@ -249,45 +236,43 @@ public class RBModel {
 			// Then, display the information for the number of displays.
 			
 			// This is where logic to control the difference between
-			// the number of displays and number of children should lie.									
-			for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
-				// get this numbered child of the current node
-				RBTree treeDisplayInfo = treeTraverser.getChild(i);
-				
-				// get the node
+			// the number of displays and number of children should lie.	
+			if (treeTraverser.getChildNum() > 0) {
+				for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
+					// get this numbered child of the current node
+					if (i < treeTraverser.getChildNum())
+					{
+						RBTree treeDisplayInfo = treeTraverser.getChild(i);
+						RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
+						
+						// unpack the node
+						String name, text, img;
+						
+						name = nodeDisplayInfo.getTitle();
+						text = nodeDisplayInfo.getText();
+						img = nodeDisplayInfo.getImagePath();
+						
+						// call each display in turn and pass it the contents of
+						// each RBTreeNode in each of the children of the tree traverser
+						view.refreshOption(i, text, img, true);
+					}
+					else 
+					{
+						// display a "disabled" button
+						view.refreshOption(i, "placeholder: no info", "test.png", false);
+					}
+				} // end next
+			}
+			// else do nothing
 				
 				// Three cases:
 				// 1) There are as many children as displays.
 				// Solution: perform normally.
-				if (treeDisplayInfo != null) {
-					RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
-					
-					// unpack the node
-					String name, text, img;
-					
-					name = nodeDisplayInfo.getTitle();
-					text = nodeDisplayInfo.getText();
-					img = nodeDisplayInfo.getImagePath();
-					
-					// call each display in turn and pass it the contents of
-					// each RBTreeNode in each of the children of the tree traverser
-					view.refreshOption(i, text, img, true);
-				}
 				// 2) There are fewer children than there are displays.
-				// Solution: disable extra displays.
-				else // there aren't enough children to be displayed
-				{
-					// display a "disabled" button
-					view.refreshOption(i, "placeholder: no info", "test.png", false);
-				}
-								
+				// Solution: disable extra displays.	
 				// 3) There are more children than there are displays.
 				// Solution: display "see more" information 
-				// as the first (last?) display call
-				
-				// Currently, this algorithm may produce
-				// results that are off by one.				
-			} // next display		
+	
 		}
 		catch (Exception e) {
 			// add better exception handling

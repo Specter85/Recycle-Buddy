@@ -13,12 +13,13 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 5/11/11
- * @version 0.0.05
+ * @version 0.1.00
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
  * 5/11/11 0.0.04 - build tree with dummy data
  * 5/11/11 0.0.05 - read and output data file
+ * 5/11/11 0.1.00 - ZFR Candidate, reads data file, passes it to UI
  */
 
 package recycleBuddy;
@@ -34,7 +35,8 @@ public class RBTree {
 	*
 	* Creates an empty tree with a parent and an empty node.
 	* 
-	* @param reference to parent (can be null, but must be explicitly passed)
+	* @params reference to parent (can be null, but must be explicitly passed)
+	*   number of children (not currently needed)
 	*/
 	public RBTree(RBTree caller, int childNumber) {
 		
@@ -59,146 +61,15 @@ public class RBTree {
 	*/
 	public void build(String dataPath) throws FileNotFoundException {		
 		try {
-
 			
-			// Create dummy data
-			thisNode.setImagePath("plasticBin.jpg");
-			thisNode.setText("This is the top");
-			thisNode.setTitle("root");
-			
-			children = new RBTree[6];
-			
-			for (int j = 0; j < 6; ++j) {
-				children[j] = new RBTree(this, 0);
-			}
-			
-			
-			
-			RBTreeNode childNode = children[0].getThisNode();
-
-			
-			childNode.setImagePath("child.jpg");
-			childNode.setText("first child");
-			childNode.setTitle("1st");
-			
-			childNode = children[1].getThisNode();
-			
-			childNode.setImagePath("child.jpg");
-			childNode.setText("second child");
-			childNode.setTitle("2nd");
-			
-
-			childNode = children[2].getThisNode();
-			
-			childNode.setImagePath("child.jpg");
-			childNode.setText("further children");
-			childNode.setTitle("more");
-			
-
-			childNode = children[3].getThisNode();
-			
-			childNode.setImagePath("child.jpg");
-			childNode.setText("further children");
-			childNode.setTitle("more");
-			
-			childNode = children[4].getThisNode();
-			
-			childNode.setImagePath("child.jpg");
-			childNode.setText("further children");
-			childNode.setTitle("more");
-			
-			childNode = children[5].getThisNode();
-
-			childNode.setImagePath("child.jpg");
-			childNode.setText("further children");
-			childNode.setTitle("more");
-			
-
-			// read the data file, output it in console
 			Scanner RBScanner = new Scanner(new File(dataPath));
 			
-
-			
-			while (RBScanner.hasNext()) {
-				String strOneTextLine;
-				strOneTextLine = RBScanner.nextLine(); 
-				System.out.println("Are we reading?");
-				System.out.println(strOneTextLine);
-			}
-			
-			
-			/* Remove all data reading + tree building
-			// open the initial file
-			FileReader recycleFile = new FileReader(dataPath);
-			
-			// place in buffered reader for easier parsing
-			BufferedReader recycleData = new BufferedReader(recycleFile);
-			
-			String[] readData = new String[4];
-			
-			// close the initial file
-			
-			// for each file to be read
-			//   open the file
-			//   read the data to:
-			
-			//discard self-identification
-			for (int x = 0; x < 6; ++x) {
-				if (recycleData.ready()) {
-					recycleData.readLine();
-				}				
-			}
-			
-			
-			for (int i = 0; i < 4; ++i) {
-				if (recycleData.ready()) {
-					readData[i] = recycleData.readLine();
-				}
-			}
-			// fill this tree's node			
-			thisNode.setTitle(readData[0]);
-			thisNode.setText(readData[1]);
-			thisNode.setImagePath(readData[2]);
-			childNum = Integer.parseInt(readData[3]);
-				
-			// lengthwise or breadthwise recursion here?
-			
-			// create children trees
-			
-			// base case
-			if (0 == childNum) {
-				recycleData.readLine();
-				return;
-			}
-			else {
-				//children = new RBTree[childNum];
-				
-				for (int offspring = 0; offspring < childNum; ++offspring) {
-					children[offspring] = new RBTree(this, offspring);
-					children[offspring].build(recycleData);
-				}
-			}
-
-			
-			//     return to parent if there are no more children to create
-			//       and parent is not null
-			//     stop when there are no more children to create and parent is null
-			//   close the file
-			recycleData.close();
-			
-			// Is this command necessary?
-			recycleFile.close();
-			*/
-			
-			
+			buildHelper(RBScanner);			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		
-		
-
 	} // end build
 	
 	
@@ -209,59 +80,40 @@ public class RBTree {
 	* Private helper class.
 	* Builds a full data tree based on external data.
 	* 
+	* @precondition a properly formed filestream (no error checking yet)
+	* 
 	* @param path for file stream
 	* 
 	* @postcondition A full tree of recycling data is constructed.
 	*/
-	private void buildHelper(BufferedReader recycleData) throws FileNotFoundException {		
-		try {			
-			String[] readData = new String[4];
+	private void buildHelper(Scanner recycleData) throws FileNotFoundException {		
+		try {
+			// read data for this part of the tree
+			thisNode.setTitle(recycleData.nextLine());
+			thisNode.setText(recycleData.nextLine());
+			thisNode.setImagePath(recycleData.nextLine());
+						
+			// find number of children
+			childNum = Integer.parseInt(recycleData.nextLine());
 			
-			// close the initial file
+			// set current child count
+			int currentChild = 0;
 			
-			// for each file to be read
-			//   open the file
-			//   read the data to:
-			
-			//discard self-identification
-			for (int x = 0; x < 6; ++x) {
-				if (recycleData.ready()) {
-					recycleData.readLine();
-				}				
-			}
-			
-			
-			for (int i = 0; i < 4; ++i) {
-				if (recycleData.ready()) {
-					readData[i] = recycleData.readLine();
-				}
-			}
-			// fill this tree's node			
-			thisNode.setTitle(readData[0]);
-			thisNode.setText(readData[1]);
-			thisNode.setImagePath(readData[2]);
-			childNum = Integer.parseInt(readData[3]);
-				
-			// lengthwise or breadthwise recursion here?
-			
-			// create children trees
-			
-			// base case
-			if (0 == childNum) {
-				recycleData.readLine();
-				return;
-			}
-			else {
-				//children = new RBTree[childNum];
-				
-				for (int offspring = 0; offspring < childNum; ++offspring) {
-					children[offspring] = new RBTree(this, offspring);
-					children[offspring].buildHelper(recycleData);
+			if (childNum > 0) {
+				children = new RBTree[childNum];
+				// create children
+				while (currentChild < childNum) {
+									
+					children[currentChild] = new RBTree(this, 0);
+					children[currentChild].buildHelper(recycleData);
+										
+					// decrement currentChild
+					++currentChild;
 				}
 			}
 		}
 		catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 	} // end overloaded build
 	

@@ -1,68 +1,64 @@
 About Us
 About application, version, update
-image.jpg
-0
+test.png
+5
 General Info
 About Bothell Recycling
-image.jpg
+test.png
 0
 Plastic
 Plastic is …
 plasticBin.jpg
 3
-Plastic Child 1 | Plastic Child 2 | Plastic Child 3
 Plastic Child 1
-Plastic is …
+Plastic is … (1)
 child.jpg
 0
 Plastic Child 2
-Plastic is …
+Plastic is … (2)
 child.jpg
 0
 Plastic Child 3
-Plastic is …
+Plastic is … (3)
 child.jpg
 0
 Paper
 Paper is …
 plasticBin.jpg
 3
-Paper Child 1 | Paper Child 2 | Paper Child 3
 Paper Child 1
-Paper is …
+Paper is … (1)
 child.jpg
 0
 Paper Child 2
-Paper is …
+Paper is … (2)
 child.jpg
 0
 Paper Child 3
-Paper is …
+Paper is … (3)
 child.jpg
 0
 Glass
 Glass is …
 plasticBin.jpg
 2
-Glass Child 1 | Glass Child 2
 Glass Child 1
-Glass is …
+Glass is … (1)
 child.jpg
 0
 Glass Child 2
-Glass is …
+Glass is … (2)
 child.jpg
 0
 Metal
 Metal is …
 plasticBin.jpg
 2
-Metal Child 1 | Metal Child 2
 Metal Child 1
-Metal is …
+Metal is … (1)
 child.jpg
 0
 Metal Child 2
-Metal is …
+Metal is … (2)
 child.jpg
 0
