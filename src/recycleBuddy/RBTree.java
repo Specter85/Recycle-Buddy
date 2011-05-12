@@ -60,7 +60,40 @@ public class RBTree {
 	* @postcondition A full tree of recycling data is constructed.
 	*/
 	public void build(String dataPath) throws FileNotFoundException {		
-		try {
+		try {			
+			// Create dummy data
+			thisNode.setImagePath("plasticBin.jpg");
+			thisNode.setText("This is the top");
+			thisNode.setTitle("root");
+			
+			children = new RBTree[6];
+			
+			for(int i = 0; i < children.length; i++) {
+				children[i] = new RBTree(this, i);
+			}
+
+			RBTreeNode childNode = children[0].getThisNode();
+
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("first child");
+			childNode.setTitle("1st");
+			
+			childNode = children[1].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("second child");
+			childNode.setTitle("2nd");
+			
+
+			childNode = children[2].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("further children");
+			childNode.setTitle("more");
+			
+
+			childNode = children[3].getThisNode();
 			
 			Scanner RBScanner = new Scanner(new File(dataPath));
 			
