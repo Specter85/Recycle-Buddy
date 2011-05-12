@@ -63,6 +63,10 @@ public class RBTree {
 			
 			children = new RBTree[6];
 			
+			for(int i = 0; i < children.length; i++) {
+				children[i] = new RBTree(this, i);
+			}
+			
 			RBTreeNode childNode = children[0].getThisNode();
 			
 			childNode.setImagePath("child.jpg");
