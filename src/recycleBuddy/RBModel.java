@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/9/11
- * @version 0.0.05
+ * @latest 5/11/11
+ * @version 0.0.07
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -30,6 +30,7 @@
  *  added primitive exception handling (needs to be improved) to class
  *  added setInitialState()
  *  added hard stop to BACK option in click()
+ * 5/11/09 0.0.07 - remove all null passing
  */
 
 package recycleBuddy;
@@ -146,7 +147,7 @@ public class RBModel {
 			else // there aren't enough children to be displayed
 			{
 				// display a "disabled" button
-				view.refreshOption(i, "placeholder: no info", null, false);
+				view.refreshOption(i, "placeholder: no info", "plasticBin.jpg", false);
 				
 				// ...and set the sidebar displays
 				view.refreshSideOption(i, "placeholder: no info", false);
@@ -272,7 +273,7 @@ public class RBModel {
 				else // there aren't enough children to be displayed
 				{
 					// display a "disabled" button
-					view.refreshOption(i, "placeholder: no info", null, false);
+					view.refreshOption(i, "placeholder: no info", "test.png", false);
 				}
 								
 				// 3) There are more children than there are displays.

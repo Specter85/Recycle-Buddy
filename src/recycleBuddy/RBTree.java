@@ -12,11 +12,12 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/8/11
- * @version 0.0.03
+ * @latest 5/11/11
+ * @version 0.0.04
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
+ * 5/11/11 0.0.04 - build tree with dummy data
  */
 
 package recycleBuddy;
@@ -55,6 +56,54 @@ public class RBTree {
 	*/
 	public void build(String dataPath) throws FileNotFoundException {		
 		try {
+			// Create dummy data
+			thisNode.setImagePath("plasticBin.jpg");
+			thisNode.setText("This is the top");
+			thisNode.setTitle("root");
+			
+			children = new RBTree[6];
+			
+			RBTreeNode childNode = children[0].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("first child");
+			childNode.setTitle("1st");
+			
+			childNode = children[1].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("second child");
+			childNode.setTitle("2nd");
+			
+
+			childNode = children[2].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("further children");
+			childNode.setTitle("more");
+			
+
+			childNode = children[3].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("further children");
+			childNode.setTitle("more");
+			
+			childNode = children[4].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("further children");
+			childNode.setTitle("more");
+			
+			childNode = children[5].getThisNode();
+			
+			childNode.setImagePath("child.jpg");
+			childNode.setText("further children");
+			childNode.setTitle("more");
+			
+			
+			
+			/* Remove all data reading 
 			// open the initial file
 			FileReader recycleFile = new FileReader(dataPath);
 			
@@ -115,6 +164,9 @@ public class RBTree {
 			
 			// Is this command necessary?
 			recycleFile.close();
+			*/
+			
+			
 		}
 		catch (Exception e) {
 			
@@ -128,15 +180,16 @@ public class RBTree {
 	
 	
 	/**
-	* build (overloaded)
+	* buildHelper 
 	*
+	* Private helper class.
 	* Builds a full data tree based on external data.
 	* 
 	* @param path for file stream
 	* 
 	* @postcondition A full tree of recycling data is constructed.
 	*/
-	public void build(BufferedReader recycleData) throws FileNotFoundException {		
+	private void buildHelper(BufferedReader recycleData) throws FileNotFoundException {		
 		try {			
 			String[] readData = new String[4];
 			
@@ -179,7 +232,7 @@ public class RBTree {
 				
 				for (int offspring = 0; offspring < childNum; ++offspring) {
 					children[offspring] = new RBTree(this, offspring);
-					children[offspring].build(recycleData);
+					children[offspring].buildHelper(recycleData);
 				}
 			}
 		}
