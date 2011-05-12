@@ -221,10 +221,13 @@ public class RBModel {
 			// the side bar displays the root's children
 			else if (ButtonTypes.SIDE_OPTION == selectionType){
 				// now we are strictly selecting children of the root
-				treeTraverser = rootTree.getChild(whichDisplay);
+				if (treeTraverser.getChildNum() != 0) {
+					treeTraverser = rootTree.getChild(whichDisplay);
+					childOffset = 0;
+				}
 				
 				// Reset child offset
-				childOffset = 0;
+				
 				
 				
 				
@@ -232,12 +235,14 @@ public class RBModel {
 			
 			// We want to display the selected data.
 			else if (ButtonTypes.OPTION == selectionType){
-				// Go to the selected child tree.
-				treeTraverser = 
-					treeTraverser.getChild(whichDisplay + childOffset);
-				
-				// Reset child offset
-				childOffset = 0;
+				if (treeTraverser.getChildNum() != 0) {
+					// Go to the selected child tree.
+					treeTraverser = 
+						treeTraverser.getChild(whichDisplay + childOffset);
+					
+					// Reset child offset
+					childOffset = 0;
+				}
 			} // end else if normal selection
 			
 			

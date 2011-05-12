@@ -13,16 +13,18 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 5/11/11
- * @version 0.0.04
+ * @version 0.0.05
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
  * 5/11/11 0.0.04 - build tree with dummy data
+ * 5/11/11 0.0.05 - read and output data file
  */
 
 package recycleBuddy;
 
 import java.io.*; // streaming data
+import java.util.*; // scanner
 
 
 public class RBTree {
@@ -35,6 +37,7 @@ public class RBTree {
 	* @param reference to parent (can be null, but must be explicitly passed)
 	*/
 	public RBTree(RBTree caller, int childNumber) {
+		
 		// Set parent tree.
 		parent = caller;
 		
@@ -56,6 +59,8 @@ public class RBTree {
 	*/
 	public void build(String dataPath) throws FileNotFoundException {		
 		try {
+
+			
 			// Create dummy data
 			thisNode.setImagePath("plasticBin.jpg");
 			thisNode.setText("This is the top");
@@ -66,8 +71,9 @@ public class RBTree {
 			for(int i = 0; i < children.length; i++) {
 				children[i] = new RBTree(this, i);
 			}
-			
+
 			RBTreeNode childNode = children[0].getThisNode();
+
 			
 			childNode.setImagePath("child.jpg");
 			childNode.setText("first child");
@@ -100,14 +106,26 @@ public class RBTree {
 			childNode.setTitle("more");
 			
 			childNode = children[5].getThisNode();
-			
+
 			childNode.setImagePath("child.jpg");
 			childNode.setText("further children");
 			childNode.setTitle("more");
 			
+
+			// read the data file, output it in console
+			Scanner RBScanner = new Scanner(new File(dataPath));
+			
+
+			
+			while (RBScanner.hasNext()) {
+				String strOneTextLine;
+				strOneTextLine = RBScanner.nextLine(); 
+				System.out.println("Are we reading?");
+				System.out.println(strOneTextLine);
+			}
 			
 			
-			/* Remove all data reading 
+			/* Remove all data reading + tree building
 			// open the initial file
 			FileReader recycleFile = new FileReader(dataPath);
 			
@@ -173,7 +191,7 @@ public class RBTree {
 			
 		}
 		catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 		
