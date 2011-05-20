@@ -1,3 +1,21 @@
+/**
+ * RBWindow.java:<p>
+ * A class which encapsulates the functionality of a RecycleBuddy
+ * window.
+ * 
+ * University of Washington, Bothell
+ * CSS 360
+ * Spring 2011
+ * Professor: Valentin Razmov
+ * Recycle Buddy Group
+ *
+ * @author Mark Zachacz
+ * @since 5/20/11
+ * @latest 5/20/11
+ * @version 0.1.01
+ * 5/20/11 0.1.01 Added commenting including the change set.
+ */
+
 package recycleBuddy;
 
 import javax.swing.ImageIcon;
@@ -48,6 +66,10 @@ public class RBWindow extends JFrame {
 		SIDE_OPTION
 	}
 
+	/**
+	 * Constructor
+	 * Builds RecycleBuddy's main window.
+	 */
 	RBWindow() {
 		// Set the window's default size and behavior.
 		super();
@@ -126,26 +148,45 @@ public class RBWindow extends JFrame {
 		model.setInitialState();
 	}
 	
-	public void changeView(ButtonTypes option, int buttonNum) {
+	/**
+	 * changeView
+	 * Depreciated test function for changing views.
+	 * 
+	 * @param option
+	 * @param buttonNum
+	 */
+	private void changeView(ButtonTypes option, int buttonNum) {
 		CardLayout cl = (CardLayout)(mainPan.getLayout());
 		if(option == ButtonTypes.HOME) {
-			/*for(int i = 0; i < options.length; i++) {
-				options[i].setText("test2");
-			}*/
 			cl.show(mainPan, BUTTON_PANEL);
 		}
 		else if(option == ButtonTypes.BACK) {
-			/*for(int i = 0; i < options.length; i++) {
-				options[i].setText("test");
-			}*/
 			cl.show(mainPan, TEXT_PANEL);
 		}
 	}
 	
-	public void changeView(ButtonTypes option) {
+	/**
+	 * changeView
+	 * Depreciated test function for changing views.
+	 * 
+	 * @param option
+	 */
+	private void changeView(ButtonTypes option) {
 		changeView(option, 0);
 	}
 	
+	/**
+	 * refreshOption
+	 * Function for refreshing the contents of one of the windows main
+	 * buttons.
+	 * 
+	 * @param button - The index of the button to be refreshed should be
+	 * a value between 0 and 5.
+	 * @param text - The text to be displayed on the button.
+	 * @param image - File name and path of the image to be displayed 
+	 * on the button. If the path is invalid nothing is displayed.
+	 * @param active - Should the button be active true yes false no.
+	 */
 	public void refreshOption(int button, String text, String image, 
 			boolean active) {
 		options[button].setText(text);
@@ -153,21 +194,48 @@ public class RBWindow extends JFrame {
 		options[button].setEnabled(active);
 	}
 	
+	/**
+	 * refreshSideOption
+	 * Function for refreshing the contents of one of the windows side
+	 * pane buttons.
+	 * 
+	 * @param button - The index of the button to be refreshed should be
+	 * a value between 0 and 5.
+	 * @param active - Should the button be active true yes false no.
+	 */
 	public void refreshSideOption(int button, String text, boolean active) {
 		sideOptions[button].setText(text);
 		sideOptions[button].setEnabled(active);
 	}
 	
+	/**
+	 * refreshTestPane
+	 * Function for refreshing the contents of the windows text pane.
+	 * 
+	 * @param text - The text to be displayed in the text pane.
+	 * @param image - File name and path of the image to be displayed 
+	 * in the text pane. If the path is invalid nothing is displayed.
+	 */
 	public void refreshTextPane(String text, String image) {
 		tPanText.setText(text);
 		tPanImage.setIcon(new ImageIcon(image));
 	}
 	
+	/**
+	 * showButtonPane
+	 * Function which switches the windows main view from the text pane
+	 * to the button pane.
+	 */
 	public void showButtonPane() {
 		CardLayout cl = (CardLayout)(mainPan.getLayout());
 		cl.show(mainPan, BUTTON_PANEL);
 	}
 	
+	/**
+	 * showTextPane
+	 * Function which switches the windows main view from the button pane
+	 * to the text pane.
+	 */
 	public void showTextPane() {
 		CardLayout cl = (CardLayout)(mainPan.getLayout());
 		cl.show(mainPan, TEXT_PANEL);

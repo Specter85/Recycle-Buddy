@@ -1,3 +1,20 @@
+/**
+ * OptionListener.java:<p>
+ * Listener class for RecycleBuddy back button.
+ * 
+ * University of Washington, Bothell
+ * CSS 360
+ * Spring 2011
+ * Professor: Valentin Razmov
+ * Recycle Buddy Group
+ *
+ * @author Mark Zachacz
+ * @since 5/20/11
+ * @latest 5/20/11
+ * @version 0.1.01
+ * 5/20/11 0.1.01 Added commenting including the change set.
+ */
+
 package recycleBuddy;
 
 import java.awt.event.ActionListener;
@@ -7,12 +24,24 @@ import recycleBuddy.RBWindow.ButtonTypes;
 
 public class BackListener implements ActionListener {
 
+	// Reference to RecycleBuddy's model.
 	private RBModel model;
 	
+	/**
+	 * Constructor
+	 * Function which builds a new BackListener.
+	 * 
+	 * @param model - Reference to RecycleBuddy's model must not
+	 * be null.
+	 */
 	BackListener(RBModel model) {
 		this.model = model;
 	}
 	
+	/**
+	 * actionPerformed
+	 * Function which handles button clicks.
+	 */
 	public void actionPerformed(ActionEvent e) {
 		model.click(ButtonTypes.HOME, 0);
 	}
