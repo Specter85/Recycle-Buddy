@@ -5,40 +5,44 @@ test.png
 General Info
 About Bothell Recycling
 test.png
+1
+General Info Child 1
+Text for Bothell recycling
+test.png
 0
-Plastic
-Plastic is …
+Plastic title
+Plastic info
 plasticBin.jpg
 3
 Plastic Child 1
-Plastic is … (1)
+Plastic something (1)
 child.jpg
 0
 Plastic Child 2
-Plastic is … (2)
+Plastic somethign (2)
 child.jpg
 0
 Plastic Child 3
-Plastic is … (3)
+Plastic something (3)
 child.jpg
 0
-Paper
-Paper is …
+Paper title
+Paper info
 plasticBin.jpg
 3
 Paper Child 1
-Paper is … (1)
+Paper something 1 (1)
 child.jpg
 0
 Paper Child 2
-Paper is … (2)
+Paper something 2 (2)
 child.jpg
 0
 Paper Child 3
-Paper is … (3)
+Paper something 3 (3)
 child.jpg
 0
-Glass
+Glass title
 Glass is …
 plasticBin.jpg
 2
@@ -50,7 +54,7 @@ Glass Child 2
 Glass is … (2)
 child.jpg
 0
-Metal
+Metal title
 Metal is …
 plasticBin.jpg
 2

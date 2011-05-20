@@ -44,7 +44,7 @@ import recycleBuddy.RBWindow.ButtonTypes;
 public class RBModel {
 	// CONSTANT DECLARATIONS
 	// Initial path to data. (TO BE DEFINED)
-	static String INITIALFILEPATH = "StartZFR.txt";
+	static String INITIALFILEPATH = "Start.txt";
 	// Note - find a better way to do this enumeration:
 	/*
 	static int HOME = 0; // control requiring root display
