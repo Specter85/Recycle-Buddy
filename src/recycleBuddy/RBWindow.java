@@ -12,8 +12,9 @@
  * @author Mark Zachacz
  * @since 5/20/11
  * @latest 5/20/11
- * @version 0.1.01
+ * @version 0.3.02
  * 5/20/11 0.1.01 Added commenting including the change set.
+ * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
  */
 
 package recycleBuddy;
@@ -32,8 +33,8 @@ import java.awt.GridLayout;
 public class RBWindow extends JFrame {
 	
 	// Constants for the window size and number of options.
-	public static final int WIDTH = 600;
-	public static final int HEIGHT = 400;
+	public static final int WIDTH = 800;
+	public static final int HEIGHT = 600;
 	public static final int NUM_OPTIONS = 6;
 	
 	// References to the window's buttons.

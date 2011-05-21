@@ -17,6 +17,10 @@ plasticBin.jpg
 Plastic Child 1
 Plastic something (1)
 child.jpg
+1
+Plastic Child 1 Display Pane
+This will show up in the display pane for Plastic Child 1.
+child.jpg
 0
 Plastic Child 2
 Plastic somethign (2)

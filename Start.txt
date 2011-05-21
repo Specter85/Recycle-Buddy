@@ -3,7 +3,7 @@ About application, version, update
 test.png
 5
 General Info
-About Bothell Recycling
+General Information About Bothell Recycling
 plasticBin.jpg
 1
 General Info
@@ -16,6 +16,10 @@ plasticBin.jpg
 5
 Plastic Child 1
 Plastic Bottles. Food, beverage, detergent, shampoo, condiment bottles, vitamins\p Labels OK\p NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment\p NO Prescription vials
+child.jpg
+1
+Plastic Child 1 Display Pane
+This is the information to display in the display pane for Plastic Child 1.
 child.jpg
 0
 Plastic Child 2

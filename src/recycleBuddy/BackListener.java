@@ -11,8 +11,9 @@
  * @author Mark Zachacz
  * @since 5/20/11
  * @latest 5/20/11
- * @version 0.1.01
+ * @version 0.3.02
  * 5/20/11 0.1.01 Added commenting including the change set.
+ * 5/20/11 0.3.02 changed function call from HOME to BACK - Niko
  */
 
 package recycleBuddy;
@@ -43,7 +44,7 @@ public class BackListener implements ActionListener {
 	 * Function which handles button clicks.
 	 */
 	public void actionPerformed(ActionEvent e) {
-		model.click(ButtonTypes.HOME, 0);
+		model.click(ButtonTypes.BACK, 0);
 	}
 	
 }

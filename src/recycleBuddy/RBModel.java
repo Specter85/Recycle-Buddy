@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/11/11
- * @version 0.1.00
+ * @latest 5/20/11
+ * @version 0.3.01
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -32,6 +32,7 @@
  *  added hard stop to BACK option in click()
  * 5/11/11 0.0.07 - remove all null passing
  * 5/11/11 0.1.00 - ZFR candidate passes data to UI
+ * 5/20/11 0.3.01 - Alpha 1, display single text panel
  */
 
 package recycleBuddy;
@@ -221,7 +222,7 @@ public class RBModel {
 			} // end else if side option selection
 			
 			// We want to display the selected data.
-			else if (ButtonTypes.OPTION == selectionType){
+			else if (ButtonTypes.OPTION == selectionType) {
 				if (treeTraverser.getChildNum() != 0) {
 					// Go to the selected child tree.
 					treeTraverser = 
@@ -237,7 +238,7 @@ public class RBModel {
 			
 			// This is where logic to control the difference between
 			// the number of displays and number of children should lie.	
-			if (treeTraverser.getChildNum() > 0) {
+			if (treeTraverser.getChildNum() > 1) {
 				for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
 					// get this numbered child of the current node
 					if (i < treeTraverser.getChildNum())
@@ -252,6 +253,9 @@ public class RBModel {
 						text = nodeDisplayInfo.getText();
 						img = nodeDisplayInfo.getImagePath();
 						
+						// make sure we're showing the button pane
+						view.showButtonPane();
+						
 						// call each display in turn and pass it the contents of
 						// each RBTreeNode in each of the children of the tree traverser
 						view.refreshOption(i, text, img, true);
@@ -260,10 +264,40 @@ public class RBModel {
 					{
 						// display a "disabled" button
 						view.refreshOption(i, "placeholder: no info", "test.png", false);
+						//view.showTextPane();
 					}
-				} // end next
+				} // next button
+			} // end if children
+			// else there are no children so display the single view pane
+			
+			// what we really want:
+			/* 
+			 * else if (treeTraverser.getChildNum() == 1) {
+			 *   ...}
+			 */
+			else if (treeTraverser.getChildNum() == 1){
+				// unpack the current node
+				RBTree displayTree = treeTraverser.getChild(0);
+				RBTreeNode nodeDisplayInfo = displayTree.getThisNode();
+				
+				String name, text, img;
+				
+				name = nodeDisplayInfo.getTitle();
+				text = nodeDisplayInfo.getText();
+				img = nodeDisplayInfo.getImagePath();
+				
+				// display the single pane
+				view.showTextPane();
+				
+				view.refreshTextPane(text, img);
+				
 			}
-			// else do nothing
+			
+			
+			// else return to parent
+			else {
+				treeTraverser = treeTraverser.getParent();
+			}
 				
 				// Three cases:
 				// 1) There are as many children as displays.

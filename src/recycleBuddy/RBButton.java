@@ -51,7 +51,7 @@ public class RBButton extends JButton {
 		add(image);
 		
 		// Add text to the button.
-		this.text = new JLabel(text);
+		this.text = new JLabel(text);			
 		add(this.text);
 	}
 	
