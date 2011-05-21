@@ -15,6 +15,7 @@
  * @version 0.3.02
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
+ * 5/20/11 0.3.03 Made text wrap properly in the text pane.
  */
 
 package recycleBuddy;
@@ -125,6 +126,8 @@ public class RBWindow extends JFrame {
 		// Add text to the text panel.
 		tPanText = new JTextArea("This is a test.");
 		tPanText.setEditable(false);
+		tPanText.setLineWrap(true);
+		tPanText.setWrapStyleWord(true);
 		tPan.add(tPanText, BorderLayout.CENTER);
 		
 		// Add an image to the text panel.
