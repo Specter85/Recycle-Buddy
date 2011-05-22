@@ -10,12 +10,13 @@
  * Recycle Buddy Group
  *
  * @author Mark Zachacz
- * @since 5/20/11
- * @latest 5/20/11
- * @version 0.3.02
+ * @since 5/22/11
+ * @latest 5/22/11
+ * @version 0.3.04
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
  * 5/20/11 0.3.03 Made text wrap properly in the text pane.
+ * 5/22/11 0.3.04 Made the text on side buttons bigger.
  */
 
 package recycleBuddy;

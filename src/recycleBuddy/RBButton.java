@@ -11,9 +11,10 @@
  *
  * @author Mark Zachacz
  * @since 5/20/11
- * @latest 5/20/11
- * @version 0.1.01
+ * @latest 5/22/11
+ * @version 0.3.02
  * 5/20/11 0.1.01 Added commenting including the change set.
+ * 5/22/11 0.3.02 Made the text on RBButtons bigger and bold.
  */
 
 package recycleBuddy;
