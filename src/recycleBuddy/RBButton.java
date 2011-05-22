@@ -11,9 +11,10 @@
  *
  * @author Mark Zachacz
  * @since 5/20/11
- * @latest 5/20/11
- * @version 0.1.01
+ * @latest 5/22/11
+ * @version 0.3.02
  * 5/20/11 0.1.01 Added commenting including the change set.
+ * 5/22/11 0.3.02 Made the text on RBButtons bigger and bold.
  */
 
 package recycleBuddy;
@@ -21,6 +22,8 @@ package recycleBuddy;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+
+import java.awt.Font;
 import java.awt.GridLayout;
 
 
@@ -51,7 +54,8 @@ public class RBButton extends JButton {
 		add(image);
 		
 		// Add text to the button.
-		this.text = new JLabel(text);			
+		this.text = new JLabel(text);
+		this.text.setFont(new Font("Serif", Font.BOLD, 18));
 		add(this.text);
 	}
 	
