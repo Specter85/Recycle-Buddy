@@ -21,6 +21,8 @@ package recycleBuddy;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+
+import java.awt.Font;
 import java.awt.GridLayout;
 
 
@@ -51,7 +53,8 @@ public class RBButton extends JButton {
 		add(image);
 		
 		// Add text to the button.
-		this.text = new JLabel(text);			
+		this.text = new JLabel(text);
+		this.text.setFont(new Font("Serif", Font.BOLD, 18));
 		add(this.text);
 	}
 	

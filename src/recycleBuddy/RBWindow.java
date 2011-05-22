@@ -29,12 +29,13 @@ import javax.swing.JTextArea;
 import java.awt.CardLayout;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 public class RBWindow extends JFrame {
 	
 	// Constants for the window size and number of options.
-	public static final int WIDTH = 800;
+	public static final int WIDTH = 1000;
 	public static final int HEIGHT = 600;
 	public static final int NUM_OPTIONS = 6;
 	
@@ -96,6 +97,7 @@ public class RBWindow extends JFrame {
 		sideOptions = new JButton[NUM_OPTIONS];
 		for(int i = 0; i < sideOptions.length; i++) {
 			sideOptions[i] = new JButton("test");
+			sideOptions[i].setFont(new Font("Serif", Font.PLAIN, 14));
 			sideOptions[i].addActionListener(new SideOptionListener(model, i));
 			pPan.add(sideOptions[i]);
 		}
