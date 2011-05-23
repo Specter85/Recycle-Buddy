@@ -91,7 +91,7 @@ Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glos
 child.jpg
 0
 Paper Child 5
-Paper Food Containers
+Food Containers
 child.jpg
 1
 Paper Child 5
@@ -111,11 +111,11 @@ Glass
 plasticBin.jpg
 2
 Glass Child 1
-Glass is … (1)
+Bottles and Jugs
 child.jpg
 0
 Glass Child 2
-Glass is … (2)
+Durable Glass
 child.jpg
 0
 Metal 

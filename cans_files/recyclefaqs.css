@@ -1,0 +1,45 @@
+#content #content_faq {
+	background: url(../../images/list_children_bg.png) no-repeat;
+	left: 338px;
+	margin-bottom: 15px;
+	min-height: 384px;
+	height: auto !important;
+	height: 384px;
+	padding: 30px 30px 8px;
+	position: relative;
+	top: 5px;
+	width: 469px;
+	margin-bottom: 60px;
+}
+
+#content #content_faq #questions {
+	padding: 15px 0px 0px 0px;
+}
+
+#content #content_faq #questions li {
+	min-height: 0px;
+	height: 0px;
+	padding: 10px 0px;
+}
+
+#content #content_faq #questions li a {
+	color: #525252;
+}
+
+#content #content_faq #faqs {
+
+}
+
+#content #content_faq #faqs dt {
+	padding-top: 15px;
+}
+
+#content #content_faq #faqs dt a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#content #content_faq #faqs dd {
+	color: #525252;
+}

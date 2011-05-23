@@ -1,0 +1,17 @@
+$(document).ready(
+	function() 
+		{
+			/*$('.thickbox').click(
+			function() 
+				{
+					$('select').hide();
+				}
+			);
+			$("body").focus(
+			function()
+				{
+					$('select').show();
+				}
+			);*/
+		}
+	);

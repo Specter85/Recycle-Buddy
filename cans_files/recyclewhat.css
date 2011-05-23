@@ -1,0 +1,1114 @@
+#content_what {
+	background: url(../../images/list_children_bg.png) no-repeat;
+	left: 338px;
+	margin-bottom: 15px;
+	min-height: 384px;
+	height: auto !important;
+	height: 384px;
+	padding: 30px 30px 8px;
+	position: relative;
+	top: 5px;
+	width: 469px;
+	margin-bottom: 60px;
+}
+
+.feature {
+	padding: 20px 0px 10px 25px;
+	text-align: left;
+}
+
+#video_player {
+	height: 220px;
+	width: 468px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.feature .navigation_tab {
+	width: 468px;	
+	margin: 0px;
+	overflow: hidden;	
+	height: 25px;
+}
+
+#template_list #content .tab {
+	width: 156px;
+	display: block;
+	min-height: 25px;
+	height: 25px;
+	padding: 0px;
+	float: left;	
+}
+
+#template_list #content .tab a {
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #bebebe;
+	display: block;
+	min-height: 19px;
+	height: 19px;
+	width: 156px;
+	text-align: center;
+	padding-top: 6px;
+	background: url(../../images/tab_unactive_other.gif) no-repeat;
+}
+
+#template_list #content .tab a.prior {
+	background: url(../../images/tab_unactive_first.gif) no-repeat;
+}
+
+#template_list #content .tab a.active {
+	color: #496824;
+	background: url(../../images/tab_active.gif) no-repeat;
+}
+
+.rounded_bottom {
+	background: url(../../images/white_content_bottom.png) no-repeat bottom;
+	padding-bottom: 10px;
+	width: 468px;
+}
+
+.white_bg_container {
+	width: 448px;
+	background: #FFF;
+	padding: 10px 10px;	
+}
+
+.white_bg_container p {
+	padding: 5px 0px;
+}
+
+.white_bg_container p em {
+	font-weight: bold;
+}
+
+.white_bg_container h5 {
+	color: #496824;
+	border: none;
+	font-size: 12px;
+	padding: 5px 0px;
+}
+
+.feature h3 {
+	margin: 0px;
+	padding: 10px 0px;
+}
+
+#content_main .recyclable {
+ 	padding: 15px 0px 0px 100px;
+}
+
+#content_what .recyclable {
+	padding: 15px 0px 0px 114px;
+}
+#content_what h6 {
+  	color: #496824;	
+	font-weight: bold;
+}
+#content_what .product_detail h6 { 	
+	color: #525252;
+ }
+ 
+.content_copy a.btn_cta_large {
+	position: relative;
+	bottom: 0px;
+	/*left: 126px;	*/
+}
+
+p.see_action {
+	color: #5f9d32;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.recyclable_options .btn_cta {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#template_list #content .recyclable_options {
+	background: url(../../images/recyclable_options_top.png) no-repeat top;
+	padding: 9px 15px 0px 15px;	
+}
+
+#template_list #content .white_bg_container .recyclable_options {
+	background-image: none;
+}
+
+#template_list #content .recyclable_options li {
+	padding: 10px 0px 10px 110px;
+	min-height: 80px;
+	height: auto !important;
+	height: 80px;	
+}
+
+#template_list #content .recyclable_options li.rdmore {
+	padding: 10px 0px 10px 0px;	
+	border-bottom: 1px solid #cdd2d8;
+	min-height: 14px;
+	height: 14px;
+	font-size: 12px;
+}
+
+.rdmore p {
+	color: #525252;	
+}
+
+#template_list #content .recyclable_options li h6 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #646464;
+}
+
+#template_list #content .recyclable_options li a {
+	text-decoration: none;
+}
+
+.content_copy {
+	padding-bottom: 20px;
+}
+
+.recyclable .btn_pdf, .recyclable .btn_start {
+	left: 185px;
+}
+
+.btn_pdf {
+	display: block;
+	width: 133px;
+	height: 19px;
+	background: url(../../images/btn_pdf.gif) no-repeat 0px 0px;
+	text-indent: -9999px;
+	position: relative;
+	left: 310px;
+}
+.btn_pdf:hover {
+	background-position: 0px -19px;
+}
+.btn_start {
+	display: block;
+	width: 133px;
+	height: 19px;
+	background: url(../../images/btn_start.gif) no-repeat 0px 0px;
+	text-indent: -9999px;
+	position: relative;
+	left: 310px;
+}
+.btn_start:hover {
+	background-position: 0px -19px;
+}
+span.adjustment {
+	position: relative;
+	left: -3px;
+}
+
+ul.recycle_menu {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #003366;
+	width: 9999px;
+	height: 73px;
+	display: block;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 0px;	
+}
+
+#template_list #content .recycle_menu li {
+	list-style: none;
+	float: left;
+	width: 125px;
+	margin: 0px 0px 0px 0px;
+	position: relative;
+	display: block;
+	min-height: 66px;
+	height: auto !important;
+	height: 66px;
+	padding-right: 8px;	
+}
+
+.recycle_menu li a {
+	float: left;
+	width: 125px;
+	margin: 0px 0px 0px 0px;
+	position: relative;
+	display: block;
+	height: 66px;
+	text-indent: -9999px;	
+}
+
+#recycling_menu {
+	position: relative;
+	padding-bottom: 20px;	
+}
+
+div#left_control, div#right_control {
+	position: absolute;
+	top: 45px;	
+}
+
+div#left_control a, div#right_control a {
+	display: block;
+	height: 22px;
+	width: 22px;
+	text-indent: -9999px;
+}
+
+#left_control {
+	background: url(../../images/arrow_left.gif) no-repeat;
+	left: -5px;
+}
+
+#right_control {
+	background: url(../../images/arrow_right.gif) no-repeat;
+	left: 425px;
+}
+
+div#mask {
+	width: 395px;
+	height: 90px;
+	display: block;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	left: 18px;	
+	top: 20px;
+	padding: 0px 5px;	
+}
+
+#paper_and_cardboard:hover, #metals:hover, #plastics:hover, #glass:hover, #electronics:hover, #batteries_and_bulbs:hover, #polystyrene:hover, #plastic_grocery_bags:hover, #organic_food_waste:hover {
+	background-position: 0px -66px;
+}
+
+#paper_and_cardboard.active, #metals.active, #plastics.active, #glass.active, #electronics.active, #batteries_and_bulbs.active, #polystyrene.active, #plastic_grocery_bags.active, #organic_food_waste.active {
+	background-position: 0px -132px;
+}
+
+
+#paper_and_cardboard {
+	background: url(../../images/recycling/categories/paper_and_cardboard.jpg) no-repeat 0px 0px;
+}
+
+#metals {
+	background: url(../../images/recycling/categories/metals.jpg) no-repeat 0px 0px;
+}
+
+#plastics {
+	background: url(../../images/recycling/categories/plastics.jpg) no-repeat 0px 0px;
+}
+
+#glass {
+	background: url(../../images/recycling/categories/glass.jpg) no-repeat 0px 0px;
+}
+
+#electronics {
+	background: url(../../images/recycling/categories/electronics.jpg) no-repeat 0px 0px;
+}
+
+#batteries_and_bulbs {
+	background: url(../../images/recycling/categories/batteries_and_bulbs.jpg) no-repeat 0px 0px;
+}
+
+#polystyrene {
+	background: url(../../images/recycling/categories/polystyrene.jpg) no-repeat 0px 0px;
+}
+
+#plastic_grocery_bags {
+	background: url(../../images/recycling/categories/plastic_grocery_bags.jpg) no-repeat 0px 0px;
+}
+
+ #organics_food_waste {
+ 	background: url(../../images/recycling/categories/organics_food_waste.jpg) no-repeat 0px 0px;
+ }
+ 
+ /* ICONS */
+ 
+#content_main .food-tips, #content_what li.food-tips {
+	background: url(../../images/recycling/icons/small/food_tips.gif) no-repeat top left;
+}
+
+#content_what .food-tips {
+	background: url(../../images/recycling/icons/large/food_tips.gif) no-repeat left 40px;
+}
+
+#content_main .food-afterlife, #content_what li.food-afterlife {
+	background: url(../../images/recycling/icons/small/food_afterlife.gif) no-repeat top left;
+}
+
+#content_what .food-afterlife {
+	background: url(../../images/recycling/icons/large/food_afterlife.gif) no-repeat left 40px;
+}
+ 
+#content_main .food-waste, #content_what li.food-waste {
+ 	background: url(../../images/recycling/icons/small/food_waste.gif) no-repeat top left;
+ }
+ 
+#content_what .food-waste {
+	background: url(../../images/recycling/icons/large/food_waste.gif) no-repeat left 40px;
+}
+ 
+#content_main .environmental-stewardship, #content_what li.environmental-stewardship {
+	background: url(../../images/recycling/icons/small/environmental_stewardship.gif) no-repeat top left;
+}
+
+#content_what .environmental-stewardship {
+	background: url(../../images/recycling/icons/large/environmental_stewardship.gif) no-repeat left 40px;
+}
+
+#content_main .aluminum-cans, #content_what li.aluminum-cans {
+	background: url(../../images/recycling/icons/small/aluminum_cans.gif) no-repeat top left;
+}
+
+#content_what .aluminum-cans {
+	background: url(../../images/recycling/icons/large/aluminum_cans.gif) no-repeat left 40px;
+}
+
+#content_main .aluminum-foil, #content_what li.aluminum-foil {
+	background: url(../../images/recycling/icons/small/aluminum_foil_and_bakeware.gif) no-repeat top left;
+}
+
+#content_what .aluminum-foil {
+	background: url(../../images/recycling/icons/large/aluminum_foil_and_bakeware.gif) no-repeat left 40px;
+}
+
+#content_main .brown-glass, #content_what li.brown-glass {
+	background: url(../../images/recycling/icons/small/brown_amber_glass.gif) no-repeat top left;
+}
+
+#content_what .brown-glass {
+	background: url(../../images/recycling/icons/large/brown_amber_glass.gif) no-repeat left 40px;
+}
+
+#content_main .clear-glass, #content_what li.clear-glass {
+	background: url(../../images/recycling/icons/small/clear_flint_glass.gif) no-repeat top left;
+}
+
+#content_what .clear-glass {
+	background: url(../../images/recycling/icons/large/clear_flint_glass.gif) no-repeat left 40px;
+}
+
+#content_main .paper-cardboard-dairy-juice, #content_what li.paper-cardboard-dairy-juice {
+	background: url(../../images/recycling/icons/small/paper_cardboard_dairy_and_juice_cartons.gif) no-repeat top left;
+}
+
+#content_what .paper-cardboard-dairy-juice {
+	background: url(../../images/recycling/icons/large/paper_cardboard_dairy_and_juice_cartons.gif) no-repeat left 40px;
+}
+
+#content_main .less-accepted-recycling {
+
+}
+
+#content_main .less-easy-recycle {
+
+}
+
+#content_main .unsolicited-direct-mail, #content_what li.unsolicited-direct-mail {
+	background: url(../../images/recycling/icons/small/unsolicited_direct_mail.gif) no-repeat top left;
+}
+
+#content_what .unsolicited-direct-mail {
+	background: url(../../images/recycling/icons/large/unsolicited_direct_mail.gif) no-repeat left 40px;
+}
+
+#content_main .phone-books, #content_what li.phone-books {
+	background: url(../../images/recycling/icons/small/phone_books.gif) no-repeat top left;
+}
+
+#content_what .phone-books {
+	background: url(../../images/recycling/icons/large/phone_books.gif) no-repeat left 40px;
+}
+
+#content_main .plastic-bags, #content_what li.plastic-bags {
+	background: url(../../images/recycling/icons/small/plastic_grocery_bags.gif) no-repeat top left;	
+}
+
+#content_what .plastic-bags {
+	background: url(../../images/recycling/icons/large/plastic_grocery_bags.gif) no-repeat left 40px;	
+}
+
+#content_main .plastic-recycling-code {
+
+}
+
+#content_main .make-sure-clean {
+
+}
+
+#content_main .steel-cans-tin-cans, #content_what li.steel-cans-tin-cans {
+	background: url(../../images/recycling/icons/small/steel_cans_tin_cans.gif) no-repeat top left;
+}	
+
+#content_what .steel-cans-tin-cans {
+	background: url(../../images/recycling/icons/large/steel_cans_tin_cans.gif) no-repeat left 40px;
+}	
+
+
+#content_main .green-glass, #content_what li.green-glass {
+	background: url(../../images/recycling/icons/small/green_emerald_glass.gif) no-repeat top left;
+}
+
+#content_what .green-glass {
+	background: url(../../images/recycling/icons/large/green_emerald_glass.gif) no-repeat left 40px;
+}
+
+#content_main .more-recycling-glass, #content_what li.more-recycling-glass {
+	background: url(../../images/recycling/icons/small/more_about_recycling_glass.gif) no-repeat top left;
+}
+
+#content_what .more-recycling-glass {
+	background: url(../../images/recycling/icons/large/more_about_recycling_glass.gif) no-repeat left 40px;
+}
+
+#content_main .compact-fluorescent-bulbs, #content_what li.compact-fluorescent-bulbs {
+	background: url(../../images/recycling/icons/small/compact_fluorescent_bulbs.gif) no-repeat top left;
+}
+
+#content_what .compact-fluorescent-bulbs {
+	background: url(../../images/recycling/icons/large/compact_fluorescent_bulbs.gif) no-repeat left 40px;
+}
+
+#content_main .incandescent-led-light-bulbs, #content_what li.incandescent-led-light-bulbs {
+	background: url(../../images/recycling/icons/small/incandescent_led_light_bulbs.gif) no-repeat top left;
+}
+
+#content_what .incandescent-led-light-bulbs {
+	background: url(../../images/recycling/icons/large/incandescent_led_light_bulbs.gif) no-repeat left 40px;
+}
+
+#content_main .rechargable-batteries, #content_what li.rechargable-batteries {
+	background: url(../../images/recycling/icons/small/rechargeable_batteries.gif) no-repeat top left;
+}
+
+#content_what .rechargable-batteries {
+	background: url(../../images/recycling/icons/large/rechargeable_batteries.gif) no-repeat left 40px;
+}
+
+#content_main .household-button-batteries, #content_what li.household-button-batteries {
+	background: url(../../images/recycling/icons/small/household_and_button_batteries.gif) no-repeat top left;
+}
+
+#content_what .household-button-batteries {
+	background: url(../../images/recycling/icons/large/household_and_button_batteries.gif) no-repeat left 40px;
+}
+
+#content_main .car-batteries, #content_what li.car-batteries {
+	background: url(../../images/recycling/icons/small/car_batteries.gif) no-repeat top left;
+}
+
+#content_what .car-batteries {
+	background: url(../../images/recycling/icons/large/car_batteries.gif) no-repeat left 40px;
+}
+
+#content_main .unacceptable-e-waste, #content_what li.unacceptable-e-waste {
+	background: url(../../images/recycling/icons/small/unacceptable_ewaste.gif) no-repeat top left;
+}
+
+#content_what .unacceptable-e-waste {
+	background: url(../../images/recycling/icons/large/unacceptable_ewaste.gif) no-repeat left 40px;
+}
+
+#content_main .cell-phones, #content_what li.cell-phones {
+	background: url(../../images/recycling/icons/small/cell_phones.gif) no-repeat top left;
+}
+
+#content_what .cell-phones {
+	background: url(../../images/recycling/icons/large/cell_phones.gif) no-repeat left 40px;
+}
+
+#content_main .consumer-electronics, #content_what li.consumer-electronics {
+	background: url(../../images/recycling/icons/small/consumer_electronics.gif) no-repeat top left;
+}
+
+#content_what .consumer-electronics {
+	background: url(../../images/recycling/icons/large/consumer_electronics.gif) no-repeat left 40px;
+}
+
+#content_main .televisions, #content_what li.televisions {
+	background: url(../../images/recycling/icons/small/televisions.gif) no-repeat top left;
+}
+
+#content_what .televisions {
+	background: url(../../images/recycling/icons/large/televisions.gif) no-repeat left 40px;
+}
+
+#content_main .office-equipment, #content_what li.office-equipment {
+	background: url(../../images/recycling/icons/small/office_equipment.gif) no-repeat top left;
+}
+
+#content_what .office-equipment {
+	background: url(../../images/recycling/icons/large/office_equipment.gif) no-repeat left 40px;
+}
+
+#content_main .computers, #content_what li.computers {
+	background: url(../../images/recycling/icons/small/computers.gif) no-repeat top left;
+}
+
+#content_what .computers {
+	background: url(../../images/recycling/icons/large/computers.gif) no-repeat left 40px;
+}	
+
+#content_main .what-not-to-recycle-glass, #content_what li.what-not-to-recycle-glass {
+	background: url(../../images/recycling/icons/small/what_not_to_recycle.gif) no-repeat top left;
+}
+
+#content_what .what-not-to-recycle-glass {
+	background: url(../../images/recycling/icons/large/what_not_to_recycle.gif) no-repeat left 40px;
+}
+
+#content_main .easy-recycle {
+
+}
+
+#content_main .foam-polystyrene, #content_what li.foam-polystyrene {
+	background: url(../../images/recycling/icons/small/foam_polystyrene.gif) no-repeat top left;
+}
+
+#content_what .foam-polystyrene {
+	background: url(../../images/recycling/icons/large/foam_polystyrene.gif) no-repeat left 40px;
+}
+
+#content_main .paperboard, #content_what li.paperboard {
+	background: url(../../images/recycling/icons/small/paperboard.gif) no-repeat top left;
+}
+
+#content_what .paperboard {
+	background: url(../../images/recycling/icons/large/paperboard.gif) no-repeat left 40px;
+}
+
+#content_main .newspapers, #content_what li.newspapers {
+	background: url(../../images/recycling/icons/small/newspapers.gif) no-repeat top left;
+}
+
+#content_what .newspapers {
+	background: url(../../images/recycling/icons/large/newspapers.gif) no-repeat left 40px;
+}
+
+#content_main .office-paper, #content_what li.office-paper {
+	background: url(../../images/recycling/icons/small/office_paper.gif) no-repeat top left;
+}
+
+#content_what .office-paper {
+	background: url(../../images/recycling/icons/large/office_paper.gif) no-repeat left 40px;
+}
+
+#content_main .magazines, #content_what li.magazines {
+	background: url(../../images/recycling/icons/small/magazines.gif) no-repeat top left;
+}
+
+#content_what .magazines {
+	background: url(../../images/recycling/icons/large/magazines.gif) no-repeat left 40px;
+}
+
+#content_main .corrugated-cardboard, #content_what li.corrugated-cardboard {
+	background: url(../../images/recycling/icons/small/corrugated_cardboard.gif) no-repeat top left;
+}
+
+#content_what .corrugated-cardboard {
+	background: url(../../images/recycling/icons/large/corrugated_cardboard.gif) no-repeat left 40px;
+}
+
+#content_main .make-sure-clean {
+	background: url(../../images/recycling/icons/small/clean.gif) no-repeat left 5px;
+}
+
+#content_what .make-sure-clean a {
+	background: url(../../images/recycling/icons/large/clean.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;
+}
+
+#content_main .resin-identification-code {
+	background: url(../../images/recycling/icons/small/recycling_codes.gif) no-repeat left 5px;
+}
+
+#content_what .resin-identification-code a {
+	background: url(../../images/recycling/icons/large/recycling_codes.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;
+}
+
+#content_main .less-easy-recycle {
+	background: url(../../images/recycling/icons/small/less_easy.gif) no-repeat left 5px;
+}
+
+#content_what .less-easy-recycle a {
+	background: url(../../images/recycling/icons/large/less_easy.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;
+}
+
+#content_main .less-accepted-recycling {
+	background: url(../../images/recycling/icons/small/less_accepted.gif) no-repeat left 5px;
+}
+
+#content_what .less-accepted-recycling a {
+	background: url(../../images/recycling/icons/large/less_accepted.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;	
+}
+
+#content_what .less-accepted-recycling li p a {
+	color: #000;
+}
+#content_main .learn-more {
+	background: url(../../images/recycling/icons/small/learn_more_plastics.gif) no-repeat left 5px;
+}
+
+#content_what .learn-more a {
+	background: url(../../images/recycling/icons/large/learn_more_plastics.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;
+}
+
+#content_main .easy-recycle {
+	background: url(../../images/recycling/icons/small/easy.gif) no-repeat left 5px;
+}
+
+#content_what .easy-recycle a {
+	background: url(../../images/recycling/icons/large/easy.gif) no-repeat left top;
+	text-decoration:underline;
+	font-size:12px;
+}
+
+#content_what .code ul li a {
+	background: none;
+}
+
+#content_what a.btn_cta {
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#template_list #content .recyclable_options li p {
+	padding-right: 15px;
+}
+
+#template_list #content .white_bg_container .recyclable ul {
+	padding-left: 15px;
+	padding-top: 0px;
+	_position: relative; 
+	_top: .5em;
+}
+
+#template_list #content .white_bg_container .recyclable ul li {
+	list-style: outside disc;
+	min-height: 0px;
+	height: 0px;
+	padding: 0px 0px 10px 0px;	
+}
+
+#template_list #content .recyclable_options li ul {
+	padding-left: 10px;
+	_position: relative; 
+	_top: .5em;
+}
+
+#template_list #content .recyclable_options li ul li {
+	min-height: 0px;
+	height: 0px;
+	padding: 0px 5px 10px 0px;
+	list-style: outside disc;	
+}
+
+.product_detail {
+	width: 290px;
+	background: #e0e0e0 url(../../images/grey_top.gif) no-repeat top;	
+	padding: 15px 20px 0px;
+}
+
+.start_links {
+	width: 330px;
+	background: #e0e0e0 url(../../images/grey_bottom.gif) no-repeat bottom;		
+	padding-bottom: 10px;
+}
+
+#content_what .code {
+	padding: 15px 0px 0px 114px;
+	margin-bottom: 15px;
+}
+
+.code3 {
+	
+}
+
+#template_list #content_what .code ul li {
+	min-height: 20px;
+	height: 20px;
+	padding-top: 0px;
+}
+
+#code1 {
+	width: 330px;
+	background: #f0b510 url(../../images/code1_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code2 {
+	width: 330px;
+	background: #efcc69 url(../../images/code2_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code3 {
+	width: 330px;
+	background: #809315 url(../../images/code3_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code4 {
+	width: 330px;
+	background: #73b7de url(../../images/code4_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code5 {
+	width: 330px;
+	background: #bbd8e8 url(../../images/code5_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code6 {
+	width: 330px;
+	background: #acb941 url(../../images/code6_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code7 {
+	width: 330px;
+	background: #c8d17b url(../../images/code7_top.gif) no-repeat top;	
+	padding-top: 15px;
+}
+
+#code1 h6 {
+	background: url(../../images/code1.gif) no-repeat;
+	width: 231px;
+	height: 31px;	
+}
+
+#code2 h6 {
+	background: url(../../images/code2.gif) no-repeat;
+	width: 173px;
+	height: 30px;	
+}
+
+#code3 h6 {
+	background: url(../../images/code3.gif) no-repeat;
+	width: 197px;
+	height: 30px;	
+}
+
+#code4 h6 {
+	background: url(../../images/code4.gif) no-repeat;
+	width: 170px;
+	height: 30px;	
+}
+
+#code5 h6 {
+	background: url(../../images/code5.gif) no-repeat;
+	width: 144px;
+	height: 30px;	
+}
+
+#code6 h6 {
+	background: url(../../images/code6.gif) no-repeat;
+	width: 141px;
+	height: 30px;
+}
+
+#code7 h6 {
+	background: url(../../images/code7.gif) no-repeat;
+	width: 185px;
+	height: 30px;
+}
+
+#code1 ul {	
+	background: url(../../images/code1_bottom.gif) no-repeat bottom;		
+}
+
+#code2 ul {	
+	background: url(../../images/code2_bottom.gif) no-repeat bottom;		
+}
+
+#code3 ul {	
+	background: url(../../images/code3_bottom.gif) no-repeat bottom;		
+}
+
+#code4 ul {	
+	background: url(../../images/code4_bottom.gif) no-repeat bottom;		
+}
+
+#code5 ul {	
+	background: url(../../images/code5_bottom.gif) no-repeat bottom;		
+}
+
+#code6 ul {	
+	background: url(../../images/code6_bottom.gif) no-repeat bottom;		
+}
+
+#code7 ul {	
+	background: url(../../images/code7_bottom.gif) no-repeat bottom;		
+}
+
+.code div ul {
+	min-height: 275px;
+	height: auto !important;
+	height: 275px;
+}
+
+.code h6 {
+	text-indent: -9999px;
+	margin-left: 6px;
+}
+
+.code ul {
+	width: 300px;
+	padding: 0px 0px 15px 30px;
+	position: relative;
+	top: 10px;	
+}
+
+.code ul li {
+	list-style: outside disc;
+	color: #FFF;	
+}
+
+.code ul li p {
+	color: #000;
+	padding-top: 3px;
+}
+
+#content_what .code1 {
+	background: url(../../images/recycling/icons/large/code1.gif) no-repeat left 60px;
+}
+
+#content_what .code2 {
+	background: url(../../images/recycling/icons/large/code2.gif) no-repeat left 60px;
+}
+
+#content_what .code3 {
+	background: url(../../images/recycling/icons/large/code3.gif) no-repeat left 60px;
+}
+
+#content_what .code4 {
+	background: url(../../images/recycling/icons/large/code4.gif) no-repeat left 60px;
+}
+
+#content_what .code5 {
+	background: url(../../images/recycling/icons/large/code5.gif) no-repeat left 60px;
+}
+
+#content_what .code6 {
+	background: url(../../images/recycling/icons/large/code6.gif) no-repeat left 60px;
+}
+
+#content_what .code7 {
+	background: url(../../images/recycling/icons/large/code7.gif) no-repeat left 60px;
+}
+
+#template_list #content_what ul.plastics_menu {
+	overflow: hidden;
+}
+
+#template_list #content_what ul.plastics_menu li {
+	padding: 0px 0px 0px 0px;
+	min-height: 155px;
+	height: 155px;	
+	width: 143px;
+	float: left;
+	margin: 0px 3px;
+}
+
+ul.plastics_menu li a {
+	text-decoration: none;
+	display: block;
+	padding-top: 104px;
+	width: 143px;	
+}
+
+.clean {
+	background: url(../../images/clean_background.gif) no-repeat left 20px;
+}
+
+.clean .intro {
+	padding-left: 135px;
+}
+
+#template_list #content_what .clean_list {
+	padding-left: 185px;
+	margin-top: 0px;
+}
+
+#template_list #content_what .clean_list li {
+	color: #718954;
+	min-height: 10px;
+	height: 10px;
+	padding: 0px 5px 10px 0px;
+	list-style: outside disc;	
+}
+
+#template_list #content_what .clean_list li p {
+	color: #525252;
+	padding: 3px 0px 7px;
+}
+
+#template_list #content_what .plastics_learn_more {
+
+}
+
+#template_list #content_what .plastics_learn_more li {
+	min-height: 70px;
+	height: 70px;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 5px 5px 5px 110px;
+}
+
+.learn_1 {
+	background: url(../../images/learn_more_1.gif) no-repeat left 5px;
+}
+
+.learn_2 {
+	background: url(../../images/learn_more_2.gif) no-repeat left 5px;
+}
+
+.learn_3 {
+	background: url(../../images/learn_more_3.gif) no-repeat left 5px;
+}
+
+.learn_4 {
+	background: url(../../images/learn_more_4.gif) no-repeat left 5px;
+}
+
+.learn_5 {
+	background: url(../../images/learn_more_5.gif) no-repeat left 5px;
+}
+
+.learn_6 {
+	background: url(../../images/learn_more_6.gif) no-repeat left 5px;
+}
+
+.learn_7 {
+	background: url(../../images/learn_more_7.gif) no-repeat left 5px;
+}
+
+.learn_8 {
+	background: url(../../images/learn_more_8.gif) no-repeat left 5px;
+}
+
+.learn_9 {
+	background: url(../../images/learn_more_9.gif) no-repeat left 5px;
+}
+
+.learn_10 {
+	background: url(../../images/learn_more_10.gif) no-repeat left 5px;
+}
+
+#template_list #content_what .plastics_learn_more li.last {
+	border-bottom: none;
+}
+
+#template_list #content_what #code_rollover {
+	background: url(../../images/code_rollover.gif) no-repeat;
+	width: 445px;
+	height: 113px;
+}
+
+#template_list #content_what #code_rollover ul {
+	overflow: visible;
+	position: relative;
+	top: 30px;
+	left: 10px;	
+	height: 51px;
+}
+
+#template_list #content_what #code_rollover ul li {
+	width: 40px;	
+	float: left;
+	margin: 5px;
+	min-height: 51px;
+	height: 51px;	
+}
+
+#code_rollover ul li a {
+	display: block;
+	height: 51px;
+	width: 40px;
+	text-indent: -9999px;	
+}
+
+#code_rollover ul li img {
+	display: none;
+	position: absolute;
+}
+
+#code_rollover ul li a.img_rollover {
+	display: none;	
+	position: absolute;
+}
+
+#code_rollover ul li a.img_rollover.pete {	
+	background: url(../../images/rollover_pete.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.hdpe {	
+	background: url(../../images/rollover_hdpe.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.v {	
+	background: url(../../images/rollover_v.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.ldpe {	
+	background: url(../../images/rollover_ldpe.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.pp {	
+	background: url(../../images/rollover_pp.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.ps {	
+	background: url(../../images/rollover_ps.png) no-repeat;	
+}
+
+#code_rollover ul li a.img_rollover.other {	
+	background: url(../../images/rollover_other.png) no-repeat;	
+}
+
+#code_rollover ul li a:hover img {
+	display: block;
+}
+
+a#pete {
+	background: url(../../images/code_pete.gif) no-repeat bottom;
+}
+
+a#hdpe {
+	background: url(../../images/code_hdpe.gif) no-repeat bottom;
+}
+
+a#v {
+	background: url(../../images/code_v.gif) no-repeat bottom;
+}
+
+a#ldpe {
+	background: url(../../images/code_ldpe.gif) no-repeat bottom;
+}
+
+a#pp {
+	background: url(../../images/code_pp.gif) no-repeat bottom;
+}
+
+a#ps {
+	background: url(../../images/code_ps.gif) no-repeat bottom;
+}
+
+a#other {
+	background: url(../../images/code_other.gif) no-repeat bottom;
+}
+
+.rollovers img {
+	position: relative;
+	display: none;
+}

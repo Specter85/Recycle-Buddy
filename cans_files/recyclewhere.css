@@ -1,0 +1,155 @@
+#content_where {
+	background: url(../../images/list_children_bg.png) no-repeat;
+	left: 338px;
+	margin-bottom: 15px;
+	min-height: 384px;
+	height: auto !important;
+	height: 384px;
+	padding: 30px 30px 8px;
+	position: relative;
+	top: 5px;
+	width: 469px;
+	margin-bottom: 60px;
+}
+
+.feature {
+	padding: 20px 0px 10px 25px;
+	text-align: left;
+}
+
+.feature .navigation_tab {
+	width: 468px;	
+	margin: 0px;
+	overflow: hidden;	
+	height: 25px;
+}
+
+#template_list #content .tab {
+	width: 156px;
+	display: block;
+	min-height: 25px;
+	height: 25px;
+	padding: 0px;
+	float: left;
+	
+}
+
+#template_list #content .tab a {
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #bebebe;
+	display: block;
+	min-height: 19px;
+	height: 19px;
+	width: 156px;
+	text-align: center;
+	padding-top: 6px;
+	background: url(../../images/tab_unactive_other.gif) no-repeat;
+}
+
+#template_list #content .tab a.prior {
+	background: url(../../images/tab_unactive_first.gif) no-repeat;
+}
+
+#template_list #content .tab a.active {
+	color: #496824;
+	background: url(../../images/tab_active.gif) no-repeat;
+}
+
+.white_bg_container {
+	width: 438px;
+	background: #FFF;
+	padding: 10px 15px;
+}
+
+#map_style {
+	padding-bottom: 15px;
+	position: relative;
+	z-index: 0;
+	margin-bottom: 15px;
+}
+
+.feature h3 {
+	margin: 0px;
+	padding: 10px 0px;
+}
+
+#state_select {
+	padding: 25px 0px;
+}
+
+#state_select label {
+	padding-right: 10px;
+	font-size: 14px;
+	color: #496824;
+}
+
+#state_select select {
+	
+}
+
+#template_list #content .locations {
+	margin: 15px 0px;
+	padding: 0px 0px 0px 20px;
+}
+
+#template_list #content .locations li {	
+	min-height: 10px;
+	height: auto !important;
+	height: 10px;
+	padding: 0px 0px 10px 0px;	
+	display: list-item;
+}
+
+#template_list #content .more_links li {
+	padding: 0px;
+	min-height: 0px;
+	height: 0px;
+}
+
+.locations li h4 {
+	color: #496824;
+	font-size: 14px;
+	padding: 0px 0px 0px 0px;
+}
+
+.locations li p {
+	padding: 0px;
+	color: #525252;
+}
+
+.locations li h4 {
+	text-decoration: underline;
+}
+
+.more_links dt {
+	color: #496824;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px 0px 0px 0px;
+}
+
+.more_links dd {
+	padding: 0px 0px 0px 0px;
+}
+
+.more_links dd a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+span.adjustment {
+	position: relative;
+	left: -3px;
+}
+
+#template_list #content .get_started_recycling {
+	list-style: outside disc; 
+	padding-left: 15px;
+}
+
+#template_list #content .get_started_recycling li {
+	min-height: 0px;
+	height: 0px;
+	padding: 0px 0px 10px 0px;
+}
