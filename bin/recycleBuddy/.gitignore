@@ -1,0 +1,11 @@
+.metadata/
+.settings/
+cans_files/
+
+*.class
+*.jar
+*.zip
+*.htm
+*.html
+*.js
+*.css
