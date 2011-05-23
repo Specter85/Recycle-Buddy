@@ -7,10 +7,10 @@ General Information About Bothell Recycling
 plasticBin.jpg
 1
 General Info
-Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).
+Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).Remember to clean all items, and to throw ALL lids in the trash. 
 plasticBin.jpg
 0
-Plastic Parent
+Plastic 
 Plastic
 plasticBottles.jpg
 5
@@ -20,7 +20,7 @@ child.jpg
 1
 Plastic Child 1 Display Pane
 This is the information to display in the display pane for Plastic Child 1.
-child.jpg
+plasticBottles.jpg
 0
 Plastic Child 2
 Plastic Jars and Jugs. Rinsed bleach, detergent and cat litter jugs\p Labels OK\p NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
@@ -38,7 +38,7 @@ Plastic Child 5
 Other Containers and Packaging. NO Styrofoam (e.g., peanuts, egg carton, packing). NO Take-out containers (e.g. clamshell, deli tray). NO Six-pack rings. NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
 child.jpg
 0
-PaperParent
+Paper
 Paper
 plasticBin.jpg
 6
@@ -78,7 +78,7 @@ Glass Child 2
 Glass is … (2)
 child.jpg
 0
-Metal Parent
+Metal 
 Metal is …
 plasticBin.jpg
 2
@@ -90,7 +90,7 @@ Metal Child 2
 Metal is … (2)
 child.jpg
 0
-Toxic Parent
+Toxic 
 Toxic is …
 plasticBin.jpg
 2
