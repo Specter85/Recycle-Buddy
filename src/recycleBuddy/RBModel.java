@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/20/11
- * @version 0.3.01
+ * @latest 5/23/11
+ * @version 0.5.00
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -33,6 +33,8 @@
  * 5/11/11 0.0.07 - remove all null passing
  * 5/11/11 0.1.00 - ZFR candidate passes data to UI
  * 5/20/11 0.3.01 - Alpha 1, display single text panel
+ * 5/22/11 0.3.02 - Alpha 2, passing title to side bars rather than text
+ * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.02
  */
 
 package recycleBuddy;

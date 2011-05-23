@@ -11,12 +11,13 @@
  *
  * @author Mark Zachacz
  * @since 5/22/11
- * @latest 5/22/11
- * @version 0.3.04
+ * @latest 5/23/11
+ * @version 0.5.00
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
  * 5/20/11 0.3.03 Made text wrap properly in the text pane.
  * 5/22/11 0.3.04 Made the text on side buttons bigger.
+ * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.04
  */
 
 package recycleBuddy;
