@@ -139,7 +139,7 @@ public class RBModel {
 			}
 			else {
 				// display a "disabled" button
-				view.refreshOption(i, "placeholder: no info", "test.png", false);
+				view.refreshOption(i, "", "family.jpg", false);
 				
 				// ...and set the sidebar displays
 				view.refreshSideOption(i, "placeholder: no info", false);
@@ -263,7 +263,7 @@ public class RBModel {
 					else 
 					{
 						// display a "disabled" button
-						view.refreshOption(i, "", "test.png", false);
+						view.refreshOption(i, "", "family.jpg", false);
 						//view.showTextPane();
 					}
 				} // next button

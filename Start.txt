@@ -15,7 +15,7 @@ Plastic
 plasticBottles.jpg
 5
 Plastic Child 1
-Plastic Bottles
+Bottles
 child.jpg
 1
 Plastic Child 1 Display Pane
@@ -23,7 +23,7 @@ Food, beverage, detergent, shampoo, condiment bottles, vitamins\p Labels OK\p NO
 plasticBottles.jpg
 0
 Plastic Child 2
-Plastic Jars and Jugs
+Jars and Jugs
 child.jpg
 1
 Plastic Child 2
@@ -31,7 +31,7 @@ Rinsed bleach, detergent and cat litter jugs\p Labels OK\p NO loose lids (e.g. j
 child.jpg
 0
 Plastic Child 3
-Plastic Round Food Tubs
+Round Food Tubs
 child.jpg
 1
 Plastic Child 3
@@ -39,7 +39,7 @@ Yogurt, cottage cheese and pudding containers\p Labels OK\p NO loose lids (e.g. 
 child.jpg
 0
 Plastic Child 4
-Plastic Bags and Other Plastic Wraps
+Plastic Bags 
 child.jpg
 1
 Plastic Child 4
@@ -47,7 +47,7 @@ NO Plastic bags, plastic wrap or bubble wrap. Suggestion: Clean plastic shopping
 child.jpg
 0
 Plastic Child 5
-Other Containers and Packaging
+Other Containers
 child.jpg
 1
 Plastic Child 5
@@ -97,7 +97,7 @@ child.jpg
 Paper Child 5
 Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. Also accepted are clean paper cups and frozen food boxes.
 child.jpg
-1
+0
 Paper Child 6
 Books
 child.jpg
@@ -107,20 +107,16 @@ Examples: paperback books and phone books.
 child.jpg
 0
 Glass
-Glass is …
+Glass
 plasticBin.jpg
-3
+2
 Glass Child 1
 Glass is … (1)
-glassJar.png
+child.jpg
 0
 Glass Child 2
 Glass is … (2)
-glassBottle.png
-0
-Glass Child 3
-Glass is … (3)
-glassBroken.png
+child.jpg
 0
 Metal 
 Metal is …
@@ -135,14 +131,54 @@ Metal is … (2)
 child.jpg
 0
 Toxic 
-Toxic is …
+Toxic 
 plasticBin.jpg
-2
+6
 Toxic Child 1
-Toxic is … (1)
+Electronic Waste
+child.jpg
+1
+Toxic Child 1
+You can recycle these items, just not with your regular recycling. Contact your local electronic stores and you can find places to send them
 child.jpg
 0
 Toxic Child 2
-Toxic is … (2)
+Batteries
+child.jpg
+1
+Toxic Child 2
+Batteries need to be recycled, but do not mix them with your other recycling. Most grocery stores or electronic stores have battery recycling
+child.jpg
+0
+Toxic Child 3
+Light Bulbs
+child.jpg
+1
+Toxic Child 3
+Light bulbs cannot be recycled, but they are OK to put in the garbage. 
+child.jpg
+0
+Toxic Child 4
+Paint Containers
+child.jpg
+1
+Toxic Child 4
+Do not attempt to recycle, this will need to be disposed of properly
+child.jpg
+0
+Toxic Child 5
+Cleaning Supplies 
+child.jpg
+1
+Toxic Child 5
+Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them
+child.jpg
+0
+Toxic Child 6
+Oil Containers 
+child.jpg
+1
+Toxic Child 6
+someting here 
 child.jpg
 0
