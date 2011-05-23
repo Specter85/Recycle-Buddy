@@ -3,7 +3,7 @@ About application, version, update
 test.png
 6
 General Info
-General Information About Bothell Recycling
+General Information
 plasticBin.jpg
 1
 General Info
@@ -113,25 +113,61 @@ plasticBin.jpg
 Glass Child 1
 Jars and Jugs
 glassJar.png
+1
+Glass Child 1
+All jars and jugs are accepted 
+glassJar.png
 0
 Glass Child 2
 Bottles
 glassBottle.png
+1
+Glass Child 2
+All glass bottles are accepted
+glassJar.png
 0
 Glass Child 3
 Broken Durable Glass
 glassBroken.png
+1
+Glass Child 3
+Glass items from your house are not accepted because they use a different kind of glass. 
+glassJar.png
 0
 Metal 
-Metal is …
+Metal 
 plasticBin.jpg
-2
+4
 Metal Child 1
-Metal is … (1)
+Aluminum Cans
+child.jpg
+1
+Metal Child 1
+All cans are gladly accepted
 child.jpg
 0
 Metal Child 2
-Metal is … (2)
+Aluminium Foil 
+child.jpg
+1
+Metal Child 2
+This is not recyclable, you must throw it away
+child.jpg
+0
+Metal Child 3
+Scrap Metal
+child.jpg
+1
+Metal Child 3
+It must be only 2x2x2 and under 35 lbs
+child.jpg
+0
+Metal Child 4
+Tin Cans
+child.jpg
+1
+Metal Child 1
+Examples are soup cans, juice cans, etc. 
 child.jpg
 0
 Toxic 
