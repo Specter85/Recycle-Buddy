@@ -1,0 +1,21 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: YULASIK <yulasik@YULASIKs-MacBook-Pro.local>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   Start.txt
+#	deleted:    bin/placeHolder
+#	deleted:    plasticBin.jpg
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.DS_Store
+#	glassBottle.png
+#	glassBroken.png
+#	glassJar.png

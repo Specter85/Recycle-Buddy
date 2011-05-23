@@ -109,14 +109,18 @@ child.jpg
 Glass
 Glass
 plasticBin.jpg
-2
+3
 Glass Child 1
-Bottles and Jugs
-child.jpg
+Jars and Jugs
+glassJar.png
 0
 Glass Child 2
-Durable Glass
-child.jpg
+Bottles
+glassBottle.png
+0
+Glass Child 3
+Broken Durable Glass
+glassBroken.png
 0
 Metal 
 Metal is …
