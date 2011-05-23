@@ -98,7 +98,7 @@ public class RBWindow extends JFrame {
 		sideOptions = new JButton[NUM_OPTIONS];
 		for(int i = 0; i < sideOptions.length; i++) {
 			sideOptions[i] = new JButton("test");
-			sideOptions[i].setFont(new Font("Serif", Font.PLAIN, 14));
+			sideOptions[i].setFont(new Font("Serif", Font.BOLD, 18));
 			sideOptions[i].addActionListener(new SideOptionListener(model, i));
 			pPan.add(sideOptions[i]);
 		}
