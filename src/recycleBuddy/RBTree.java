@@ -12,14 +12,15 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/11/11
- * @version 0.1.00
+ * @latest 5/23/11
+ * @version 0.5.00
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
  * 5/11/11 0.0.04 - build tree with dummy data
  * 5/11/11 0.0.05 - read and output data file
  * 5/11/11 0.1.00 - ZFR Candidate, reads data file, passes it to UI
+ * 5/23/11 5.0.00 Beta Release - unchanged from build 0.1.00
  */
 
 package recycleBuddy;
