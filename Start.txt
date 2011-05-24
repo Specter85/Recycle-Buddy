@@ -3,56 +3,64 @@ About application, version, update
 test.png
 6
 General Info
-General Information About Bothell Recycling
+General Information
 plasticBin.jpg
 1
 General Info
 Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).Remember to clean all items, and to throw ALL lids in the trash. 
-plasticBin.jpg
+bothell.jpg
 0
 Plastic 
 Plastic
-plasticBottles.jpg
-5
+plasticBottle.png
+6
 Plastic Child 1
 Bottles
-child.jpg
+plasticBottle.png
 1
 Plastic Child 1 Display Pane
 Food, beverage, detergent, shampoo, condiment bottles, vitamins\p Labels OK\p NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment\p NO Prescription vials
-plasticBottles.jpg
+plasticBottle.png
 0
 Plastic Child 2
 Jars and Jugs
-child.jpg
+plasticJug.png
 1
 Plastic Child 2
 Rinsed bleach, detergent and cat litter jugs\p Labels OK\p NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
-child.jpg
+plasticJug.png
 0
 Plastic Child 3
 Round Food Tubs
-child.jpg
+plasticTube.png
 1
 Plastic Child 3
 Yogurt, cottage cheese and pudding containers\p Labels OK\p NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment”
-child.jpg
+plasticTube.png
 0
 Plastic Child 4
 Plastic Bags 
-child.jpg
+plasticBag.png
 1
 Plastic Child 4
 NO Plastic bags, plastic wrap or bubble wrap. Suggestion: Clean plastic shopping bags can be recycled at many grocery and retail stores.
-child.jpg
+plasticBag.png
 0
 Plastic Child 5
 Other Containers
-child.jpg
+plasticOther.png
 1
 Plastic Child 5
 NO Styrofoam (e.g., peanuts, egg carton, packing). NO Take-out containers (e.g. clamshell, deli tray). NO Six-pack rings. NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
-child.jpg
+plasticOther.png
+0
+Plastic Child 6
+Cups
+plasticCup.png
+1
+Plastic Child 6
+All plastic cups are recyclable
+plasticCup.png
 0
 Paper
 Paper
@@ -60,51 +68,51 @@ plasticBin.jpg
 6
 Paper Child 1
 Cardboard
-child.jpg
+paperCardboard.png
 1
 Paper Child 1
 Examples of cardboard that are accepted: shipping boxes, flattened cardboard (limit 2x3 ft).
-child.jpg
+paperCardboard.png
 0
 Paper Child 2
 Magazines
-child.jpg
+paperMagazines.png
 1
 Paper Child 2
 Examples of magazines that are accepted: magazines, catalogs, glossy publications.
-child.jpg
+paperMagazines.png
 0
 Paper Child 3
 Common Paper
-child.jpg
+paperNews.png
 1
 Paper Child 3
 The following are examples of several types of paper that are accepted. Office Paper: white computer paper, letterhead, newsprint, colored paper, file stock, ground wood papers. Newspapers: newspapers and inserts. Mail: flyers, catalogs, coupons or mixed paper, window envelopes, unsolicited direct mail.
-child.jpg
+paperNews.png
 0
 Paper Child 4
 Paperboard (like Cereal Boxes)
-child.jpg
+paperCereal.png
 1
 Paper Child 4
 Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glossy it’s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. Be sure the paperboard you have is clean and free of food waste. Then recycle it.
-child.jpg
+paperCereal.png
 0
 Paper Child 5
 Food Containers
-child.jpg
+paperCarton.png
 1
 Paper Child 5
 Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. Also accepted are clean paper cups and frozen food boxes.
-child.jpg
+paperCarton.png
 0
 Paper Child 6
 Books
-child.jpg
+paperBook.png
 1
 Paper Child 6
 Examples: paperback books and phone books.
-child.jpg
+paperBook.png
 0
 Glass
 Glass
@@ -113,25 +121,61 @@ plasticBin.jpg
 Glass Child 1
 Jars and Jugs
 glassJar.png
+1
+Glass Child 1
+All jars and jugs are accepted 
+glassJar.png
 0
 Glass Child 2
 Bottles
-glassBottle.png
+glassBottle_small.png
+1
+Glass Child 2
+All glass bottles are accepted
+glassBottle_small.png
 0
 Glass Child 3
 Broken Durable Glass
 glassBroken.png
+1
+Glass Child 3
+Glass items from your house are not accepted because they use a different kind of glass. 
+glassBroken.png
 0
 Metal 
-Metal is …
+Metal 
 plasticBin.jpg
-2
+4
 Metal Child 1
-Metal is … (1)
+Aluminum Cans
+child.jpg
+1
+Metal Child 1
+All cans are gladly accepted
 child.jpg
 0
 Metal Child 2
-Metal is … (2)
+Aluminium Foil 
+child.jpg
+1
+Metal Child 2
+This is not recyclable, you must throw it away
+child.jpg
+0
+Metal Child 3
+Scrap Metal
+child.jpg
+1
+Metal Child 3
+It must be only 2x2x2 and under 35 lbs
+child.jpg
+0
+Metal Child 4
+Tin Cans
+child.jpg
+1
+Metal Child 1
+Examples are soup cans, juice cans, etc. 
 child.jpg
 0
 Toxic 
