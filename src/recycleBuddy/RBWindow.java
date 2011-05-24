@@ -20,6 +20,7 @@
  * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.04
  * 5/24/11 5.0.01 Made text pane font bigger. Changed the windows colors to two
  * 					different greens.
+ * 5/24/11 5.0.03 Added some options for color.
  */
 
 package recycleBuddy;
@@ -74,10 +75,16 @@ public class RBWindow extends JFrame {
 		SIDE_OPTION
 	}
 	
-	// consts for different shades of green.
-	public static final int DARK_GREEN = 150;
-	public static final int LIGHT_GREEN = 200;
-
+	// consts for dark green
+	public static final int DARK_GREEN_R = 0;
+	public static final int DARK_GREEN_G = 190;
+	public static final int DARK_GREEN_B = 40;
+	
+	// consts for light green
+	public static final int LIGHT_GREEN_R = 0;
+	public static final int LIGHT_GREEN_G = 250;
+	public static final int LIGHT_GREEN_B = 40;
+	
 	/**
 	 * Constructor
 	 * Builds RecycleBuddy's main window.
@@ -89,7 +96,7 @@ public class RBWindow extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ImageIcon temp = new ImageIcon("RecycleBuddy.png");
 		this.setIconImage(temp.getImage());
-		this.setBackground(new Color(0, LIGHT_GREEN, 0));
+		this.setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 		this.setTitle("Recycle Buddy");
 		
 		// Create RecycleBuddy's model.
@@ -100,7 +107,7 @@ public class RBWindow extends JFrame {
 		
 		// Create panel for the side pane buttons.
 		JPanel pPan = new JPanel();
-		pPan.setBackground(new Color(0, DARK_GREEN, 0));
+		pPan.setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
 		pPan.setLayout(new GridLayout(6,1));
 		add(pPan, BorderLayout.WEST);
 		
@@ -109,7 +116,7 @@ public class RBWindow extends JFrame {
 		for(int i = 0; i < sideOptions.length; i++) {
 			sideOptions[i] = new JButton("test");
 			sideOptions[i].setFont(new Font("Serif", Font.BOLD, 18));
-			sideOptions[i].setBackground(new Color(0, DARK_GREEN, 0));
+			sideOptions[i].setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
 			sideOptions[i].addActionListener(new SideOptionListener(model, i));
 			pPan.add(sideOptions[i]);
 		}
@@ -121,7 +128,7 @@ public class RBWindow extends JFrame {
 		
 		// Create panel for the option buttons and add it to the main panel.
 		bPan = new JPanel();
-		bPan.setBackground(new Color(0, LIGHT_GREEN, 0));
+		bPan.setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 		bPan.setLayout(new GridLayout(2, 3));
 		mainPan.add(bPan, BUTTON_PANEL);
 		
@@ -129,14 +136,14 @@ public class RBWindow extends JFrame {
 		options = new RBButton[NUM_OPTIONS];
 		for(int i = 0; i < options.length; i++) {
 			options[i] = new RBButton("test", "test.png");
-			options[i].setBackground(new Color(0, LIGHT_GREEN, 0));
+			options[i].setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 			options[i].addActionListener(new OptionListener(model, i));
 			bPan.add(options[i]);
 		}
 		
 		// Create the text panel and add it to the main panel.
 		tPan = new JPanel();
-		tPan.setBackground(new Color(0, LIGHT_GREEN, 0));
+		tPan.setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 		tPan.setLayout(new BorderLayout());
 		mainPan.add(tPan, TEXT_PANEL);
 		
@@ -155,17 +162,17 @@ public class RBWindow extends JFrame {
 		
 		// Create panel for the home and back buttons.
 		JPanel pan = new JPanel();
-		pan.setBackground(new Color(0, LIGHT_GREEN, 0));
+		pan.setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 		pan.setLayout(new FlowLayout());
 		add(pan, BorderLayout.SOUTH);
 		
 		// Add the home and back buttons.
 		back = new JButton("Back");
-		back.setBackground(new Color(0, DARK_GREEN, 0));
+		back.setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
 		back.addActionListener(new BackListener(model));
 		pan.add(back);	
 		home = new JButton("Home");
-		home.setBackground(new Color(0, DARK_GREEN, 0));
+		home.setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
 		home.addActionListener(new HomeListener(model));
 		pan.add(home);
 		
