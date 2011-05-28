@@ -36,6 +36,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 
 public class RBWindow extends JFrame {
@@ -108,17 +110,33 @@ public class RBWindow extends JFrame {
 		// Create panel for the side pane buttons.
 		JPanel pPan = new JPanel();
 		pPan.setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
-		pPan.setLayout(new GridLayout(6,1));
+		pPan.setLayout(new GridBagLayout());
 		add(pPan, BorderLayout.WEST);
+		
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.BOTH;
+		c.weighty = 0.2;
+		c.gridx = 0;
+		c.gridy = 0;
+		
+		// Create label for the side pane.
+		JLabel pLab = new JLabel();
+		pLab.setText("Quick Links");
+		pLab.setHorizontalAlignment(JLabel.CENTER);
+		pLab.setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
+		pPan.add(pLab, c);
+		
+		c.weighty = 0.5;
 		
 		// Add buttons to the side pane.
 		sideOptions = new JButton[NUM_OPTIONS];
 		for(int i = 0; i < sideOptions.length; i++) {
 			sideOptions[i] = new JButton("test");
-			sideOptions[i].setFont(new Font("Serif", Font.BOLD, 18));
+			sideOptions[i].setFont(new Font("Serif", Font.BOLD, 20));
 			sideOptions[i].setBackground(new Color(DARK_GREEN_R, DARK_GREEN_G, DARK_GREEN_B));
 			sideOptions[i].addActionListener(new SideOptionListener(model, i));
-			pPan.add(sideOptions[i]);
+			c.gridy = i + 1;
+			pPan.add(sideOptions[i], c);
 		}
 		
 		// Make the main panel and set it to CardLayout.
@@ -138,7 +156,7 @@ public class RBWindow extends JFrame {
 			options[i] = new RBButton("test", "test.png");
 			options[i].setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 			options[i].addActionListener(new OptionListener(model, i));
-			bPan.add(options[i]);
+			bPan.add(options[i], c);
 		}
 		
 		// Create the text panel and add it to the main panel.
@@ -152,7 +170,7 @@ public class RBWindow extends JFrame {
 		tPanText.setEditable(false);
 		tPanText.setLineWrap(true);
 		tPanText.setWrapStyleWord(true);
-		tPanText.setFont(new Font("Serif", Font.PLAIN, 18));
+		tPanText.setFont(new Font("Serif", Font.PLAIN, 20));
 		tPan.add(tPanText, BorderLayout.CENTER);
 		
 		// Add an image to the text panel.

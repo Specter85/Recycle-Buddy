@@ -57,7 +57,7 @@ public class RBButton extends JButton {
 		
 		// Add text to the button.
 		this.text = new JLabel(text);
-		this.text.setFont(new Font("Serif", Font.BOLD, 18));
+		this.text.setFont(new Font("Serif", Font.BOLD, 20));
 		add(this.text, BorderLayout.SOUTH);
 	}
 	
