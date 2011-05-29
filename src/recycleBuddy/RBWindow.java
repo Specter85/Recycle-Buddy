@@ -21,6 +21,8 @@
  * 5/24/11 5.0.01 Made text pane font bigger. Changed the windows colors to two
  * 					different greens.
  * 5/24/11 5.0.03 Added some options for color.
+ * 5/29/11 5.0.04 Made the window bigger this should be the max size since if
+ * 					it gets any bigger it won't fit on my screen.
  */
 
 package recycleBuddy;
@@ -43,8 +45,8 @@ import java.awt.GridLayout;
 public class RBWindow extends JFrame {
 	
 	// Constants for the window size and number of options.
-	public static final int WIDTH = 1000;
-	public static final int HEIGHT = 600;
+	public static final int WIDTH = 1100;
+	public static final int HEIGHT = 700;
 	public static final int NUM_OPTIONS = 6;
 	
 	// References to the window's buttons.
