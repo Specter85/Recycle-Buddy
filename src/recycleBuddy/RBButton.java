@@ -17,6 +17,7 @@
  * 5/22/11 0.3.02 Made the text on RBButtons bigger and bold.
  * 5/22/11 0.3.02 Gave the images on the buttons more space on the buttons.
  * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.02
+ * 5/28/11 5.0.01 Center align text and images.
  */
 
 package recycleBuddy;
@@ -53,10 +54,12 @@ public class RBButton extends JButton {
 		// Add an image to the button.
 		image = new JLabel();
 		image.setIcon(new ImageIcon(imageName));
+		image.setHorizontalAlignment(JLabel.CENTER);
 		add(image, BorderLayout.CENTER);
 		
 		// Add text to the button.
 		this.text = new JLabel(text);
+		this.text.setHorizontalAlignment(JLabel.CENTER);
 		this.text.setFont(new Font("Serif", Font.BOLD, 20));
 		add(this.text, BorderLayout.SOUTH);
 	}
