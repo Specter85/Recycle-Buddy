@@ -276,7 +276,7 @@ public class RBWindow extends JFrame {
 		
 		tPanText.setText(tokens[0]);
 		for (int i = 1; i < tokens.length; i++)	
-			tPanText.append("\n\n" + tokens[i]);
+			tPanText.append("\n" + tokens[i]);
 		
 		tPanImage.setIcon(new ImageIcon(image));
 	}
