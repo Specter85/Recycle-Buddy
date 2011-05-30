@@ -23,6 +23,8 @@
  * 5/24/11 5.0.03 Added some options for color.
  * 5/29/11 5.0.04 Made the window bigger this should be the max size since if
  * 					it gets any bigger it won't fit on my screen.
+ * 5/30/11 5.0.05 Added parsing text code to refreshTextPane so that there's new line or new paragraph
+ *                                      for the appropriate text in String.
  */
 
 package recycleBuddy;
