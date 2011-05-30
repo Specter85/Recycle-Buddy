@@ -7,7 +7,7 @@ General Information
 plasticBin.jpg
 1
 General Info
-Recycling is ^provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection.|Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).|Remember to clean all items, and to throw ALL lids in the trash. 
+Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).| |Remember to clean all items before recycling. 
 bothell.jpg
 0
 Plastic 
@@ -19,7 +19,7 @@ Bottles
 plasticBottle.png
 1
 Plastic Child 1 Display Pane
-Food, beverage, detergent, shampoo, condiment bottles, vitamins |Labels OK |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment|NO Prescription vials
+Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment | |NO Prescription vials
 plasticBottle.png
 0
 Plastic Child 2
@@ -27,7 +27,7 @@ Jars and Jugs
 plasticJug.png
 1
 Plastic Child 2
-Rinsed bleach, detergent and cat litter jugs^Labels OK ^NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
+Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
 plasticJug.png
 0
 Plastic Child 3
@@ -35,7 +35,7 @@ Round Food Tubs
 plasticTube.png
 1
 Plastic Child 3
-Yogurt, cottage cheese and pudding containers^Labels OK ^NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
+Yogurt, cottage cheese and pudding containers | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
 plasticTube.png
 0
 Plastic Child 4
@@ -43,7 +43,7 @@ Plastic Bags
 plasticBag.png
 1
 Plastic Child 4
-NO Plastic bags, plastic wrap or bubble wrap. Suggestion: Clean plastic shopping bags can be recycled at many grocery and retail stores.
+NO Plastic bags, plastic wrap or bubble wrap. | |Suggestion: Clean plastic shopping bags can be recycled at many grocery and retail stores.
 plasticBag.png
 0
 Plastic Child 5
@@ -51,7 +51,7 @@ Other Containers
 plasticOther.png
 1
 Plastic Child 5
-NO Styrofoam (e.g., peanuts, egg carton, packing).^NO Take-out containers (e.g. clamshell, deli tray). NO Six-pack rings. NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
+NO Styrofoam (e.g., peanuts, egg carton, packing).|NO Take-out containers (e.g. clamshell, deli tray). |NO Six-pack rings. |NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
 plasticOther.png
 0
 Plastic Child 6
@@ -71,7 +71,7 @@ Cardboard
 paperCardboard.png
 1
 Paper Child 1
-Examples of cardboard that are accepted: shipping boxes, flattened cardboard (limit 2x3 ft).
+Examples of cardboard that are accepted: shipping boxes, flattened cardboard.
 paperCardboard.png
 0
 Paper Child 2
@@ -87,7 +87,7 @@ Common Paper
 paperNews.png
 1
 Paper Child 3
-The following are examples of several types of paper that are accepted. Office Paper: white computer paper, letterhead, newsprint, colored paper, file stock, ground wood papers. Newspapers: newspapers and inserts. Mail: flyers, catalogs, coupons or mixed paper, window envelopes, unsolicited direct mail.
+The following are examples of several types of paper that are accepted. | |Office Paper: white computer paper, letterhead, newsprint, colored paper, file stock, ground wood papers. | |Newspapers: newspapers and inserts. | |Mail: flyers, catalogs, coupons or mixed paper, window envelopes, unsolicited direct mail.
 paperNews.png
 0
 Paper Child 4
@@ -95,7 +95,7 @@ Paperboard (like Cereal Boxes)
 paperCereal.png
 1
 Paper Child 4
-Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glossy it’s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. Be sure the paperboard you have is clean and free of food waste. Then recycle it.
+Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glossy it’s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. | |Be sure the paperboard you have is clean and free of food waste. Then recycle it.
 paperCereal.png
 0
 Paper Child 5
@@ -103,7 +103,7 @@ Food Containers
 paperCarton.png
 1
 Paper Child 5
-Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. Also accepted are clean paper cups and frozen food boxes.
+Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. | |Also accepted are clean paper cups and frozen food boxes.
 paperCarton.png
 0
 Paper Child 6
