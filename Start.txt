@@ -19,7 +19,7 @@ Bottles
 plasticBottle.png
 1
 Plastic Child 1 Display Pane
-Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment | |NO Prescription vials
+Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
 plasticBottle.png
 0
 Plastic Child 2
