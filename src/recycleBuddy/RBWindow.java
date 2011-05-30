@@ -269,7 +269,15 @@ public class RBWindow extends JFrame {
 	 * in the text pane. If the path is invalid nothing is displayed.
 	 */
 	public void refreshTextPane(String text, String image) {
-		tPanText.setText(text);
+		
+		String phrase = text;
+		String delims = "[|]+";
+		String[] tokens = phrase.split(delims);
+		
+		tPanText.setText(tokens[0]);
+		for (int i = 1; i < tokens.length; i++)	
+			tPanText.append("\n\n" + tokens[i]);
+		
 		tPanImage.setIcon(new ImageIcon(image));
 	}
 	
