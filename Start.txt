@@ -7,7 +7,7 @@ General Information
 plasticBin.jpg
 1
 General Info
-Recycling is ^provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection.|Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).|Remember to clean all items, and to throw ALL lids in the trash. 
+Recycling is ^provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection.|Put recycling that doesnâ€™t fit in your cart in old recycling bin or cardboard boxes (limit 3â€™x3â€™x3â€™).|Remember to clean all items, and to throw ALL lids in the trash. 
 bothell.jpg
 0
 Plastic 
@@ -95,7 +95,7 @@ Paperboard (like Cereal Boxes)
 paperCereal.png
 1
 Paper Child 4
-Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glossy it’s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. Be sure the paperboard you have is clean and free of food waste. Then recycle it.
+Examples of paperboard that are accepted: paper bags, cereal boxes. If itâ€™s glossy itâ€™s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. Be sure the paperboard you have is clean and free of food waste. Then recycle it.
 paperCereal.png
 0
 Paper Child 5
@@ -123,7 +123,7 @@ Jars and Jugs
 glassJar.png
 1
 Glass Child 1
-All jars and jugs are accepted 
+All colors and sizes of jars and jugs are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassJar.png
 0
 Glass Child 2
@@ -131,7 +131,7 @@ Bottles
 glassBottle_small.png
 1
 Glass Child 2
-All glass bottles are accepted
+All colors and sizes of glass bottles are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassBottle_small.png
 0
 Glass Child 3
@@ -139,27 +139,27 @@ Broken Durable Glass
 glassBroken.png
 1
 Glass Child 3
-Glass items from your house are not accepted because they use a different kind of glass. 
+Durable glass from your house like glass cups or Pyrex are not accepted because they are made from different materials.
 glassBroken.png
 0
 Metal 
 Metal 
 plasticBin.jpg
-4
+5
 Metal Child 1
 Aluminum Cans
 child.jpg
 1
 Metal Child 1
-All cans are gladly accepted
+Aluminum cans are accepted. Make sure to remove any plastics or rubber. Examples are pop cans, beer cans, etc.
 child.jpg
 0
 Metal Child 2
-Aluminium Foil 
+Aluminum Foil 
 child.jpg
 1
 Metal Child 2
-This is not recyclable, you must throw it away
+Aluminum foil is not recyclable, you must throw it away.
 child.jpg
 0
 Metal Child 3
@@ -167,15 +167,23 @@ Scrap Metal
 child.jpg
 1
 Metal Child 3
-It must be only 2x2x2 and under 35 lbs
+Scrap metal must be less than 2x2x2 ft, 35 lbs. No aluminum foil, foil trays, aerosol cans, needles, syringes, sharp or greasy scrap metal, knives or scissors.
 child.jpg
 0
 Metal Child 4
-Tin Cans
+Tin and Steel Cans
 child.jpg
 1
-Metal Child 1
-Examples are soup cans, juice cans, etc. 
+Metal Child 4
+Tin and steel cans are accepted. Make sure to remove any plastics or rubber. Examples are soup cans, juice cans, etc. The lids are recyclable if left attached to the can or placed inside the can.
+child.jpg
+0
+Metal Child 5
+Bottle Caps
+child.jpg
+1
+Metal Child 5
+Bottle Caps are too small to be recycled. They must be thrown away.
 child.jpg
 0
 Toxic 
@@ -211,7 +219,7 @@ Paint Containers
 child.jpg
 1
 Toxic Child 4
-Do not attempt to recycle, this will need to be disposed of properly
+Do not attempt to recycle, this will need to be disposed of properly.
 child.jpg
 0
 Toxic Child 5
@@ -219,7 +227,7 @@ Cleaning Supplies
 child.jpg
 1
 Toxic Child 5
-Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them
+Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them.|Be aware of what chemicals you are dumping down the drain. Check with your local sewage utility for blacklisted chemicals.
 child.jpg
 0
 Toxic Child 6
@@ -227,6 +235,6 @@ Oil Containers
 child.jpg
 1
 Toxic Child 6
-someting here 
+Do not attempt to recycle, this will need to be disposed of properly.|Oil containers can't be recycled because of oil residue that seeps into the plastic and can't be washed off. Oil containers can't be washed because oil can't be dumped in drains.   
 child.jpg
 0
