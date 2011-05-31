@@ -13,7 +13,7 @@
  * @latest 5/20/11
  * @version 0.5.00
  * 5/11/11 0.1.01 Written
- * 5/23/11 5.0.00 Beta Release - unchanged from build 0.1.01
+ * 5/23/11 0.5.00 Beta Release - unchanged from build 0.1.01
  */
 
 package recycleBuddy;

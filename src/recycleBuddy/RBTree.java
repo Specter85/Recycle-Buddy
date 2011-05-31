@@ -12,15 +12,17 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/23/11
- * @version 0.5.00
+ * @latest 5/30/11
+ * @version 0.9.02
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
  * 5/11/11 0.0.04 - build tree with dummy data
  * 5/11/11 0.0.05 - read and output data file
  * 5/11/11 0.1.00 - ZFR Candidate, reads data file, passes it to UI
- * 5/23/11 5.0.00 Beta Release - unchanged from build 0.1.00
+ * 5/23/11 0.5.00 Beta Release - unchanged from build 0.1.00
+ * 5/29/11 0.9.01 - FRC 1, added exceptions for malformed and missing files
+ * 5/30/11 0.9.02 - FRC 2, added paths for image folders 
  */
 
 package recycleBuddy;
@@ -49,6 +51,9 @@ public class RBTree {
 		
 		// Assign child number
 		childNum = childNumber;
+		
+
+		
 	}
 	
 	/**
@@ -60,14 +65,15 @@ public class RBTree {
 	* 
 	* @postcondition A full tree of recycling data is constructed.
 	*/
-	public void build(String dataPath) throws FileNotFoundException {		
+	public void build(String dataPath, String commonImgs, String cityImgs) throws FileNotFoundException, 
+	NumberFormatException, Exception {		
 		try {						
 			Scanner RBScanner = new Scanner(new File(dataPath));
 			
-			buildHelper(RBScanner);			
+			buildHelper(RBScanner, commonImgs, cityImgs);			
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			throw e;
 		}
 		
 	} // end build
@@ -86,17 +92,33 @@ public class RBTree {
 	* 
 	* @postcondition A full tree of recycling data is constructed.
 	*/
-	private void buildHelper(Scanner recycleData) throws FileNotFoundException {		
+	private void buildHelper(Scanner recycleData, String commonImgs, String cityImgs) throws FileNotFoundException, 
+	NumberFormatException, Exception {	
 		try {
 			// read data for this part of the tree
-			thisNode.setTitle(recycleData.nextLine());
-			thisNode.setText(recycleData.nextLine());
-			thisNode.setImagePath(recycleData.nextLine());
+			if (recycleData.hasNext()) 
+				thisNode.setTitle(recycleData.nextLine());
+			else throw new Exception("The file ended before " +
+					"a title could be read.");
+			
+			if (recycleData.hasNext()) 
+				thisNode.setText(recycleData.nextLine());
+			else throw new Exception("The file ended before " +
+					"a text line could be read.");
+			
+			if (recycleData.hasNext()) 
+				//thisNode.setImagePath(recycleData.nextLine());
+				thisNode.setImagePath(commonImgs + recycleData.nextLine());
+			else throw new Exception("The file ended before " +
+					"an image path could be read.");
 						
+			System.out.println("Image path: " + thisNode.getImagePath());
+			
 			// find number of children
-			childNum = Integer.parseInt(recycleData.nextLine());
-			
-			
+			if (recycleData.hasNext()) {						
+				childNum = Integer.parseInt(recycleData.nextLine());
+			}
+										
 			System.out.println("in tree: " + thisNode.getTitle());
 			if (parent != null ) {
 				System.out.println("with parent: " + parent.getThisNode().getTitle());
@@ -115,18 +137,29 @@ public class RBTree {
 				while (currentChild < childNum) {
 									
 					children[currentChild] = new RBTree(this, 0);
-					children[currentChild].buildHelper(recycleData);
+					children[currentChild].buildHelper(recycleData, commonImgs, cityImgs);
 										
 					// decrement currentChild
 					++currentChild;
 				}
 			}
 		}
+		catch (NumberFormatException nfe) {
+			childNum = 0;
+			throw nfe;
+		}
+		catch (FileNotFoundException fnfe) {
+			throw fnfe;
+		}
 		catch (Exception e) {
+			
 			e.printStackTrace();
 		}
 	} // end overloaded build
 	
+
+
+
 	
 	
 	// ACCESSORS

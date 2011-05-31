@@ -1,5 +1,5 @@
 About Us
-About application, version, update
+About application, version 0.9.01 FRC 1 May 31, 2011, update
 test.png
 6
 General Info
