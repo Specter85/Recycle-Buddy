@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/23/11
- * @version 0.5.00
+ * @latest 5/30/11
+ * @version 0.9.03
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -34,7 +34,10 @@
  * 5/11/11 0.1.00 - ZFR candidate passes data to UI
  * 5/20/11 0.3.01 - Alpha 1, display single text panel
  * 5/22/11 0.3.02 - Alpha 2, passing title to side bars rather than text
- * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.02
+ * 5/23/11 0.5.00 Beta Release - unchanged from build 0.3.02
+ * 5/30/11 0.9.01 - FRC 1, developing RBFormHandler class
+ * 5/30/11 0.9.02 - FRC 2, added paths for image folders
+ * 5/30/11 0.9.03 - FRC 3, added further exception handling
  */
 
 package recycleBuddy;
@@ -46,8 +49,11 @@ import recycleBuddy.RBWindow.ButtonTypes;
 
 public class RBModel {
 	// CONSTANT DECLARATIONS
-	// Initial path to data. (TO BE DEFINED)
+	// Initial paths to data. 
 	static String INITIALFILEPATH = "Start.txt";
+	static String COMMONLIBRARYFOLDERPATH = "Common Image Library/";
+	static String CITYFOLDERPATH = "Bothell/";
+	
 	// Note - find a better way to do this enumeration:
 	/*
 	static int HOME = 0; // control requiring root display
@@ -70,12 +76,15 @@ public class RBModel {
 	*/
 	public RBModel(int howManyControls, RBWindow refViews) {
 		try {
+			// create reference to view
+			view = refViews;
+			
 			// Create a new Recycle Buddy data tree.
 			// As the root, its parent is null.
 			rootTree = new RBTree(null, 0);
 			
 			// Build the tree with the file path to the data.
-			rootTree.build(INITIALFILEPATH);
+			rootTree.build(INITIALFILEPATH, COMMONLIBRARYFOLDERPATH, CITYFOLDERPATH);
 			
 		
 			// Point the tree traverser to the root.
@@ -93,13 +102,11 @@ public class RBModel {
 			// Initialize child offset.
 			childOffset = 0;
 			
-			// create reference to view
-			view = refViews;
 		}
 		catch (Exception e) {
-			// add better exception handling
-			// focus on io exceptions
-			
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
 			e.printStackTrace();
 		}
 	} // end RBModel
@@ -118,34 +125,42 @@ public class RBModel {
 	 *   correct, initialized position.
 	 */
 	public void setInitialState() {
-		// for each display area
-		for (int i = 0; i < displayAmt; ++i) {
-			// display on the main button and display on a side button			
-			if (i < treeTraverser.getChildNum()) {
-				RBTree treeDisplayInfo = treeTraverser.getChild(i);
-				RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
-				
-				// unpack the node
-				String name, text, img;
-				
-				name = nodeDisplayInfo.getTitle();
-				text = nodeDisplayInfo.getText();
-				img = nodeDisplayInfo.getImagePath();
-				
-				// call each display in turn and pass it the contents of
-				// each RBTreeNode in each of the children of the tree traverser
-				view.refreshOption(i, text, img, true);
-				
-				// ..and set the sidebar displays
-				view.refreshSideOption(i, name, true);
+		try {
+			// for each display area
+			for (int i = 0; i < displayAmt; ++i) {
+				// display on the main button and display on a side button			
+				if (i < treeTraverser.getChildNum()) {
+					RBTree treeDisplayInfo = treeTraverser.getChild(i);
+					RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
+					
+					// unpack the node
+					String name, text, img;
+					
+					name = nodeDisplayInfo.getTitle();
+					text = nodeDisplayInfo.getText();
+					img = nodeDisplayInfo.getImagePath();
+					
+					// call each display in turn and pass it the contents of
+					// each RBTreeNode in each of the children of the tree traverser
+					view.refreshOption(i, text, img, true);
+					
+					// ..and set the sidebar displays
+					view.refreshSideOption(i, name, true);
+				}
+				else {
+					// display a "disabled" button
+					view.refreshOption(i, "", "family.jpg", false);
+					
+					// ...and set the sidebar displays
+					view.refreshSideOption(i, "placeholder: no info", false);
+				}
 			}
-			else {
-				// display a "disabled" button
-				view.refreshOption(i, "", "family.jpg", false);
-				
-				// ...and set the sidebar displays
-				view.refreshSideOption(i, "placeholder: no info", false);
-			}
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
 		}
 	}
 	
@@ -215,10 +230,13 @@ public class RBModel {
 			// the side bar displays the root's children
 			else if (ButtonTypes.SIDE_OPTION == selectionType){
 				// now we are strictly selecting children of the root
-				
+				/*
+				if (whichDisplay <= treeTraverser.getChildNum())
+					treeTraverser = rootTree.getChild(whichDisplay);
+				childOffset = 0;
+				*/
 				treeTraverser = rootTree.getChild(whichDisplay);
 				childOffset = 0;
-				
 				
 				// Reset child offset																
 			} // end else if side option selection
@@ -227,7 +245,12 @@ public class RBModel {
 			else if (ButtonTypes.OPTION == selectionType) {
 				if (treeTraverser.getChildNum() != 0) {
 					// Go to the selected child tree.
-					treeTraverser = 
+					/*
+					if (whichDisplay <= rootTree.getChildNum())					
+						treeTraverser = 						
+							treeTraverser.getChild(whichDisplay + childOffset);
+					*/
+					treeTraverser = 						
 						treeTraverser.getChild(whichDisplay + childOffset);
 					
 					// Reset child offset
@@ -311,15 +334,127 @@ public class RBModel {
 	
 		}
 		catch (Exception e) {
-			// add better exception handling
-			// focus on out of range exceptions
-			// ...and null exceptions
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			System.err.println(e.getMessage());
 			e.printStackTrace();
 		}
+
 	} // end click
 	
+	// Form Handler Functions
+	public void back() {
+		try {
+			// Go back to the root.
+			treeTraverser = rootTree;
+			
+			// Reinitialize child offset.
+			childOffset = 0;
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
+		}
+	}
+	
+	public void choose(int whichDisplay) {
+		try {
+			if (treeTraverser.getChildNum() != 0) {
+				// Go to the selected child tree.
+				treeTraverser = 
+					treeTraverser.getChild(whichDisplay + childOffset);
+				
+				// Reset child offset
+				childOffset = 0;
+			}
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
+		}
+	}
+	
+	public void home() {
+		try {
+			// Go back to the parent tree, if it exists
+			if (null != treeTraverser.getParent()) {
+				treeTraverser = treeTraverser.getParent();
+			}	
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
+		}
+	}
+	
+	public void chooseFromHome(int whichDisplay) {
+		try {
+			// now we are strictly selecting children of the root
+			
+			treeTraverser = rootTree.getChild(whichDisplay);
+			childOffset = 0;
+			
+			
+			// Reset child offset	
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
+		}
+	}
+	
+	public int getNumSelections() {
+		try {
+	
+			int numSelections;
+			
+			numSelections = treeTraverser.getChildNum();
+			
+			return numSelections;
+		}
+		catch (Exception e) {
+			// display exception on panel
+			view.showTextPane();
+			view.refreshTextPane(e.getMessage(), "child.jpg");
+			e.printStackTrace();
+			
+			return -1;
+		}
+	}
+	
+	public String[] getEntry(int whichEntry) {
+		String[] entryInformation = new String[3];
+		
+		try {
+
+			RBTreeNode selectedNode = 
+				treeTraverser.getChild(whichEntry).getThisNode();
+			
+			entryInformation[0] = selectedNode.getImagePath();
+			entryInformation[1] = selectedNode.getText();
+			entryInformation[2] = selectedNode.getTitle();
+			
+			return entryInformation;
+		}
+		catch (Exception e) {
+			// display exception on panel
+			entryInformation[0] = "child.jpg";
+			entryInformation[1] = e.getMessage();
+			entryInformation[2] = "An error occurred retrieving information";
+			
+			return entryInformation;
+		}
+	}
 	// PRIVATE MEMBERS
-	private int controlAmt; // number of inputs from Controller
 	private int displayAmt; // number of displays in Viewer
 	private int childOffset; // offset for displaying siblings
 	private RBTree rootTree; // a tree containing recycling data

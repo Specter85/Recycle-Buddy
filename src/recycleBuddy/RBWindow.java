@@ -11,20 +11,21 @@
  *
  * @author Mark Zachacz
  * @since 5/24/11
- * @latest 5/24/11
- * @version 0.5.01
+ * @latest 5/31/11
+ * @version 0.9.06
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
  * 5/20/11 0.3.03 Made text wrap properly in the text pane.
  * 5/22/11 0.3.04 Made the text on side buttons bigger.
- * 5/23/11 5.0.00 Beta Release - unchanged from build 0.3.04
- * 5/24/11 5.0.01 Made text pane font bigger. Changed the windows colors to two
+ * 5/23/11 0.5.00 Beta Release - unchanged from build 0.3.04
+ * 5/24/11 0.9.01 Made text pane font bigger. Changed the windows colors to two
  * 					different greens.
- * 5/24/11 5.0.03 Added some options for color.
- * 5/29/11 5.0.04 Made the window bigger this should be the max size since if
+ * 5/24/11 0.9.03 Added some options for color.
+ * 5/29/11 0.9.04 Made the window bigger this should be the max size since if
  * 					it gets any bigger it won't fit on my screen.
- * 5/30/11 5.0.05 Added parsing text code to refreshTextPane so that there's new line or new paragraph
+ * 5/30/11 0.9.05 Added parsing text code to refreshTextPane so that there's new line or new paragraph
  *                                      for the appropriate text in String.
+ * 5/31/11 0.9.06 FRC 6, adjusted version numbering - Niko
  */
 
 package recycleBuddy;
@@ -105,8 +106,10 @@ public class RBWindow extends JFrame {
 		this.setBackground(new Color(LIGHT_GREEN_R, LIGHT_GREEN_G, LIGHT_GREEN_B));
 		this.setTitle("Recycle Buddy");
 		
+
 		// Create RecycleBuddy's model.
 		model = new RBModel(NUM_OPTIONS, this);
+
 		
 		// Set the layout for the window.
 		setLayout(new BorderLayout());

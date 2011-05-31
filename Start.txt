@@ -1,5 +1,5 @@
 About Us
-About application, version, update
+About application, version 0.9.01 FRC 1 May 31, 2011, update
 test.png
 6
 General Info
@@ -144,39 +144,39 @@ glassBroken.png
 0
 Metal 
 Metal 
-plasticBin.jpg
+updated_metal_button.png
 5
 Metal Child 1
 Aluminum Cans
-child.jpg
+metalCan.png
 1
 Metal Child 1
 Aluminum cans are accepted. Make sure to remove any plastics or rubber. Examples are pop cans, beer cans, etc.
-child.jpg
+metalCan.png
 0
 Metal Child 2
 Aluminum Foil 
-child.jpg
+metalFoil.png
 1
 Metal Child 2
 Aluminum foil is not recyclable, you must throw it away.
-child.jpg
+metalFoil.png
 0
 Metal Child 3
 Scrap Metal
-child.jpg
+metalScrap.png
 1
 Metal Child 3
 Scrap metal must be less than 2x2x2 ft, 35 lbs. No aluminum foil, foil trays, aerosol cans, needles, syringes, sharp or greasy scrap metal, knives or scissors.
-child.jpg
+metalScrap.png
 0
 Metal Child 4
 Tin and Steel Cans
-child.jpg
+metalTin.png
 1
 Metal Child 4
 Tin and steel cans are accepted. Make sure to remove any plastics or rubber. Examples are soup cans, juice cans, etc. The lids are recyclable if left attached to the can or placed inside the can.
-child.jpg
+metalTin.png
 0
 Metal Child 5
 Bottle Caps
