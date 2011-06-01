@@ -4,22 +4,22 @@ test.png
 6
 General Info
 General Information
-plasticBin.jpg
+general-recycling.gif
 1
 General Info
-Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn’t fit in your cart in old recycling bin or cardboard boxes (limit 3’x3’x3’).| |Remember to clean all items before recycling. 
+Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn't fit in your cart in an old recycling bin or cardboard box (No larger than: 3 x 3 x 3).| |Remember to clean ALL items before recycling. 
 bothell.jpg
 0
 Plastic 
 Plastic
-plasticBottle.png
+plasticButton.png
 6
 Plastic Child 1
 Bottles
 plasticBottle.png
 1
 Plastic Child 1 Display Pane
-Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
+Examples include (but not limited to): Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
 plasticBottle.png
 0
 Plastic Child 2
@@ -27,7 +27,7 @@ Jars and Jugs
 plasticJug.png
 1
 Plastic Child 2
-Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
+Examples include (but not limited to): Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
 plasticJug.png
 0
 Plastic Child 3
@@ -35,7 +35,7 @@ Round Food Tubs
 plasticTube.png
 1
 Plastic Child 3
-Yogurt, cottage cheese and pudding containers | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
+Examples include (but not limited to): Yogurt, cottage cheese and pudding containers | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
 plasticTube.png
 0
 Plastic Child 4
@@ -64,14 +64,14 @@ plasticCup.png
 0
 Paper
 Paper
-plasticBin.jpg
+paperButton.png
 6
 Paper Child 1
 Cardboard
 paperCardboard.png
 1
 Paper Child 1
-Examples of cardboard that are accepted: shipping boxes, flattened cardboard.
+Examples include (but not limited to): Shipping boxes, flattened cardboard.
 paperCardboard.png
 0
 Paper Child 2
@@ -79,7 +79,7 @@ Magazines
 paperMagazines.png
 1
 Paper Child 2
-Examples of magazines that are accepted: magazines, catalogs, glossy publications.
+Examples include (but not limited to): Magazines, catalogs, glossy publications.
 paperMagazines.png
 0
 Paper Child 3
@@ -87,7 +87,7 @@ Common Paper
 paperNews.png
 1
 Paper Child 3
-The following are examples of several types of paper that are accepted. | |Office Paper: white computer paper, letterhead, newsprint, colored paper, file stock, ground wood papers. | |Newspapers: newspapers and inserts. | |Mail: flyers, catalogs, coupons or mixed paper, window envelopes, unsolicited direct mail.
+Examples include (but not limited to): | |Office Paper: white computer paper, letterhead, newsprint, colored paper, file stock, ground wood papers. | |Newspapers: newspapers and inserts. | |Mail: flyers, catalogs, coupons or mixed paper, window envelopes, unsolicited direct mail.
 paperNews.png
 0
 Paper Child 4
@@ -95,7 +95,7 @@ Paperboard (like Cereal Boxes)
 paperCereal.png
 1
 Paper Child 4
-Examples of paperboard that are accepted: paper bags, cereal boxes. If it’s glossy it’s ok to recycle like glossy magazines. One side of recycled paperboard is usually gray. | |Be sure the paperboard you have is clean and free of food waste. Then recycle it.
+Examples include (but not limited to): Paper bags, cereal boxes. If it's glossy it's ok to recycle, like glossy magazines. One side of recycled paperboard is usually gray. | |Be sure the paperboard you have is clean and free of food waste. 
 paperCereal.png
 0
 Paper Child 5
@@ -103,7 +103,7 @@ Food Containers
 paperCarton.png
 1
 Paper Child 5
-Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. | |Also accepted are clean paper cups and frozen food boxes.
+Examples include (but not limited to): Clean Non-plastic milk & juice cartons (known as poly-coated paperboard containers) are accepted. | |Also accepted are clean paper cups and frozen food boxes.
 paperCarton.png
 0
 Paper Child 6
@@ -111,19 +111,19 @@ Books
 paperBook.png
 1
 Paper Child 6
-Examples: paperback books and phone books.
+Examples include (but not limited to): Paperback books and phone books.
 paperBook.png
 0
 Glass
 Glass
-plasticBin.jpg
+glassButton.png
 3
 Glass Child 1
 Jars and Jugs
 glassJar.png
 1
 Glass Child 1
-All colors and sizes of jars and jugs are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
+All colors and sizes of jars and jugs are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassJar.png
 0
 Glass Child 2
@@ -131,7 +131,7 @@ Bottles
 glassBottle_small.png
 1
 Glass Child 2
-All colors and sizes of glass bottles are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
+All colors and sizes of glass bottles are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassBottle_small.png
 0
 Glass Child 3
@@ -188,7 +188,7 @@ child.jpg
 0
 Toxic 
 Toxic 
-plasticBin.jpg
+toxic waste.jpg
 6
 Toxic Child 1
 Electronic Waste
@@ -211,7 +211,7 @@ Light Bulbs
 child.jpg
 1
 Toxic Child 3
-Light bulbs cannot be recycled, but they are OK to put in the garbage. 
+Light bulbs cannot be recycled, but they are OK to put in the garbage.| |Some stores offer light bulb recycling, so check with a local grocery or department store (such as Bartell's)
 child.jpg
 0
 Toxic Child 4
