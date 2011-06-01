@@ -15,19 +15,28 @@ Plastic
 plasticButton.png
 6
 Plastic Child 1
-Bottles
-plasticBottle.png
+Lids
+plasticLid.png
 1
 Plastic Child 1 Display Pane
+<<<<<<< HEAD
 Examples include (but not limited to): Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
 plasticBottle.png
+=======
+NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
+plasticLid.png
+>>>>>>> origin/master
 0
 Plastic Child 2
-Jars and Jugs
+Jars, Jugs, and Bottles
 plasticJug.png
 1
 Plastic Child 2
+<<<<<<< HEAD
 Examples include (but not limited to): Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
+=======
+Food, beverage, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials||
+>>>>>>> origin/master
 plasticJug.png
 0
 Plastic Child 3
@@ -51,15 +60,15 @@ Other Containers
 plasticOther.png
 1
 Plastic Child 5
-NO Styrofoam (e.g., peanuts, egg carton, packing).|NO Take-out containers (e.g. clamshell, deli tray). |NO Six-pack rings. |NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
+Rinsed bleach, detergent, shampoo, and cat litter jugs. | |NO Styrofoam (e.g., peanuts, egg carton, packing).|NO Take-out containers (e.g. clamshell, deli tray). |NO Six-pack rings. |NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
 plasticOther.png
 0
 Plastic Child 6
-Cups
+Plastic Utensils
 plasticCup.png
 1
 Plastic Child 6
-All plastic cups are recyclable
+All plastic cups and utensils are recyclable
 plasticCup.png
 0
 Paper
@@ -107,11 +116,15 @@ Examples include (but not limited to): Clean Non-plastic milk & juice cartons (k
 paperCarton.png
 0
 Paper Child 6
-Books
+Paperback Books
 paperBook.png
 1
 Paper Child 6
+<<<<<<< HEAD
 Examples include (but not limited to): Paperback books and phone books.
+=======
+Examples: paperback books and phone books.||HARDCOVER books are NOT accepted.
+>>>>>>> origin/master
 paperBook.png
 0
 Glass
@@ -128,11 +141,16 @@ glassJar.png
 0
 Glass Child 2
 Bottles
-glassBottle_small.png
+glassBottle.png
 1
 Glass Child 2
+<<<<<<< HEAD
 All colors and sizes of glass bottles are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassBottle_small.png
+=======
+All colors and sizes of glass bottles are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
+glassBottle.png
+>>>>>>> origin/master
 0
 Glass Child 3
 Broken Durable Glass
@@ -145,7 +163,7 @@ glassBroken.png
 Metal 
 Metal 
 updated_metal_button.png
-5
+6
 Metal Child 1
 Aluminum Cans
 metalCan.png
@@ -180,11 +198,19 @@ metalTin.png
 0
 Metal Child 5
 Bottle Caps
-child.jpg
+metalLid.png
 1
 Metal Child 5
 Bottle Caps are too small to be recycled. They must be thrown away.
-child.jpg
+metalLid.png
+0
+Metal Child 6
+Aluminium Bakeware
+metalBake.png
+1
+Metal Child 6
+Aluminium Bakeware is accepted and can be recycled.
+metalBake.png
 0
 Toxic 
 Toxic 
@@ -192,49 +218,54 @@ toxic waste.jpg
 6
 Toxic Child 1
 Electronic Waste
-child.jpg
+toxicElect.png
 1
 Toxic Child 1
 You can recycle these items, just not with your regular recycling. Contact your local electronic stores and you can find places to send them
-child.jpg
+toxicElect.png
 0
 Toxic Child 2
 Batteries
-child.jpg
+toxicBat.png
 1
 Toxic Child 2
 Batteries need to be recycled, but do not mix them with your other recycling. Most grocery stores or electronic stores have battery recycling
-child.jpg
+toxicBat.png
 0
 Toxic Child 3
 Light Bulbs
-child.jpg
+toxicBulb.png
 1
 Toxic Child 3
+<<<<<<< HEAD
 Light bulbs cannot be recycled, but they are OK to put in the garbage.| |Some stores offer light bulb recycling, so check with a local grocery or department store (such as Bartell's)
 child.jpg
+=======
+Light bulbs cannot be recycled, but they are OK to put in the garbage. 
+toxicBulb.png
+>>>>>>> origin/master
 0
 Toxic Child 4
 Paint Containers
-child.jpg
+toxicPaint.png
 1
 Toxic Child 4
 Do not attempt to recycle, this will need to be disposed of properly.
-child.jpg
+toxicPaint.png
 0
 Toxic Child 5
 Cleaning Supplies 
-child.jpg
+toxicClean.png
 1
 Toxic Child 5
 Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them.|Be aware of what chemicals you are dumping down the drain. Check with your local sewage utility for blacklisted chemicals.
-child.jpg
+toxicClean.png
 0
 Toxic Child 6
 Oil Containers 
-child.jpg
+toxicOil.png
 1
 Toxic Child 6
 Do not attempt to recycle, this will need to be disposed of properly.|Oil containers can't be recycled because of oil residue that seeps into the plastic and can't be washed off. Oil containers can't be washed because oil can't be dumped in drains.   
-child.jpg
+toxicOil.png
 0
