@@ -13,7 +13,7 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 6/1/11
- * @version 0.9.03
+ * @version 1.0.00
  * 5/3/11 0.0.01 - Created tree structure.
  * 5/5/11 0.0.02 - added build(), full comments, and childNum
  * 5/8/11 0.0.03 - changed version scheme, added some build() functionality
@@ -24,6 +24,7 @@
  * 5/29/11 0.9.01 - FRC 1, added exceptions for malformed and missing files
  * 5/30/11 0.9.02 - FRC 2, added paths for image folders 
  * 6/1/11 0.9.03 - FRC 3, completed comments
+ * 6/1/11 1.0.00 Final Release - unchanged from build 0.9.03
  */
 
 package recycleBuddy;
@@ -153,8 +154,7 @@ public class RBTree {
 			throw fnfe;
 		}
 		catch (Exception e) {
-			
-			e.printStackTrace();
+			throw e;
 		}
 	} // end buildHelper
 	

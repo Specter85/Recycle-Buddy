@@ -10,10 +10,11 @@
  *
  * @author Mark Zachacz
  * @since 5/11/11
- * @latest 5/20/11
- * @version 0.5.00
+ * @latest 6/1/11
+ * @version 1.0.00
  * 5/11/11 0.1.01 Written
  * 5/23/11 0.5.00 Beta Release - unchanged from build 0.1.01
+ * 6/1/11 1.0.00 Final Release - unchanged from build 0.1.01
  */
 
 package recycleBuddy;

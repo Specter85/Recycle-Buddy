@@ -11,14 +11,15 @@
  *
  * @author Mark Zachacz
  * @since 5/20/11
- * @latest 5/31/11
- * @version 0.9.02
+ * @latest 6/1/11
+ * @version 1.0.00
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/22/11 0.3.02 Made the text on RBButtons bigger and bold.
  * 5/22/11 0.3.02 Gave the images on the buttons more space on the buttons.
  * 5/23/11 0.5.00 Beta Release - unchanged from build 0.3.02
  * 5/28/11 0.9.01 Center align text and images.
  * 5/31/11 0.9.02 FRC 2, Adjusted version numbering - Niko
+ * 6/1/11 1.0.00 Final Release - unchanged from build 0.9.02
  */
 
 package recycleBuddy;

@@ -12,7 +12,7 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 6/1/11
- * @version 0.5.00
+ * @version 1.0.00
  * 5/3/11 0.0.01 - coded private data members, get and set functions
  * 5/5/11 0.0.02 - added full comments and fill() function
  * 5/8/11 0.0.03 - changed version scheme, considering removing fill()

@@ -11,8 +11,8 @@
  *
  * @author Mark Zachacz
  * @since 5/24/11
- * @latest 5/31/11
- * @version 0.9.06
+ * @latest 6/1/11
+ * @version 1.0.00
  * 5/20/11 0.1.01 Added commenting including the change set.
  * 5/20/11 0.3.02 changed constants for screen size from 600x400 to 800x600 - Niko
  * 5/20/11 0.3.03 Made text wrap properly in the text pane.
@@ -26,6 +26,7 @@
  * 5/30/11 0.9.05 Added parsing text code to refreshTextPane so that there's new line or new paragraph
  *                                      for the appropriate text in String.
  * 5/31/11 0.9.06 FRC 6, adjusted version numbering - Niko
+ * 6/1/11 1.0.00 Final Release - unchanged from build 0.9.06
  */
 
 package recycleBuddy;

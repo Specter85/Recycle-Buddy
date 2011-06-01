@@ -12,7 +12,7 @@
  * @author Niko Simonson
  * @since 5/3/11
  * @latest 6/1/11
- * @version 0.9.04
+ * @version 1.0.00
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -40,6 +40,9 @@
  * 5/30/11 0.9.03 - FRC 3, added further exception handling
  * 6/1/11 0.9.04 - FRC 4, expanded comments,
  *   removed child offset (defer to version 2)
+ * 6/1/11 1.0.00 Final Release - moved tree build to setInitialState function
+ *   added more constant image paths
+ *   should handle malformed start.txt data without crashing now
  */
 
 package recycleBuddy;
@@ -56,14 +59,15 @@ public class RBModel {
 	static String COMMONLIBRARYFOLDERPATH = "Common Image Library/";
 	// Location and name of city image folder
 	static String CITYFOLDERPATH = "Bothell/";
+	// Location of error image
+	static String ERRORIMAGE = "Common Image Library/error.jpg";
+	// Location of disabled image
+	static String DISABLEDIMAGE = "CommonImageLibrary/family.jpg";
 		
 	// DATA COMPONENT INTERACTIVE SECTION
 	// INCLUDES CONSTRUCTOR
 	/**
 	* RBModel Constructor
-	*
-	* Creates and builds the root data tree.
-	* Points the treeTraverser tree to the root tree.
 	* 
 	* @preconditions Correct path to a properly-formed Start.txt file is available.
 	* 
@@ -78,20 +82,12 @@ public class RBModel {
 			// Create a new Recycle Buddy data tree.
 			// As the root, its parent is null.
 			rootTree = new RBTree(null, 0);
-			
-			// Build the tree with the file path to the data.
-			rootTree.build(INITIALFILEPATH, COMMONLIBRARYFOLDERPATH, CITYFOLDERPATH);
-					
-			// Point the tree traverser to the root.
-			treeTraverser = rootTree;			
-			
+									
 			// Set the number of displays.
 			displayAmt = howManyControls;			
 		}
 		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
+			// print out exception
 			e.printStackTrace();
 		}
 	} // end RBModel
@@ -99,6 +95,9 @@ public class RBModel {
 	// VIEWER-CONTROLLER (UI) COMPONENT INTERACTIVE SECTION	
 	/**
 	 * setInitialState
+	 * 
+	 * Creates and builds the root data tree.
+	 * Points the treeTraverser tree to the root tree.
 	 * 
 	 * Sends the first display information to be shown.
 	 * 
@@ -114,6 +113,12 @@ public class RBModel {
 			// VARIABLE DECLARATIONS
 			// name, text, and image path in tree node
 			String name, text, img;
+			
+			// Build the tree with the file path to the data.
+			rootTree.build(INITIALFILEPATH, COMMONLIBRARYFOLDERPATH, CITYFOLDERPATH);
+					
+			// Point the tree traverser to the root.
+			treeTraverser = rootTree;	
 			
 			// for each display area
 			for (int i = 0; i < displayAmt; ++i) {
@@ -136,17 +141,17 @@ public class RBModel {
 				}
 				else {
 					// display a "disabled" button
-					view.refreshOption(i, "", "family.jpg", false);
+					view.refreshOption(i, "", DISABLEDIMAGE, false);
 					
 					// ...and set the sidebar displays
-					view.refreshSideOption(i, "placeholder: no info", false);
+					view.refreshSideOption(i, "", false);
 				}
 			}
 		}
 		catch (Exception e) {
 			// display exception on panel
 			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
+			view.refreshTextPane(e.getMessage(), ERRORIMAGE);
 			e.printStackTrace();
 		}
 	}
@@ -244,8 +249,7 @@ public class RBModel {
 					else 
 					{
 						// display a "disabled" button
-						view.refreshOption(i, "", "family.jpg", false);
-						//view.showTextPane();
+						view.refreshOption(i, "", DISABLEDIMAGE, false);
 					}
 				} // next button
 			} // end if children
@@ -278,7 +282,7 @@ public class RBModel {
 		catch (Exception e) {
 			// display exception on panel
 			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
+			view.refreshTextPane(e.getMessage(), ERRORIMAGE);
 			System.err.println(e.getMessage());
 			e.printStackTrace();
 		}
