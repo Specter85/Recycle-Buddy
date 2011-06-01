@@ -12,7 +12,7 @@ bothell.jpg
 0
 Plastic 
 Plastic
-plasticButton.png
+homePlastic.png
 6
 Plastic Child 1
 Lids
@@ -64,7 +64,7 @@ plasticCup.png
 0
 Paper
 Paper
-paperButton.png
+homePaper.png
 6
 Paper Child 1
 Cardboard
@@ -116,7 +116,7 @@ paperBook.png
 0
 Glass
 Glass
-glassButton.png
+homeGlass.png
 3
 Glass Child 1
 Jars and Jugs
@@ -144,7 +144,7 @@ glassBroken.png
 0
 Metal 
 Metal 
-updated_metal_button.png
+homeMetal.png
 6
 Metal Child 1
 Aluminum Cans
@@ -179,7 +179,7 @@ Tin and steel cans are accepted. Make sure to remove any plastics or rubber. Exa
 metalTin.png
 0
 Metal Child 5
-Bottle Caps
+Bottle Caps and Metal Lids
 metalLid.png
 1
 Metal Child 5
