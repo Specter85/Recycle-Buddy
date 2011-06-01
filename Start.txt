@@ -19,24 +19,15 @@ Lids
 plasticLid.png
 1
 Plastic Child 1 Display Pane
-<<<<<<< HEAD
-Examples include (but not limited to): Food, beverage, detergent, shampoo, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
-plasticBottle.png
-=======
 NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
 plasticLid.png
->>>>>>> origin/master
 0
 Plastic Child 2
 Jars, Jugs, and Bottles
 plasticJug.png
 1
 Plastic Child 2
-<<<<<<< HEAD
-Examples include (but not limited to): Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment
-=======
-Food, beverage, condiment bottles, vitamins | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials||
->>>>>>> origin/master
+Examples include (but not limited to): Food, beverage, condiment bottles, and vitamins| | Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment||NO Prescription vials
 plasticJug.png
 0
 Plastic Child 3
@@ -120,11 +111,7 @@ Paperback Books
 paperBook.png
 1
 Paper Child 6
-<<<<<<< HEAD
-Examples include (but not limited to): Paperback books and phone books.
-=======
-Examples: paperback books and phone books.||HARDCOVER books are NOT accepted.
->>>>>>> origin/master
+Examples include (but not limited to): paperback books and phone books.||HARDCOVER books are NOT accepted.
 paperBook.png
 0
 Glass
@@ -144,13 +131,8 @@ Bottles
 glassBottle.png
 1
 Glass Child 2
-<<<<<<< HEAD
 All colors and sizes of glass bottles are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassBottle_small.png
-=======
-All colors and sizes of glass bottles are accepted. Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
-glassBottle.png
->>>>>>> origin/master
 0
 Glass Child 3
 Broken Durable Glass
@@ -237,13 +219,8 @@ Light Bulbs
 toxicBulb.png
 1
 Toxic Child 3
-<<<<<<< HEAD
 Light bulbs cannot be recycled, but they are OK to put in the garbage.| |Some stores offer light bulb recycling, so check with a local grocery or department store (such as Bartell's)
-child.jpg
-=======
-Light bulbs cannot be recycled, but they are OK to put in the garbage. 
 toxicBulb.png
->>>>>>> origin/master
 0
 Toxic Child 4
 Paint Containers
