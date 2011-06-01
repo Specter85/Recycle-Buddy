@@ -27,7 +27,7 @@ Jars, Jugs, and Bottles
 plasticJug.png
 1
 Plastic Child 2
-Examples include (but not limited to): Food, beverage, condiment bottles, and vitamins| |Labels OK| |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment||NO Prescription vials
+Examples include (but not limited to): ||Food, beverage, condiment bottles, and vitamin bottles. Rinsed bleach, detergent, shampoo, and cat litter jugs. | |Labels OK| |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment||NO Prescription vials
 plasticJug.png
 0
 Plastic Child 3
@@ -51,7 +51,7 @@ Other Containers
 plasticOther.png
 1
 Plastic Child 5
-Rinsed bleach, detergent, shampoo, and cat litter jugs. | |NO Styrofoam (e.g., peanuts, egg carton, packing).|NO Take-out containers (e.g. clamshell, deli tray). |NO Six-pack rings. |NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
+NO Styrofoam (e.g., peanuts, egg carton, packing).|NO Take-out containers (e.g. clamshell, deli tray). |NO Six-pack rings. |NO Containers that contained hazardous or toxic material (e.g., antifreeze, oil).
 plasticOther.png
 0
 Plastic Child 6
@@ -59,7 +59,7 @@ Plastic Utensils
 plasticCup.png
 1
 Plastic Child 6
-All plastic cups and utensils are recyclable
+All clean plastic cups, plates, and utensils are recyclable. 
 plasticCup.png
 0
 Paper
@@ -111,7 +111,7 @@ Paperback Books
 paperBook.png
 1
 Paper Child 6
-Examples include (but not limited to): paperback books and phone books.||HARDCOVER books are NOT accepted.
+Examples include (but not limited to): paperback books and phone books.| |HARDCOVER books are NOT accepted.
 paperBook.png
 0
 Glass
@@ -123,7 +123,7 @@ Jars and Jugs
 glassJar.png
 1
 Glass Child 1
-All colors and sizes of jars and jugs are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
+All colors and sizes of jars and jugs are accepted.| |Labels OK | |NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassJar.png
 0
 Glass Child 2
@@ -131,7 +131,7 @@ Bottles
 glassBottle.png
 1
 Glass Child 2
-All colors and sizes of glass bottles are accepted.| |Labels are okay, but NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
+All colors and sizes of glass bottles are accepted.| |Labels OK | |NO durable glass, lids, caps ceramics, dishes, light bulbs, mirrors or window glass.
 glassBottle_small.png
 0
 Glass Child 3
@@ -139,7 +139,7 @@ Broken Durable Glass
 glassBroken.png
 1
 Glass Child 3
-Durable glass from your house like glass cups or Pyrex are not accepted because they are made from different materials.
+Durable glass from your house like glass cups or Pyrex are not accepted because they are made from different materials. You must throw it away. 
 glassBroken.png
 0
 Metal 
@@ -151,7 +151,7 @@ Aluminum Cans
 metalCan.png
 1
 Metal Child 1
-Aluminum cans are accepted. Make sure to remove any plastics or rubber. Examples are pop cans, beer cans, etc.
+Examples include (but not limited to): Pop cans, beer cans, and juice cans.| |Make sure to remove any plastics or rubber. 
 metalCan.png
 0
 Metal Child 2
@@ -167,7 +167,7 @@ Scrap Metal
 metalScrap.png
 1
 Metal Child 3
-Scrap metal must be less than 2x2x2 ft, 35 lbs. No aluminum foil, foil trays, aerosol cans, needles, syringes, sharp or greasy scrap metal, knives or scissors.
+Scrap metal must be less than 2x2x2 ft, 35 lbs.| |No aluminum foil, aerosol cans, needles, syringes, sharp or greasy scrap metal, knives or scissors.
 metalScrap.png
 0
 Metal Child 4
@@ -175,7 +175,7 @@ Tin and Steel Cans
 metalTin.png
 1
 Metal Child 4
-Tin and steel cans are accepted. Make sure to remove any plastics or rubber. Examples are soup cans, juice cans, etc. The lids are recyclable if left attached to the can or placed inside the can.
+Tin and steel cans are accepted. Examples include (but not limited to): Soup cans, juice cans, etc.| |Make sure to remove any plastics or rubber. | |The lids are recyclable if left attached to the can or placed inside the can.
 metalTin.png
 0
 Metal Child 5
@@ -183,7 +183,7 @@ Bottle Caps and Metal Lids
 metalLid.png
 1
 Metal Child 5
-Bottle Caps are too small to be recycled. They must be thrown away.
+Bottle Caps and metal lids are too small to be recycled. They must be thrown away.| |Exception: placing the metal lid inside of metal can is recyclable
 metalLid.png
 0
 Metal Child 6
@@ -191,7 +191,7 @@ Aluminium Bakeware
 metalBake.png
 1
 Metal Child 6
-Aluminium Bakeware is accepted and can be recycled.
+Clean, Aluminium Bakeware is accepted and can be recycled.
 metalBake.png
 0
 Toxic 
