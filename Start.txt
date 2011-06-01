@@ -4,7 +4,7 @@ test.png
 6
 General Info
 General Information
-general-recycling.gif
+homeGeneral.png
 1
 General Info
 Recycling is provided at no extra cost with your basic garbage service. There is no limit on the amount of clean recycling you can set out for collection. Put recycling that doesn't fit in your cart in an old recycling bin or cardboard box (No larger than: 3 x 3 x 3).| |Remember to clean ALL items before recycling. 
