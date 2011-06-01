@@ -83,15 +83,15 @@ public class RBWindow extends JFrame {
 		SIDE_OPTION
 	}
 	
-	// consts for dark green
-	public static final int DARK_GREEN_R = 250;
-	public static final int DARK_GREEN_G = 250;
-	public static final int DARK_GREEN_B = 0;
+	// consts for yellow
+	public static final int DARK_GREEN_R = 165;
+	public static final int DARK_GREEN_G = 195;
+	public static final int DARK_GREEN_B = 105;
 	
 	// consts for light green
-	public static final int LIGHT_GREEN_R = 100;
-	public static final int LIGHT_GREEN_G = 250;
-	public static final int LIGHT_GREEN_B = 100;
+	public static final int LIGHT_GREEN_R = 225;
+	public static final int LIGHT_GREEN_G = 225;
+	public static final int LIGHT_GREEN_B = 225;
 	
 	/**
 	 * Constructor
