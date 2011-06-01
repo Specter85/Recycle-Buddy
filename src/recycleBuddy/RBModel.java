@@ -11,8 +11,8 @@
  *
  * @author Niko Simonson
  * @since 5/3/11
- * @latest 5/30/11
- * @version 0.9.03
+ * @latest 6/1/11
+ * @version 0.9.04
  * 5/3/11 0.0.01 - coded constructor and click()
  * 5/5/11 0.0.02 - added childOffset support for more children than displays,
  * 	added full commenting
@@ -38,30 +38,25 @@
  * 5/30/11 0.9.01 - FRC 1, developing RBFormHandler class
  * 5/30/11 0.9.02 - FRC 2, added paths for image folders
  * 5/30/11 0.9.03 - FRC 3, added further exception handling
+ * 6/1/11 0.9.04 - FRC 4, expanded comments,
+ *   removed child offset (defer to version 2)
  */
 
 package recycleBuddy;
 
-// enum for select() function
+// enum for button types
 import recycleBuddy.RBWindow.ButtonTypes;
-//import java.io.*; // streaming data
 
 
 public class RBModel {
 	// CONSTANT DECLARATIONS
-	// Initial paths to data. 
+	// Location and name of data and text file.
 	static String INITIALFILEPATH = "Start.txt";
+	// Location and name of common image folder
 	static String COMMONLIBRARYFOLDERPATH = "Common Image Library/";
+	// Location and name of city image folder
 	static String CITYFOLDERPATH = "Bothell/";
-	
-	// Note - find a better way to do this enumeration:
-	/*
-	static int HOME = 0; // control requiring root display
-	static int BACK = 1; // control requiring parent display
-	static int SEEMORE = 2;
-	static int SPECIALCONTROLOFFSET = 3; // number of special controls
-	*/
-	
+		
 	// DATA COMPONENT INTERACTIVE SECTION
 	// INCLUDES CONSTRUCTOR
 	/**
@@ -72,7 +67,8 @@ public class RBModel {
 	* 
 	* @preconditions Correct path to a properly-formed Start.txt file is available.
 	* 
-	* @param The quantity of potential different control inputs.
+	* @param The quantity of potential different control inputs, a reference to
+	*  the calling window
 	*/
 	public RBModel(int howManyControls, RBWindow refViews) {
 		try {
@@ -85,23 +81,12 @@ public class RBModel {
 			
 			// Build the tree with the file path to the data.
 			rootTree.build(INITIALFILEPATH, COMMONLIBRARYFOLDERPATH, CITYFOLDERPATH);
-			
-		
+					
 			// Point the tree traverser to the root.
 			treeTraverser = rootTree;			
 			
-			// Set the number of controls.
-			//controlAmt = howManyControls;
-			
 			// Set the number of displays.
-			//displayAmt = controlAmt - SPECIALCONTROLOFFSET;
-			
-			displayAmt = howManyControls;
-			
-			
-			// Initialize child offset.
-			childOffset = 0;
-			
+			displayAmt = howManyControls;			
 		}
 		catch (Exception e) {
 			// display exception on panel
@@ -126,6 +111,10 @@ public class RBModel {
 	 */
 	public void setInitialState() {
 		try {
+			// VARIABLE DECLARATIONS
+			// name, text, and image path in tree node
+			String name, text, img;
+			
 			// for each display area
 			for (int i = 0; i < displayAmt; ++i) {
 				// display on the main button and display on a side button			
@@ -133,9 +122,7 @@ public class RBModel {
 					RBTree treeDisplayInfo = treeTraverser.getChild(i);
 					RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
 					
-					// unpack the node
-					String name, text, img;
-					
+					// unpack the node					
 					name = nodeDisplayInfo.getTitle();
 					text = nodeDisplayInfo.getText();
 					img = nodeDisplayInfo.getImagePath();
@@ -171,109 +158,79 @@ public class RBModel {
 	*   
 	* @preconditions 1) Number of display areas is known.
 	*   2) Correct command to call displays in Viewer module is known.
-	*   3) It is understood that:
-	*     3a) Control 0 corresponds to HOME
-	*     3b) Control 1 corresponds to BACK
-	*     3c) Controls 2+ correspond to category selections.
-	*   4) Number of displays is equal to number of controls - number
+	*   3) Number of displays is equal to number of controls - number
 	*     of special controls (aka SPECIALCONTROLOFFSET)
-	*   5) Data tree is built
+	*   4) Data tree is built
+	*   5) There are not more children than displays.
+	*   6) Enabled viewer-controller pairs exactly correspond to the 
+	*      number of children at the current tree.
 	* 
-	* @param whichControl called the display
+	* @param what type of control was clicked, which display is to be selected
 	* 
 	* @postcondition Each display will be set to the correct information.
 	*/
 	public void click(ButtonTypes selectionType, int whichDisplay) {
-		try {
+		try {		
 			// VARIABLE DECLARATIONS
-			// which (if non-negative) viewer-controller pair sent input
-			//int whichDisplay = whichOption - SPECIALCONTROLOFFSET;
-			
+			// name, text, and image path in tree node
+			String name, text, img;
+			// tree that holds desired data
+			RBTree treeDisplayInfo;
+			// node that holds desired data
+			RBTreeNode nodeDisplayInfo;
+		
 			// First, go to the correct portion of the tree.
 			
 			// We want to display the initial data
 			if (ButtonTypes.HOME == selectionType) {
 				// Go back to the root.
-				treeTraverser = rootTree;
-				
-				// Reinitialize child offset.
-				childOffset = 0;
-				
+				treeTraverser = rootTree;				
 			} // end if HOME
+			
 			// We want to display the previous data
-			else if (ButtonTypes.BACK == selectionType) {
-				// DECLARE VARIABLES												
-				// child order of this tree (not available)				
-				//int whichChild = treeTraverser.getChildNum();
-												
-				// probable off-by-one error
-				// recalculate offset
-				/*
-				while ((whichChild - childOffset) > displayAmt) {
-					childOffset += displayAmt;
-				}*/
-									
+			else if (ButtonTypes.BACK == selectionType) {									
 				// Go back to the parent tree, if it exists
 				if (null != treeTraverser.getParent()) {
 					treeTraverser = treeTraverser.getParent();
-				}																							
+				}	
+				// Otherwise, do nothing.
 			} // end if BACK
-			/*
-			// We want to display more siblings
-			else if (SEEMORE == whichControl) {
-				// probable off-by-one error
-				childOffset += displayAmt;
-
-			} // end if SEEMORE
-			*/
 			
 			// the side bar displays the root's children
 			else if (ButtonTypes.SIDE_OPTION == selectionType){
 				// now we are strictly selecting children of the root
-				/*
-				if (whichDisplay <= treeTraverser.getChildNum())
-					treeTraverser = rootTree.getChild(whichDisplay);
-				childOffset = 0;
-				*/
-				treeTraverser = rootTree.getChild(whichDisplay);
-				childOffset = 0;
 				
-				// Reset child offset																
+				// if the tree has children, get the selected child
+				if (rootTree.getChildNum() != 0)
+					treeTraverser = rootTree.getChild(whichDisplay);																
 			} // end else if side option selection
 			
 			// We want to display the selected data.
 			else if (ButtonTypes.OPTION == selectionType) {
+				// if this tree has children
 				if (treeTraverser.getChildNum() != 0) {
 					// Go to the selected child tree.
-					/*
-					if (whichDisplay <= rootTree.getChildNum())					
-						treeTraverser = 						
-							treeTraverser.getChild(whichDisplay + childOffset);
-					*/
 					treeTraverser = 						
-						treeTraverser.getChild(whichDisplay + childOffset);
-					
-					// Reset child offset
-					childOffset = 0;
+						treeTraverser.getChild(whichDisplay);
 				}
 			} // end else if normal selection
 			
-			
 			// Then, display the information for the number of displays.
 			
-			// This is where logic to control the difference between
-			// the number of displays and number of children should lie.	
+			// If there is more than one child, we want multiple displays. 
 			if (treeTraverser.getChildNum() > 1) {
-				for (int i = childOffset; i < (displayAmt + childOffset); ++i) {
+				// for each display amount
+				for (int i = 0; i < (displayAmt); ++i) {
 					// get this numbered child of the current node
 					if (i < treeTraverser.getChildNum())
 					{
-						RBTree treeDisplayInfo = treeTraverser.getChild(i);
-						RBTreeNode nodeDisplayInfo = treeDisplayInfo.getThisNode();
+						// find the correct branch of the tree
+						treeDisplayInfo = treeTraverser.getChild(i);
 						
-						// unpack the node
-						String name, text, img;
+						// retrieve the data node
+						nodeDisplayInfo = treeDisplayInfo.getThisNode();
 						
+						// unpack the node						
 						name = nodeDisplayInfo.getTitle();
 						text = nodeDisplayInfo.getText();
 						img = nodeDisplayInfo.getImagePath();
@@ -281,8 +238,7 @@ public class RBModel {
 						// make sure we're showing the button pane
 						view.showButtonPane();
 						
-						// call each display in turn and pass it the contents of
-						// each RBTreeNode in each of the children of the tree traverser
+						// call selected display and pass it the unpacked data
 						view.refreshOption(i, text, img, true);
 					}
 					else 
@@ -293,45 +249,31 @@ public class RBModel {
 					}
 				} // next button
 			} // end if children
-			// else there are no children so display the single view pane
 			
-			// what we really want:
-			/* 
-			 * else if (treeTraverser.getChildNum() == 1) {
-			 *   ...}
-			 */
+			// if there's a single child, we want to display a single pane view
 			else if (treeTraverser.getChildNum() == 1){
+				// find the correct branch of the tree
+				treeDisplayInfo = treeTraverser.getChild(0);
+				
+				// retrieve the data node
+				nodeDisplayInfo = treeDisplayInfo.getThisNode();
+				
 				// unpack the current node
-				RBTree displayTree = treeTraverser.getChild(0);
-				RBTreeNode nodeDisplayInfo = displayTree.getThisNode();
-				
-				String name, text, img;
-				
 				name = nodeDisplayInfo.getTitle();
 				text = nodeDisplayInfo.getText();
 				img = nodeDisplayInfo.getImagePath();
 				
-				// display the single pane
+				// display the single pane view
 				view.showTextPane();
 				
+				// send information to that view
 				view.refreshTextPane(text, img);
-				
 			}
 			
-			
-			// else return to parent
+			// otherwise, there are no children, so return to the parent
 			else {
 				treeTraverser = treeTraverser.getParent();
-			}
-				
-				// Three cases:
-				// 1) There are as many children as displays.
-				// Solution: perform normally.
-				// 2) There are fewer children than there are displays.
-				// Solution: disable extra displays.	
-				// 3) There are more children than there are displays.
-				// Solution: display "see more" information 
-	
+			}	
 		}
 		catch (Exception e) {
 			// display exception on panel
@@ -343,120 +285,8 @@ public class RBModel {
 
 	} // end click
 	
-	// Form Handler Functions
-	public void back() {
-		try {
-			// Go back to the root.
-			treeTraverser = rootTree;
-			
-			// Reinitialize child offset.
-			childOffset = 0;
-		}
-		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
-			e.printStackTrace();
-		}
-	}
-	
-	public void choose(int whichDisplay) {
-		try {
-			if (treeTraverser.getChildNum() != 0) {
-				// Go to the selected child tree.
-				treeTraverser = 
-					treeTraverser.getChild(whichDisplay + childOffset);
-				
-				// Reset child offset
-				childOffset = 0;
-			}
-		}
-		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
-			e.printStackTrace();
-		}
-	}
-	
-	public void home() {
-		try {
-			// Go back to the parent tree, if it exists
-			if (null != treeTraverser.getParent()) {
-				treeTraverser = treeTraverser.getParent();
-			}	
-		}
-		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
-			e.printStackTrace();
-		}
-	}
-	
-	public void chooseFromHome(int whichDisplay) {
-		try {
-			// now we are strictly selecting children of the root
-			
-			treeTraverser = rootTree.getChild(whichDisplay);
-			childOffset = 0;
-			
-			
-			// Reset child offset	
-		}
-		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
-			e.printStackTrace();
-		}
-	}
-	
-	public int getNumSelections() {
-		try {
-	
-			int numSelections;
-			
-			numSelections = treeTraverser.getChildNum();
-			
-			return numSelections;
-		}
-		catch (Exception e) {
-			// display exception on panel
-			view.showTextPane();
-			view.refreshTextPane(e.getMessage(), "child.jpg");
-			e.printStackTrace();
-			
-			return -1;
-		}
-	}
-	
-	public String[] getEntry(int whichEntry) {
-		String[] entryInformation = new String[3];
-		
-		try {
-
-			RBTreeNode selectedNode = 
-				treeTraverser.getChild(whichEntry).getThisNode();
-			
-			entryInformation[0] = selectedNode.getImagePath();
-			entryInformation[1] = selectedNode.getText();
-			entryInformation[2] = selectedNode.getTitle();
-			
-			return entryInformation;
-		}
-		catch (Exception e) {
-			// display exception on panel
-			entryInformation[0] = "child.jpg";
-			entryInformation[1] = e.getMessage();
-			entryInformation[2] = "An error occurred retrieving information";
-			
-			return entryInformation;
-		}
-	}
 	// PRIVATE MEMBERS
 	private int displayAmt; // number of displays in Viewer
-	private int childOffset; // offset for displaying siblings
 	private RBTree rootTree; // a tree containing recycling data
 	private RBTree treeTraverser; // pointer to various parts of the data tree
 	private RBWindow view;
