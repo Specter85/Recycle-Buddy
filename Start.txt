@@ -19,7 +19,7 @@ Lids
 plasticLid.png
 1
 Plastic Child 1 Display Pane
-NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment |NO Prescription vials
+NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment 
 plasticLid.png
 0
 Plastic Child 2
@@ -27,7 +27,7 @@ Jars, Jugs, and Bottles
 plasticJug.png
 1
 Plastic Child 2
-Examples include (but not limited to): Food, beverage, condiment bottles, and vitamins| | Rinsed bleach, detergent and cat litter jugs | |Labels OK | |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment||NO Prescription vials
+Examples include (but not limited to): Food, beverage, condiment bottles, and vitamins| |Labels OK| |NO loose lids (e.g. juice box lids, jug lids, plastic bottle caps) -  loose lids will jam recycling equipment||NO Prescription vials
 plasticJug.png
 0
 Plastic Child 3
