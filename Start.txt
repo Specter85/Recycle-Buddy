@@ -196,7 +196,7 @@ metalBake.png
 0
 Toxic 
 Toxic 
-toxic waste.jpg
+homeToxic.png
 6
 Toxic Child 1
 Electronic Waste
@@ -227,7 +227,7 @@ Paint Containers
 toxicPaint.png
 1
 Toxic Child 4
-Do not attempt to recycle, this will need to be disposed of properly.
+Do not attempt to recycle, this will need to be disposed of properly, taking it to a hazardous waste facility.| |The Hazardous Waste Collection Shed is located at King County's Factoria Transfer Station located at:| | 13800 S.E. 32nd St., Bellevue| |Call the Hazards Line at 206-296-4692 if you have any questions about hazardous wastes in your home.
 toxicPaint.png
 0
 Toxic Child 5
@@ -235,7 +235,7 @@ Cleaning Supplies
 toxicClean.png
 1
 Toxic Child 5
-Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them.|Be aware of what chemicals you are dumping down the drain. Check with your local sewage utility for blacklisted chemicals.
+Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them.| |Be aware of what chemicals you are dumping down the drain. Check with your local sewage utility for blacklisted chemicals.
 toxicClean.png
 0
 Toxic Child 6
@@ -243,6 +243,6 @@ Oil Containers
 toxicOil.png
 1
 Toxic Child 6
-Do not attempt to recycle, this will need to be disposed of properly.|Oil containers can't be recycled because of oil residue that seeps into the plastic and can't be washed off. Oil containers can't be washed because oil can't be dumped in drains.   
+Oil containers can't be recycled because of oil residue that seeps into the plastic and can't be washed off. Oil containers can't be washed because oil can't be dumped in drains.| |Do not attempt to recycle, this will need to be disposed of properly.| |The Hazardous Waste Collection Shed is located at King County's Factoria Transfer Station located at:| | 13800 S.E. 32nd St., Bellevue| |Call the Hazards Line at 206-296-4692 if you have any questions about hazardous wastes in your home.   
 toxicOil.png
 0
