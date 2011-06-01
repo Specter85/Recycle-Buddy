@@ -200,49 +200,49 @@ plasticBin.jpg
 6
 Toxic Child 1
 Electronic Waste
-child.jpg
+toxicElect.png
 1
 Toxic Child 1
 You can recycle these items, just not with your regular recycling. Contact your local electronic stores and you can find places to send them
-child.jpg
+toxicElect.png
 0
 Toxic Child 2
 Batteries
-child.jpg
+toxicBat.png
 1
 Toxic Child 2
 Batteries need to be recycled, but do not mix them with your other recycling. Most grocery stores or electronic stores have battery recycling
-child.jpg
+toxicBat.png
 0
 Toxic Child 3
 Light Bulbs
-child.jpg
+toxicBulb.png
 1
 Toxic Child 3
 Light bulbs cannot be recycled, but they are OK to put in the garbage. 
-child.jpg
+toxicBulb.png
 0
 Toxic Child 4
 Paint Containers
-child.jpg
+toxicPaint.png
 1
 Toxic Child 4
 Do not attempt to recycle, this will need to be disposed of properly.
-child.jpg
+toxicPaint.png
 0
 Toxic Child 5
 Cleaning Supplies 
-child.jpg
+toxicClean.png
 1
 Toxic Child 5
 Most of these items are plastic. As long as you wash out the bottles, you are free to recycle them.|Be aware of what chemicals you are dumping down the drain. Check with your local sewage utility for blacklisted chemicals.
-child.jpg
+toxicClean.png
 0
 Toxic Child 6
 Oil Containers 
-child.jpg
+toxicOil.png
 1
 Toxic Child 6
 Do not attempt to recycle, this will need to be disposed of properly.|Oil containers can't be recycled because of oil residue that seeps into the plastic and can't be washed off. Oil containers can't be washed because oil can't be dumped in drains.   
-child.jpg
+toxicOil.png
 0
